@@ -1,0 +1,11 @@
+pyproject.toml
+src/evireview/__init__.py
+src/evireview/aspects_v1.yaml
+src/evireview/common.py
+src/evireview/ingest.py
+src/evireview.egg-info/PKG-INFO
+src/evireview.egg-info/SOURCES.txt
+src/evireview.egg-info/dependency_links.txt
+src/evireview.egg-info/entry_points.txt
+src/evireview.egg-info/requires.txt
+src/evireview.egg-info/top_level.txt

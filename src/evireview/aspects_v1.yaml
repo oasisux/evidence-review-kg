@@ -1,0 +1,91 @@
+# Beauty aspect dictionary v1. Aliases are matched case-insensitively on word boundaries.
+version: aspects-v1
+domain: beauty
+aspects:
+  texture:
+    description: How the product feels physically - consistency, thickness, smoothness, creaminess.
+    aliases: [texture, consistency, feel, feels, creamy, smooth, silky, thick, thin, runny, watery, gritty, lightweight, light weight]
+  scent:
+    description: The smell or fragrance of the product.
+    aliases: [scent, smell, smells, smelled, fragrance, odor, aroma, perfume, scented, unscented, stinks]
+  scent_longevity:
+    description: How long the scent or fragrance lasts after application.
+    aliases: [long lasting scent, lasts all day, scent lasts, smell lasts, fades quickly, wears off, longevity]
+  moisturization:
+    description: How well the product hydrates or moisturizes skin or hair, or whether it dries it out.
+    aliases: [moisturizing, moisturizes, moisturize, hydrating, hydrated, hydration, dry, drying, dried out, moisture, nourishing]
+  absorption:
+    description: How quickly and fully the product absorbs or sinks into skin or hair.
+    aliases: [absorbs, absorb, absorbed, soaks in, sinks in, absorption]
+  residue:
+    description: Greasy, oily, sticky, tacky or heavy residue left on skin or hair after use.
+    aliases: [greasy, oily, sticky, tacky, residue, film, heavy, weighs down, slick, buildup, build up]
+  irritation:
+    description: Skin or scalp irritation, burning, itching, rash, breakouts or allergic reaction - or gentleness on sensitive skin.
+    aliases: [irritation, irritated, irritating, burn, burning, itch, itchy, rash, breakout, breakouts, broke out, allergic, reaction, gentle, sting, stings]
+  coverage:
+    description: How well makeup or color covers, its opacity and pigmentation.
+    aliases: [coverage, pigment, pigmented, pigmentation, opaque, sheer, covers]
+  shade_match:
+    description: Whether the color or shade matches expectations, photos or skin tone.
+    aliases: [shade, color, colour, tone, match, matches, too dark, too light, orange]
+  wear_time:
+    description: How long makeup, polish or styling result lasts before fading, chipping or smudging.
+    aliases: [wear, lasts, last all day, chip, chips, chipped, smudge, smudges, fades, staying power, long wearing, long lasting]
+  hold:
+    description: Hair styling hold - how well hair stays in place.
+    aliases: [hold, holds, stiff, crunchy, frizz, flyaways, in place]
+  lather:
+    description: How much the product foams or lathers.
+    aliases: [lather, lathers, foam, foams, suds, bubbles]
+  packaging:
+    description: Packaging quality, container, leaks, damage on arrival, seal.
+    aliases: [packaging, package, container, bottle, jar, leaked, leaking, leak, broken, arrived, seal, sealed, box]
+  dispenser:
+    description: The pump, spray, applicator, brush or dispensing mechanism.
+    aliases: [pump, spray, sprayer, nozzle, applicator, brush, wand, dropper, dispenser, tube, cap, lid]
+  size_quantity:
+    description: Product size, amount or quantity received relative to expectation.
+    aliases: [size, small, tiny, amount, quantity, ounce, oz, ml, travel size, big, large]
+  value_for_money:
+    description: Price and whether the product is worth the money.
+    aliases: [price, value, worth, expensive, cheap, overpriced, money, cost, bargain, deal, affordable]
+  ease_of_application:
+    description: How easy the product is to apply, spread, blend or use.
+    aliases: [easy to use, easy to apply, apply, application, applies, spreads, blend, blends, blendable, goes on]
+  effectiveness:
+    description: Whether the product does what it is supposed to do, as experienced by the reviewer (not a verified health claim).
+    aliases: [works, worked, effective, results, difference, does the job, did nothing, doesn't work, does not work, useless]
+contexts:
+  - unspecified
+  - skin_type=oily
+  - skin_type=dry
+  - skin_type=sensitive
+  - skin_type=combination
+  - skin_type=acne_prone
+  - hair_type=curly
+  - hair_type=fine
+  - hair_type=thick
+  - hair_type=color_treated
+  - climate=humid
+  - climate=dry
+  - climate=cold
+  - climate=hot
+  - time_of_use=day
+  - time_of_use=night
+context_cues:
+  skin_type=oily: [oily skin]
+  skin_type=dry: [dry skin]
+  skin_type=sensitive: [sensitive skin]
+  skin_type=combination: [combination skin, combo skin]
+  skin_type=acne_prone: [acne prone, acne-prone, acne]
+  hair_type=curly: [curly hair, curls, curly]
+  hair_type=fine: [fine hair, thin hair]
+  hair_type=thick: [thick hair]
+  hair_type=color_treated: [color treated, colored hair, dyed hair, bleached]
+  climate=humid: [humid, humidity]
+  climate=dry: [dry climate, arid]
+  climate=cold: [winter, cold weather]
+  climate=hot: [summer, hot weather, heat]
+  time_of_use=day: [during the day, daytime, morning]
+  time_of_use=night: [at night, overnight, night time, nighttime, before bed]

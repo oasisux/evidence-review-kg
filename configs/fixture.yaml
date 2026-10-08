@@ -1,0 +1,54 @@
+project: evireview-kg
+profile: fixture
+seed: 42
+runtime:
+  platform: macos-arm64
+  embedding_device: cpu
+dataset:
+  repo: fixture
+  revision: fixture-v1
+  category: Fixture_Beauty
+  review_file: fixtures/reviews.jsonl
+  meta_file: fixtures/meta.jsonl
+  max_products: 100
+  min_reviews_per_product: 1
+  reviews_per_product: 20
+  dev_products: 2
+extraction:
+  provider: mock
+  model: rules-v1
+  effort: low
+  reviews_per_call: 8
+verification:
+  model: rules-v1
+  effort: low
+  candidates_per_call: 15
+augmentation:
+  threshold: 0.80
+  dev_precision_target: 0.85
+  max_gaps_per_product: 5
+  gap_min_mentions: 2
+  gap_max_claims: 1
+  mention_cos: 0.45
+  gaps_per_call: 3
+answer:
+  model: rules-v1
+  effort: low
+  max_evidence: 8
+judge:
+  model: rules-v1
+  effort: low
+retrieval:
+  encoder: sentence-transformers/all-MiniLM-L6-v2
+  candidate_k: 50
+  rrf_k: 60
+budget:
+  max_cost_usd: 0.0
+  concurrency: 1
+paths:
+  processed: data/fixture/processed
+  graphs: data/fixture/graphs
+  cache: .cache/fixture
+  runs: runs/fixture
+  annotations: data/fixture/annotations
+  reports: data/fixture/reports

@@ -1,0 +1,19 @@
+Metadata-Version: 2.4
+Name: evireview
+Version: 0.3.1
+Requires-Python: >=3.11
+Requires-Dist: anthropic
+Requires-Dist: pydantic
+Requires-Dist: pyarrow
+Requires-Dist: duckdb
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: rank_bm25
+Requires-Dist: sentence-transformers
+Requires-Dist: networkx
+Requires-Dist: streamlit
+Requires-Dist: pyvis
+Requires-Dist: pyyaml
+Requires-Dist: scikit-learn
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"

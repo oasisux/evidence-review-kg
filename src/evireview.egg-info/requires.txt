@@ -1,0 +1,16 @@
+anthropic
+pydantic
+pyarrow
+duckdb
+pandas
+numpy
+rank_bm25
+sentence-transformers
+networkx
+streamlit
+pyvis
+pyyaml
+scikit-learn
+
+[dev]
+pytest

@@ -1,0 +1,2 @@
+[console_scripts]
+evireview = evireview.cli:main
