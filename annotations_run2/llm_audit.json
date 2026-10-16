@@ -1,0 +1,714 @@
+{
+  "model": "claude-fable-5-1",
+  "effort": "medium",
+  "label_source": "llm_auditor",
+  "note": "LLM cross-audit, not human validation",
+  "queries": {
+    "qf3f21244": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q23ddedf7": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qd9c400bc": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qf83c6605": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q458a8835": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qed2621bb": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q06176f30": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q9406ac57": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q97f052a7": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q4f2bb7f8": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q5c82b764": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q23ddedf7 (headband that stays put during workouts)."
+    },
+    "qef160310": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q4f338bd2": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q90113fe9": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q55f77a27": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q6275549e": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q14908118": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products on hydration."
+    },
+    "qf4ce9d71": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products on scent."
+    },
+    "qfa514cf9": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "q6efa0d35": {
+      "decision": "approve",
+      "reason": "Disagreement question referring to listed product."
+    },
+    "q8156198d": {
+      "decision": "approve",
+      "reason": "Main-complaints question referring to listed product."
+    },
+    "q7a6f8b98": {
+      "decision": "approve",
+      "reason": "Clinical study data not answerable from reviews."
+    },
+    "qadc969d7": {
+      "decision": "approve",
+      "reason": "Retail price/certification not answerable from reviews."
+    },
+    "q426a0941": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q429ad000": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q510c8ec4": {
+      "decision": "drop",
+      "reason": "Near-duplicate of qd9c400bc."
+    },
+    "q94f68658": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qf5ee366d": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qcbb475b1": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q9e0692e5": {
+      "decision": "approve",
+      "reason": "Generic but natural positive-condition question."
+    },
+    "qbcf56089": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qf877d3cc": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qa408aeed": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q90113fe9 (leak-proof travel bottles)."
+    },
+    "qce632ef0": {
+      "decision": "drop",
+      "reason": "Vague and near-duplicate of qf0d93294 (value for money)."
+    },
+    "q32784b82": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qcf76e3de": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q35de65c1": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qb15a34d1": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q67807f50": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qd4429879": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q1ec2c741": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q6374da98": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qe1870caf": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qeb53969e": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q087c90a0": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qfe2dd36d": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qd842d944": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qcb867f13": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q229eddd6": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q51ff16ae": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q92e24918": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qec6db4c7": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "q3afc45c9": {
+      "decision": "approve",
+      "reason": "Natural positive-condition question."
+    },
+    "qc814631f": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q4c4484f0": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q4f2bb7f8."
+    },
+    "qea9de68f": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qa3e643f5": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qb7da1543": {
+      "decision": "drop",
+      "reason": "Near-duplicate of qf83c6605 (mascara that lasts without flaking)."
+    },
+    "qece9f999": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q8857e8c7": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q90113fe9."
+    },
+    "qb799358b": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qc4e54095": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q32784b82 (comfortable headband for long wear)."
+    },
+    "q14b690be": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q144c60e9": {
+      "decision": "drop",
+      "reason": "Near-duplicate of qb15a34d1 (tanning lotion gentle on sensitive skin)."
+    },
+    "qa668f873": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q968cb7d9": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q3f764d0a": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q43e9e40c": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qa61ebeff": {
+      "decision": "drop",
+      "reason": "Near-duplicate of q429ad000 (moisturizer that absorbs fast)."
+    },
+    "q6613fa75": {
+      "decision": "drop",
+      "reason": "Near-duplicate of qd842d944 (brush that glides through tangles)."
+    },
+    "q12b2dbda": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qf50f3762": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qb3d0cfd8": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q59692f39": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qf0d93294": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qb032856f": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q54bc955d": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qaa6d86e6": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qc48d8d2d": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qfc07530e": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q99c93e16": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "qe00c7204": {
+      "decision": "approve",
+      "reason": "Fits neg_condition, specific to magnetic lashes."
+    },
+    "qa7ffc4f3": {
+      "decision": "approve",
+      "reason": "Fits neg_condition."
+    },
+    "q8d186873": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qdae332fe": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qb1c4ab82": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qe09bdcca": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qc3d6b6c7": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qbfe8d5ce": {
+      "decision": "drop",
+      "reason": "Compares a soap bar to a facial toner; unnatural cross-category comparison."
+    },
+    "q78b494d5": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "q16323c75": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "q1ecabd03": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qf7458aeb": {
+      "decision": "approve",
+      "reason": "Clear comparison of listed products."
+    },
+    "qa3883513": {
+      "decision": "approve",
+      "reason": "Disagreement question on listed product."
+    },
+    "q4a1ae21d": {
+      "decision": "approve",
+      "reason": "Main-complaints question on listed product."
+    },
+    "q7650401b": {
+      "decision": "approve",
+      "reason": "Disagreement question on listed product."
+    },
+    "q17c47715": {
+      "decision": "approve",
+      "reason": "Disagreement question on listed product."
+    },
+    "q06fab400": {
+      "decision": "approve",
+      "reason": "Main-criticisms question on listed product."
+    },
+    "q2cd764bd": {
+      "decision": "approve",
+      "reason": "Disagreement question on listed product."
+    },
+    "q225c641d": {
+      "decision": "approve",
+      "reason": "Clinical/SPF test data not answerable from reviews."
+    },
+    "qb463cac2": {
+      "decision": "approve",
+      "reason": "Certification/supply chain not answerable from reviews."
+    },
+    "q2315ecd5": {
+      "decision": "approve",
+      "reason": "Current retail pricing not answerable from reviews."
+    },
+    "q0fc6eb09": {
+      "decision": "approve",
+      "reason": "Clinical trial evidence not answerable from reviews."
+    },
+    "q43f9af4e": {
+      "decision": "approve",
+      "reason": "Exact formulation/certification not answerable from reviews."
+    },
+    "qd53d1119": {
+      "decision": "approve",
+      "reason": "ADA approval/lab verification not answerable from reviews."
+    }
+  },
+  "claims": {
+    "eb1612c62d80ee3c60e0": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "a70faea81eba5086c6e8": {
+      "auditor": "supported",
+      "judge": "unsupported"
+    },
+    "e2bad5b5ce41d1034bec": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "60961fb749324165301a": {
+      "auditor": "unsupported",
+      "judge": "unsupported"
+    },
+    "50e3692ffc10f36b727a": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "8e0486982121c0fc5c01": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "b1020b9c10ac1b91858e": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "eb8ba3c3e9b245302910": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "5bf688f2477afba992be": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "1167af563710d3df66c8": {
+      "auditor": "unsupported",
+      "judge": "unsupported"
+    },
+    "106d05c79f25d3e3890f": {
+      "auditor": "unsupported",
+      "judge": "supported"
+    },
+    "df185f17d3021c74d5fc": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "52766d2704232f34be0e": {
+      "auditor": "unsupported",
+      "judge": "supported"
+    },
+    "2a5e09fa1e67f35ed2da": {
+      "auditor": "unsupported",
+      "judge": "supported"
+    },
+    "f6ca32c6e51cee3d740c": {
+      "auditor": "unsupported",
+      "judge": "unsupported"
+    },
+    "3be89f76541b18055419": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "f92c12f6bd9457c59d80": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "e5715d461ec46eff8ce8": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "735455b64c8a99b248f1": {
+      "auditor": "unsupported",
+      "judge": "supported"
+    },
+    "595067802caba6244752": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "ddd4a875eeaa9d11ca92": {
+      "auditor": "unsupported",
+      "judge": "unsupported"
+    },
+    "ce3e6efe60d378b0333e": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "d0240a13818b60af1297": {
+      "auditor": "unsupported",
+      "judge": "unsupported"
+    },
+    "b19a5cab1132f40938b5": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "3241fda2e4362c52c57b": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "bcd548786339158db6ae": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "db0fafb5127cb4f48c08": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "62dc75ec745ce9649db8": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "985e8650f3e7db43ecfc": {
+      "auditor": "supported",
+      "judge": "supported"
+    },
+    "beb2d9f063dc2bf0ddb1": {
+      "auditor": "supported",
+      "judge": "supported"
+    }
+  },
+  "qrels": {
+    "qce632ef0|product:B07QBBJLVJ": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "qed2621bb|product:B08MPK4JRB": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qb7da1543|product:B00YV1MC1E": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qea9de68f|product:B07XTJWHM1": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "q51ff16ae|product:B07QPFYT5M": {
+      "auditor": 0,
+      "judge": 1
+    },
+    "qb799358b|product:B07HKNYDKD": {
+      "auditor": 0,
+      "judge": 1
+    },
+    "qb799358b|product:B077D7NWK4": {
+      "auditor": 1,
+      "judge": 1
+    },
+    "q229eddd6|product:B01M1IEADO": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qed2621bb|product:B0019WZHXI": {
+      "auditor": 1,
+      "judge": 2
+    },
+    "qed2621bb|product:B07D7VDBGC": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "q92e24918|product:B081TXGQHW": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qa408aeed|product:B07M5HB65T": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qce632ef0|product:B01GBZT5GM": {
+      "auditor": 1,
+      "judge": 1
+    },
+    "qce632ef0|product:B0070IAT38": {
+      "auditor": 2,
+      "judge": 1
+    },
+    "qc814631f|product:B071YZ2J6S": {
+      "auditor": 1,
+      "judge": 1
+    },
+    "q4f2bb7f8|product:B00J14AOUW": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "qec6db4c7|product:B00YV1MC1E": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qef160310|product:B01MG5ZN04": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qce632ef0|product:B00DBNDS8Y": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "qf0d93294|product:B00NK65R5O": {
+      "auditor": 1,
+      "judge": 2
+    },
+    "qfc07530e|product:B093K8398V": {
+      "auditor": 0,
+      "judge": 1
+    },
+    "q51ff16ae|product:B01CDHJQFC": {
+      "auditor": 0,
+      "judge": 1
+    },
+    "qed2621bb|product:B07G5R9BKW": {
+      "auditor": 1,
+      "judge": 1
+    },
+    "q6275549e|product:B01GBZT5GM": {
+      "auditor": 0,
+      "judge": 1
+    },
+    "q426a0941|product:B00J14AOUW": {
+      "auditor": 1,
+      "judge": 2
+    },
+    "qe00c7204|product:B089F4YSHW": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "q97f052a7|product:B01GBZT5GM": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "qd9c400bc|product:B087J1T1H8": {
+      "auditor": 2,
+      "judge": 2
+    },
+    "q3f764d0a|product:B093K8398V": {
+      "auditor": 0,
+      "judge": 0
+    },
+    "qb799358b|product:B00NK65R5O": {
+      "auditor": 1,
+      "judge": 2
+    }
+  },
+  "answers": {
+    "qadc969d7|A-context": {
+      "auditor": "ok",
+      "reason": "Quotes support the price-friendliness claims; answer correctly notes insufficient evidence for retailer prices and USDA certification."
+    },
+    "qa3883513|B2": {
+      "auditor": "ok",
+      "reason": "Coverage praise and the shade-match disagreement are each backed by the cited quotes; opinions framed as reviewer views."
+    },
+    "qfa514cf9|A-verify": {
+      "auditor": "ok",
+      "reason": "Cited quotes support ease-of-application and the single 'wears quickly' remark; comparison is hedged as insufficient evidence, though 'a couple reviewers' for a single E4 quote is slightly loose."
+    },
+    "q78b494d5|A-context": {
+      "auditor": "ok",
+      "reason": "Positive and negative quotes for each mascara match the sentences citing them; conclusion of mixed opinions is appropriate."
+    },
+    "q16323c75|A-budget": {
+      "auditor": "ok",
+      "reason": "Dermacol and Fashion Fair coverage quotes support their sentences, including tattoo mentions; answer hedges the lack of direct comparison."
+    },
+    "qbfe8d5ce|B2": {
+      "auditor": "ok",
+      "reason": "E1/E2 support mild on reactive skin, E5 supports zero irritation, E8 supports the allergic-reaction report; framed as reviewer opinions."
+    },
+    "q14908118|A-budget": {
+      "auditor": "ok",
+      "reason": "Hydration quotes for both products match the cited sentences, the drying dissent is cited, and the longer-lasting comparison is marked as insufficient evidence."
+    },
+    "qf7458aeb|B2": {
+      "auditor": "ok",
+      "reason": "Smooth texture, moisturizing, and authenticity for raw shea are supported; Vivo Per Lei scent/best-body-butter claims supported; thickness comparison correctly flagged as unsupported."
+    },
+    "q7a6f8b98|A-context": {
+      "auditor": "ok",
+      "reason": "Correctly states no clinical evidence; positive and negative anecdotal quotes match the sentences citing them."
+    },
+    "q4a1ae21d|B2": {
+      "auditor": "not_ok",
+      "reason": "The sentence crediting 'leakproof design, durability, and ease of filling' cites E2/E3/E5/E8, which are only generic praise and do not mention leakproofness; the leakproof support (E4) is not cited for that claim."
+    }
+  }
+}

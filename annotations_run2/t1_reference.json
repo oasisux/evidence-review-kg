@@ -1,0 +1,797 @@
+{
+  "reviews": {
+    "dev": [
+      "review:e0aa0cca3dd05af868c87e3a31a5797c",
+      "review:9a38055a65bb433072a91d78ec93e334",
+      "review:65611bbddb3d5cbaf4b851dc298da422",
+      "review:8a9995408cbd3e90813354e97a49d1e2",
+      "review:889be3168789025300b3726604a35619",
+      "review:1b47af74e6030beabf4985cdfc791e86",
+      "review:ed30eddd0d691c6b16bc0144276ea75e",
+      "review:d2ed3dc0cdc43df428f0386be4deff50",
+      "review:6ee2b85927f065336a872d99b5f3123f",
+      "review:1c03c8a5aa11224f2da1e501e5d56128"
+    ],
+    "test": [
+      "review:77e9b02cdf4e9f28ec0e5515ffea06bd",
+      "review:ef5dff27c0cedefa0403d7c28f196122",
+      "review:33514410d0a21b239a6325e848473fc8",
+      "review:a2c9dad3dc1474cfcdc9e6316ee4fe3f",
+      "review:570731afd33876214c366378df62b30a",
+      "review:0812ccbb9c21327b446aa50abc418502",
+      "review:7bb710fd5545cfc224adce96d18d608e",
+      "review:a73e71be9e3f327da78c8071d907ce72",
+      "review:a82fdb4556ae1b557bce15d4b0920908",
+      "review:67f8da3a3706d88bffcff58e76d71352",
+      "review:47b155714ebc6598c9020f104727aad4",
+      "review:c08fde4d6c44d91248cf595e573d8f51",
+      "review:d574fdcb39840d480dd88b5d911d6ec5",
+      "review:0cd0a7cbe48063ad4382768c9236c952",
+      "review:1ab9a25fb8cb8805a7b981d26f8fed05",
+      "review:9ec7cb9ae30a5fd67a6d0cbd0c2ee3f3",
+      "review:915c84145af5a3e0f3589421507cc279",
+      "review:f80d8c63930292395fc9d0e4beb9fdb4",
+      "review:50a23e1cebd88494c1d8f8062427350f",
+      "review:007cd2089efb45e2e14c55b8855f5e5c",
+      "review:ab5c4f5d50af17adba6443e02fceb53f",
+      "review:46cce7e02cf8e4568d148600360ef870",
+      "review:0375addb6275a56a4c882a29edc7ede1",
+      "review:89ee9742c04c6cb372f33c181401d909",
+      "review:9b8d2349476e6fc411dc95538feb305c",
+      "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "review:7e63418b7cf74975449d4ed87699a9c3",
+      "review:10e5e4bafc12c163fb11c9cf224014a7",
+      "review:0a8cb9f6da7d774777704e2e2c2614de",
+      "review:c8d449879bffe643829d7197112df698"
+    ]
+  },
+  "claims": [
+    {
+      "review_id": "review:9a38055a65bb433072a91d78ec93e334",
+      "aspect": "effectiveness",
+      "aspect_term": "Work great",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Work great!"
+    },
+    {
+      "review_id": "review:65611bbddb3d5cbaf4b851dc298da422",
+      "aspect": "ease_of_application",
+      "aspect_term": "Easy to use",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Easy to use."
+    },
+    {
+      "review_id": "review:8a9995408cbd3e90813354e97a49d1e2",
+      "aspect": "effectiveness",
+      "aspect_term": "clean shave",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Great way to get a clean shave"
+    },
+    {
+      "review_id": "review:8a9995408cbd3e90813354e97a49d1e2",
+      "aspect": "value_for_money",
+      "aspect_term": "super cheap",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "the razor blade are super cheap"
+    },
+    {
+      "review_id": "review:889be3168789025300b3726604a35619",
+      "aspect": "effectiveness",
+      "aspect_term": "results",
+      "polarity": "positive",
+      "context": "time_of_use=night",
+      "modality": "asserted",
+      "quote": "I am so happy with the results of this night time miracle cream"
+    },
+    {
+      "review_id": "review:889be3168789025300b3726604a35619",
+      "aspect": "effectiveness",
+      "aspect_term": "turkey neck waddle",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "My &#34;turkey neck waddle&#34; is no longer the first thing I see in the mirror."
+    },
+    {
+      "review_id": "review:1b47af74e6030beabf4985cdfc791e86",
+      "aspect": "effectiveness",
+      "aspect_term": "does what it claims",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This mascara actually does what it claims"
+    },
+    {
+      "review_id": "review:1b47af74e6030beabf4985cdfc791e86",
+      "aspect": "effectiveness",
+      "aspect_term": "Long lashes",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Long lashes without the hassle of extensions"
+    },
+    {
+      "review_id": "review:ed30eddd0d691c6b16bc0144276ea75e",
+      "aspect": "effectiveness",
+      "aspect_term": "fits the bill",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "this one definitely fits the bill"
+    },
+    {
+      "review_id": "review:ed30eddd0d691c6b16bc0144276ea75e",
+      "aspect": "packaging",
+      "aspect_term": "travel case",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Very well made"
+    },
+    {
+      "review_id": "review:d2ed3dc0cdc43df428f0386be4deff50",
+      "aspect": "effectiveness",
+      "aspect_term": "great machine",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This is a great machine!"
+    },
+    {
+      "review_id": "review:6ee2b85927f065336a872d99b5f3123f",
+      "aspect": "hold",
+      "aspect_term": "no slipping off",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "how my hair back during my workout. no slipping off"
+    },
+    {
+      "review_id": "review:1c03c8a5aa11224f2da1e501e5d56128",
+      "aspect": "effectiveness",
+      "aspect_term": "Doesn’t really do anything",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Doesn’t really do anything"
+    },
+    {
+      "review_id": "review:1c03c8a5aa11224f2da1e501e5d56128",
+      "aspect": "irritation",
+      "aspect_term": "damaging your skin and leaving marks",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "without damaging your skin and leaving marks everywhere"
+    },
+    {
+      "review_id": "review:77e9b02cdf4e9f28ec0e5515ffea06bd",
+      "aspect": "effectiveness",
+      "aspect_term": "works beautifully",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "It works beautifully for my skin, including even tone, smooth and slight glow."
+    },
+    {
+      "review_id": "review:ef5dff27c0cedefa0403d7c28f196122",
+      "aspect": "effectiveness",
+      "aspect_term": "does wonders",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "it does wonders for my skin"
+    },
+    {
+      "review_id": "review:33514410d0a21b239a6325e848473fc8",
+      "aspect": "size_quantity",
+      "aspect_term": "Fits great",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Fits great, even on my small head."
+    },
+    {
+      "review_id": "review:a2c9dad3dc1474cfcdc9e6316ee4fe3f",
+      "aspect": "scent",
+      "aspect_term": "scents",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "i did enjoy the scents"
+    },
+    {
+      "review_id": "review:a2c9dad3dc1474cfcdc9e6316ee4fe3f",
+      "aspect": "irritation",
+      "aspect_term": "irritates my skin",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "i cant use this product because it irritates my skin"
+    },
+    {
+      "review_id": "review:570731afd33876214c366378df62b30a",
+      "aspect": "effectiveness",
+      "aspect_term": "everything you need in one spin",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Such a nice piece to have sitting on vanity to have everything you need in one spin"
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "texture",
+      "aspect_term": "dry and clumpy",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Eyeliner is dry and clumpy"
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "texture",
+      "aspect_term": "dried out and clumpy",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The eyeliner is dried out and clumpy."
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "ease_of_application",
+      "aspect_term": "hard to use",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "they are VERY hard to use if you can't get a nice line of the eye liner applied"
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "effectiveness",
+      "aspect_term": "impossible task",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "that seems to be an impossible task"
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "effectiveness",
+      "aspect_term": "better results",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "hypothetical",
+      "quote": "I think you could be using a CRAYON and get better results."
+    },
+    {
+      "review_id": "review:0812ccbb9c21327b446aa50abc418502",
+      "aspect": "effectiveness",
+      "aspect_term": "useless",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Without the eyeliner, the eyelashes are useless unless you glue them on."
+    },
+    {
+      "review_id": "review:7bb710fd5545cfc224adce96d18d608e",
+      "aspect": "moisturization",
+      "aspect_term": "moisturized",
+      "polarity": "positive",
+      "context": "time_of_use=night",
+      "modality": "asserted",
+      "quote": "By the time I wake up my face is moisturized"
+    },
+    {
+      "review_id": "review:7bb710fd5545cfc224adce96d18d608e",
+      "aspect": "effectiveness",
+      "aspect_term": "pimples gone",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "pimples gone"
+    },
+    {
+      "review_id": "review:7bb710fd5545cfc224adce96d18d608e",
+      "aspect": "effectiveness",
+      "aspect_term": "Softer lips",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Softer lips with the lip mask"
+    },
+    {
+      "review_id": "review:7bb710fd5545cfc224adce96d18d608e",
+      "aspect": "size_quantity",
+      "aspect_term": "A lot of product",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "A lot of product"
+    },
+    {
+      "review_id": "review:7bb710fd5545cfc224adce96d18d608e",
+      "aspect": "value_for_money",
+      "aspect_term": "well worth it",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "well worth it"
+    },
+    {
+      "review_id": "review:a73e71be9e3f327da78c8071d907ce72",
+      "aspect": "ease_of_application",
+      "aspect_term": "goes on smooth",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "goes on smooth"
+    },
+    {
+      "review_id": "review:a73e71be9e3f327da78c8071d907ce72",
+      "aspect": "moisturization",
+      "aspect_term": "keeps my lips moist",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "keeps my lips moist"
+    },
+    {
+      "review_id": "review:a73e71be9e3f327da78c8071d907ce72",
+      "aspect": "shade_match",
+      "aspect_term": "pulls the pigment from natural coloring",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "pulls the pigment from natural coloring"
+    },
+    {
+      "review_id": "review:a73e71be9e3f327da78c8071d907ce72",
+      "aspect": "wear_time",
+      "aspect_term": "doesn't bleed and lasts",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "doesn't bleed and lasts"
+    },
+    {
+      "review_id": "review:a82fdb4556ae1b557bce15d4b0920908",
+      "aspect": "effectiveness",
+      "aspect_term": "holes near the elastic band",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This product came with holes near the elastic band and the holes have worsened after washing."
+    },
+    {
+      "review_id": "review:a82fdb4556ae1b557bce15d4b0920908",
+      "aspect": "packaging",
+      "aspect_term": "came with holes",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This product came with holes near the elastic band"
+    },
+    {
+      "review_id": "review:67f8da3a3706d88bffcff58e76d71352",
+      "aspect": "effectiveness",
+      "aspect_term": "Works great",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Works great"
+    },
+    {
+      "review_id": "review:67f8da3a3706d88bffcff58e76d71352",
+      "aspect": "size_quantity",
+      "aspect_term": "to large",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "other_product",
+      "quote": "when my WEN is to large"
+    },
+    {
+      "review_id": "review:c08fde4d6c44d91248cf595e573d8f51",
+      "aspect": "dispenser",
+      "aspect_term": "brush heads",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The brush heads are so nice"
+    },
+    {
+      "review_id": "review:c08fde4d6c44d91248cf595e573d8f51",
+      "aspect": "packaging",
+      "aspect_term": "cap",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "I can't get the cap to stay on the head"
+    },
+    {
+      "review_id": "review:d574fdcb39840d480dd88b5d911d6ec5",
+      "aspect": "effectiveness",
+      "aspect_term": "work great",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Well made and work great!"
+    },
+    {
+      "review_id": "review:0cd0a7cbe48063ad4382768c9236c952",
+      "aspect": "irritation",
+      "aspect_term": "does not bother my eyes",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The eyeliner is ok and does not bother my eyes"
+    },
+    {
+      "review_id": "review:0cd0a7cbe48063ad4382768c9236c952",
+      "aspect": "wear_time",
+      "aspect_term": "keep the magnetic lash on",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "it does not keep the magnetic lash on your eye for more than 5 hours"
+    },
+    {
+      "review_id": "review:0cd0a7cbe48063ad4382768c9236c952",
+      "aspect": "hold",
+      "aspect_term": "popped up and will not reattach",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "the inner corners have popped up and will not reattach because the magnet has pulled the liner off my eye"
+    },
+    {
+      "review_id": "review:0cd0a7cbe48063ad4382768c9236c952",
+      "aspect": "effectiveness",
+      "aspect_term": "not the worst and not the best",
+      "polarity": "mixed",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This one is not the worst and not the best....just ok."
+    },
+    {
+      "review_id": "review:1ab9a25fb8cb8805a7b981d26f8fed05",
+      "aspect": "size_quantity",
+      "aspect_term": "great size",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "they are a great size for storing my shampoo, conditioner, soap, and all the essentials for my travels"
+    },
+    {
+      "review_id": "review:1ab9a25fb8cb8805a7b981d26f8fed05",
+      "aspect": "size_quantity",
+      "aspect_term": "hold a lot of product",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "They hold a lot of product"
+    },
+    {
+      "review_id": "review:1ab9a25fb8cb8805a7b981d26f8fed05",
+      "aspect": "packaging",
+      "aspect_term": "without leaking",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "without leaking"
+    },
+    {
+      "review_id": "review:915c84145af5a3e0f3589421507cc279",
+      "aspect": "effectiveness",
+      "aspect_term": "Bristles keep shedding",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Bristles keep shedding"
+    },
+    {
+      "review_id": "review:915c84145af5a3e0f3589421507cc279",
+      "aspect": "effectiveness",
+      "aspect_term": "Product",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Product not that great"
+    },
+    {
+      "review_id": "review:f80d8c63930292395fc9d0e4beb9fdb4",
+      "aspect": "size_quantity",
+      "aspect_term": "too big",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The flower is too big"
+    },
+    {
+      "review_id": "review:f80d8c63930292395fc9d0e4beb9fdb4",
+      "aspect": "value_for_money",
+      "aspect_term": "looks cheap",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "looks cheap"
+    },
+    {
+      "review_id": "review:50a23e1cebd88494c1d8f8062427350f",
+      "aspect": "irritation",
+      "aspect_term": "burns",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "I got 3rd degree burns"
+    },
+    {
+      "review_id": "review:50a23e1cebd88494c1d8f8062427350f",
+      "aspect": "irritation",
+      "aspect_term": "redness",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "I still have redness that won’t go away"
+    },
+    {
+      "review_id": "review:50a23e1cebd88494c1d8f8062427350f",
+      "aspect": "effectiveness",
+      "aspect_term": "over heats",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "These machine over heats no matter what"
+    },
+    {
+      "review_id": "review:50a23e1cebd88494c1d8f8062427350f",
+      "aspect": "effectiveness",
+      "aspect_term": "defective",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "the machine is defective"
+    },
+    {
+      "review_id": "review:007cd2089efb45e2e14c55b8855f5e5c",
+      "aspect": "wear_time",
+      "aspect_term": "do not stay on",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "they do not stay on my eyes even with 5 layers of thick eyeliner"
+    },
+    {
+      "review_id": "review:46cce7e02cf8e4568d148600360ef870",
+      "aspect": "size_quantity",
+      "aspect_term": "wider",
+      "polarity": "neutral",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "It’s wider than I expected"
+    },
+    {
+      "review_id": "review:46cce7e02cf8e4568d148600360ef870",
+      "aspect": "effectiveness",
+      "aspect_term": "headband",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The headband is pretty good!"
+    },
+    {
+      "review_id": "review:0375addb6275a56a4c882a29edc7ede1",
+      "aspect": "packaging",
+      "aspect_term": "Magnets",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Magnets are bulky"
+    },
+    {
+      "review_id": "review:0375addb6275a56a4c882a29edc7ede1",
+      "aspect": "dispenser",
+      "aspect_term": "eyeliner brushes",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "eyeliner brushes are stiff"
+    },
+    {
+      "review_id": "review:0375addb6275a56a4c882a29edc7ede1",
+      "aspect": "ease_of_application",
+      "aspect_term": "hard to apply",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "making it hard to apply product"
+    },
+    {
+      "review_id": "review:0375addb6275a56a4c882a29edc7ede1",
+      "aspect": "scent",
+      "aspect_term": "smell",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "eyeliner liquid has unpleasant magnetic smell"
+    },
+    {
+      "review_id": "review:89ee9742c04c6cb372f33c181401d909",
+      "aspect": "texture",
+      "aspect_term": "silicone",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "The silicone makes it easier to handle in the shower"
+    },
+    {
+      "review_id": "review:89ee9742c04c6cb372f33c181401d909",
+      "aspect": "size_quantity",
+      "aspect_term": "Fits well",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Fits well in my toiletry bag"
+    },
+    {
+      "review_id": "review:89ee9742c04c6cb372f33c181401d909",
+      "aspect": "ease_of_application",
+      "aspect_term": "Easy to fill up",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Easy to fill up"
+    },
+    {
+      "review_id": "review:9b8d2349476e6fc411dc95538feb305c",
+      "aspect": "effectiveness",
+      "aspect_term": "heal faster",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Bruises seem to heal faster when using Weleda Arnica Ointment."
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "effectiveness",
+      "aspect_term": "high quality",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "This nail polish is definitely high quality"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "texture",
+      "aspect_term": "textures",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "comes in a wide variety of colors and textures"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "coverage",
+      "aspect_term": "cover the nail bed",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Most of them only need one coat to cover the nail bed"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "texture",
+      "aspect_term": "gloppy",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "the nail polish hasn't gotten gloppy"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "wear_time",
+      "aspect_term": "chipped or cracked",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "so far hasn't chipped or cracked"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "texture",
+      "aspect_term": "smooth matte finish",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "It leaves a very pleasant smooth matte finish"
+    },
+    {
+      "review_id": "review:c843ee803e1d81d3f67757ac00fa0a99",
+      "aspect": "value_for_money",
+      "aspect_term": "worth the money",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "more than worth the money"
+    },
+    {
+      "review_id": "review:7e63418b7cf74975449d4ed87699a9c3",
+      "aspect": "effectiveness",
+      "aspect_term": "BEST brush",
+      "polarity": "positive",
+      "context": "hair_type=curly",
+      "modality": "asserted",
+      "quote": "I have found it to be the BEST brush on the market!"
+    },
+    {
+      "review_id": "review:7e63418b7cf74975449d4ed87699a9c3",
+      "aspect": "hold",
+      "aspect_term": "hold the curl",
+      "polarity": "positive",
+      "context": "hair_type=curly",
+      "modality": "asserted",
+      "quote": "It helps hold the curl"
+    },
+    {
+      "review_id": "review:7e63418b7cf74975449d4ed87699a9c3",
+      "aspect": "effectiveness",
+      "aspect_term": "detangles and removes majority of frizz",
+      "polarity": "positive",
+      "context": "hair_type=curly",
+      "modality": "asserted",
+      "quote": "detangles and removes majority of frizz when used on wet/conditioned hair"
+    },
+    {
+      "review_id": "review:7e63418b7cf74975449d4ed87699a9c3",
+      "aspect": "effectiveness",
+      "aspect_term": "detangling brush",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "as a detangling brush and she absolutely loves it and will use nothing else!"
+    },
+    {
+      "review_id": "review:10e5e4bafc12c163fb11c9cf224014a7",
+      "aspect": "ease_of_application",
+      "aspect_term": "shut it off",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Can't shut it off"
+    },
+    {
+      "review_id": "review:c8d449879bffe643829d7197112df698",
+      "aspect": "packaging",
+      "aspect_term": "leak",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "do not leak"
+    },
+    {
+      "review_id": "review:c8d449879bffe643829d7197112df698",
+      "aspect": "ease_of_application",
+      "aspect_term": "hard to fill",
+      "polarity": "negative",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "hard to fill with conditioner"
+    },
+    {
+      "review_id": "review:c8d449879bffe643829d7197112df698",
+      "aspect": "ease_of_application",
+      "aspect_term": "no problem",
+      "polarity": "positive",
+      "context": "unspecified",
+      "modality": "asserted",
+      "quote": "Shampoo was no problem."
+    }
+  ]
+}
