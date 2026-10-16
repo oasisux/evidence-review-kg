@@ -33,6 +33,10 @@ curl -LO https://huggingface.co/datasets/McAuley-Lab/Amazon-Reviews-2023/resolve
 # Full research run (100 products): ingest -> build -> judge(dev) -> augment -> judge -> evaluate
 .venv/bin/evireview all --config configs/research.yaml
 
+# Optional, between ingest and build: propose aspect-dictionary changes from dev reviews only
+.venv/bin/evireview ingest --config configs/research.yaml
+.venv/bin/evireview induce-aspects --config configs/research.yaml   # -> reports/aspect_induction.json
+
 # Dashboard (http://127.0.0.1:8501)
 .venv/bin/evireview app --config configs/research.yaml
 ```
@@ -43,8 +47,9 @@ Every LLM response is cached in `.cache/llm/`. Re-running a stage reuses the cac
 
 | Stage | What it does |
 |---|---|
-| ingest | Streams the raw JSONL and keeps products with ≥15 reviews and metadata. Selects 100 products and ≤20 reviews each by `SHA256(seed‖id)`. Splits products 30 dev / 70 test. |
-| build (G1) | Sonnet 5 extracts aspect-opinion claims with verbatim quotes. Hard gates check the schema, that the exact span exists, and the modality. The semantic verifier (separate call) labels each claim entail / neutral / contradict. |
+| ingest | Streams the raw JSONL and keeps products with ≥30 reviews and metadata. An LLM title classifier assigns each product a family; products are taken in `SHA256(seed‖id)` order until each family quota is full (50 skin moisturizers + 50 hair-care products), with ≤50 reviews each. Splits products 15 dev / 35 test per family. Stores the seller listing (title, features, description) as `meta_doc`. |
+| induce-aspects (optional) | EDC on dev reviews only: open aspect extraction → one-sentence definitions → map onto the dictionary or cluster into proposed new aspects. Writes a proposal; `aspects_v2.yaml` is edited by hand. |
+| build (G1) | Seller layer: open extraction of seller statements from `meta_doc`, EDC canonicalization, `SELLER_STATES` / `SELLER_TARGETS` edges (source `seller`, never mixed into review opinions). Reviews: Sonnet 5 extracts aspect-opinion claims with verbatim quotes, using the closed aspect set of the product's family plus `other` for opinions no aspect fits. Hard gates check the schema, family, that the exact span exists, and the modality. The semantic verifier (separate call) labels each claim entail / neutral / contradict. |
 | judge dev | Opus 5 labels 150 dev candidates. τ = maximum coverage subject to dev precision ≥ 0.85. |
 | augment | **C1** finds (product, aspect) gaps that reviews mention but no claim covers, and re-extracts with a schema restricted to that aspect. **C2** applies the same two-stage gate. **C3** builds per-context opinion-distribution nodes (positive/negative counts, contested flag). It also builds the ablations A-budget, A-verify and A-context. |
 | judge | Opus 5 (raw text only, blind to systems) drafts 40 queries, grades product relevance (qrels), labels claim support, writes T1 reference claims, and grades answers. |
@@ -57,6 +62,7 @@ Every LLM response is cached in `.cache/llm/`. Re-running a stage reuses the cac
 ## Outputs
 
 - `data/graphs/<variant>/{nodes,edges,claims,evidence,aggregates}.parquet`, plus `snapshot.json`
+- `data/graphs/seller_attributes.parquet` and `seller_schema.json` (induced seller attribute schema)
 - `reports/evaluation.json`, `construction_quality.csv`, `augmentation_audit.csv`, `retrieval_qa_metrics.csv`, `ablations.csv`, `cost_latency.csv`, `error_cases.csv` (UTF-8 with BOM; open in Excel with ID columns as text)
 - `annotations/` holds judge labels and `llm_audit.json`. These files are never read by ingest, extraction or indexing (test L01).
 

@@ -22,9 +22,13 @@ VARIANT_LABEL = {"g1": "G1 (direct LLM extraction)", "ceva": "G2 CEVA (proposed)
 
 
 def load_data(cfg: Config) -> tuple[pd.DataFrame, pd.DataFrame, dict]:
+    """Reviews carry their product's family (None for products outside the sampled families)."""
     d = cfg.p("processed")
     reviews = pd.read_parquet(d / "reviews.parquet")
     products = pd.read_parquet(d / "products.parquet")
+    if "family" not in products:  # data ingested before v2
+        products["family"] = None
+    reviews["family"] = reviews.product_id.map(products.set_index("product_id").family)
     split = {s["product_id"]: s["partition"] for s in read_json(d / "split_manifest.json")["split"]}
     return reviews, products, split
 
@@ -39,8 +43,10 @@ def _version(cfg: Config) -> str:
 
 # ------------------------------------------------------------------ stage: build (G1 + verification)
 def run_build(cfg: Config) -> pd.DataFrame:
-    reviews, _, split = load_data(cfg)
+    from .seller import build_seller_attributes
+    reviews, products, split = load_data(cfg)
     llm = _llm(cfg)
+    build_seller_attributes(cfg, llm, products)
     raw = rule_candidates(reviews) if llm is None else llm_candidates(llm, cfg, reviews, stage="extract")
     cands = apply_hard_gates(raw, reviews, "direct", "g1", _version(cfg))
     cands = verify(llm, cfg, cands, reviews, stage="verify_g1")
@@ -56,15 +62,16 @@ def sentence_table(reviews: pd.DataFrame, cos: float) -> pd.DataFrame:
     from .common import aspects_mentioned
     rows = []
     for r in reviews.itertuples():
+        fam = getattr(r, "family", None)
         for s, e, sent in split_sentences(r.doc):
-            rows.append(dict(review_id=r.review_id, product_id=r.product_id, start=s, end=e, text=sent,
-                             alias_aspects=aspects_mentioned(sent)))
+            rows.append(dict(review_id=r.review_id, product_id=r.product_id, family=fam, start=s, end=e, text=sent,
+                             alias_aspects=aspects_mentioned(sent, fam)))
     st = pd.DataFrame(rows)
     emb = embed.encode(st.text.tolist())
     sims = emb @ embed.aspect_matrix().T
     names = aspect_names()
-    st["aspects"] = [sorted(set(a) | {names[j] for j in np.where(sims[i] >= cos)[0]})
-                     for i, a in enumerate(st.alias_aspects)]
+    st["aspects"] = [sorted((set(a) | {names[j] for j in np.where(sims[i] >= cos)[0]}) & set(aspect_names(f)))
+                     for i, (a, f) in enumerate(zip(st.alias_aspects, st.family))]
     return st
 
 
@@ -80,15 +87,16 @@ def find_gaps(cfg: Config, st: pd.DataFrame, accepted: pd.DataFrame) -> list[dic
     have = accepted.groupby(["product_id", "aspect"]).size().to_dict()
     gaps = []
     for pid, g in st.groupby("product_id"):
+        fam = g.family.iloc[0] if "family" in g else None
         cand = []
-        for a in aspect_names():
+        for a in aspect_names(fam):
             mention = g[g.aspects.apply(lambda xs: a in xs)]
             unlinked = mention[~mention.linked]
             if len(mention) >= aug["gap_min_mentions"] and have.get((pid, a), 0) <= aug["gap_max_claims"] \
                     and len(unlinked):
                 cand.append((len(mention), a, unlinked.review_id.unique().tolist()[:8]))
         for n, a, rids in sorted(cand, reverse=True)[: aug["max_gaps_per_product"]]:
-            gaps.append({"product_id": pid, "aspect": a, "mentions": n, "review_ids": rids})
+            gaps.append({"product_id": pid, "family": fam, "aspect": a, "mentions": n, "review_ids": rids})
     return gaps
 
 
@@ -101,7 +109,8 @@ def random_groups(cfg: Config, st: pd.DataFrame, accepted: pd.DataFrame, gaps: l
     for gap in gaps:
         cands = list(pool.get(gap["product_id"], []))
         rng.shuffle(cands)
-        groups.append({"product_id": gap["product_id"], "aspect": None, "review_ids": cands[: len(gap["review_ids"])]})
+        groups.append({"product_id": gap["product_id"], "family": gap.get("family"), "aspect": None,
+                       "review_ids": cands[: len(gap["review_ids"])]})
     return groups
 
 
@@ -113,6 +122,9 @@ def tuned_threshold(cfg: Config, g1: pd.DataFrame) -> dict:
     if not labels:
         return default
     dev = g1[g1.cand_id.isin(labels) & (g1.verify_label == "entail")].copy()
+    if g1.cand_id.isin(labels).sum() == 0:
+        raise SystemExit("judge_dev_candidates.json labels none of the current G1 candidates: it belongs to another "
+                         "sample or build. Move the annotations away and run `evireview judge --task dev`.")
     dev["y"] = dev.cand_id.map(lambda c: labels[c] == "supported")
     target = cfg["augmentation"]["dev_precision_target"]
     best = None
@@ -143,9 +155,11 @@ def run_augment(cfg: Config) -> dict:
     st = sentence_table(reviews, cfg["augmentation"]["mention_cos"])
     gaps = find_gaps(cfg, st, base)
     rv = reviews.set_index("review_id")
-    gap_groups = [{"aspect": g["aspect"], "reviews": rv.loc[g["review_ids"]].reset_index()} for g in gaps]
+    gap_groups = [{"aspect": g["aspect"], "family": g["family"], "reviews": rv.loc[g["review_ids"]].reset_index()}
+                  for g in gaps]
     rnd = random_groups(cfg, st, base, gaps)
-    rnd_groups = [{"aspect": None, "reviews": rv.loc[g["review_ids"]].reset_index()} for g in rnd if g["review_ids"]]
+    rnd_groups = [{"aspect": None, "family": g["family"], "reviews": rv.loc[g["review_ids"]].reset_index()}
+                  for g in rnd if g["review_ids"]]
 
     base_spans: dict[tuple, list] = {}
     for r in base.itertuples():
@@ -283,6 +297,19 @@ def write_graph(cfg: Config, name: str, claims: pd.DataFrame, reviews: pd.DataFr
         if r.user_key:
             node(r.user_key, "User", r.user_key[-6:])
             edge(r.user_key, "WROTE", r.review_id, [r.review_id])
+    seller_path = cfg.p("graphs") / "seller_attributes.parquet"
+    seller = pd.read_parquet(seller_path) if seller_path.exists() else pd.DataFrame()
+    seller = seller[seller.hard_pass] if len(seller) else seller
+    asin = products.set_index("product_id").parent_asin
+    for x in seller.itertuples():  # seller claims: separate source, never merged into review opinions
+        prov = [f"meta:{asin[x.product_id]}:{int(x.start)}-{int(x.end)}"]
+        sid = "sattr:" + sha(canonical_json([x.attribute, x.value]))[:16]
+        node(sid, "SellerAttribute", f"{x.attribute}={x.value}", attribute=x.attribute, value=x.value,
+             source_kind="seller", epistemic="seller_claim")
+        edge(x.product_id, "SELLER_STATES", sid, prov)
+        if x.context != "unspecified":
+            node(f"context:{x.context}", "Context", x.context)
+            edge(x.product_id, "SELLER_TARGETS", f"context:{x.context}", prov)
     for a in aspect_names():
         node(aspect_id(a), "Aspect", a)
     for c in claims.itertuples():
@@ -325,6 +352,8 @@ def write_graph(cfg: Config, name: str, claims: pd.DataFrame, reviews: pd.DataFr
              "n_product_aspect_pairs": int(claims.groupby(["product_id", "aspect"]).ngroups),
              "n_tuples": int(claims.groupby(["product_id", "aspect", "polarity", "context"]).ngroups),
              "n_recovered": int((claims.derivation == "recovered").sum()),
+             "n_seller_statements": int(len(seller)),
+             "n_seller_context_targets": int((seller.context != "unspecified").sum()) if len(seller) else 0,
              "n_contested": int(aggs[aggs.context == "*"].contested.sum())}
     write_json(out / "snapshot.json", stats)
     return stats

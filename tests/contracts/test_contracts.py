@@ -128,3 +128,77 @@ def test_ui04_not_evaluated_without_labels(built):
     ev = json.loads((built.p("reports") / "evaluation.json").read_text())
     st = {r["metric"]: r for r in ev["retrieval"]}
     assert st["ndcg@10"]["evaluation_status"] == "NOT_EVALUATED" and st["ndcg@10"]["value"] is None
+
+
+# ---------------------------------------------------------------- v2: families, seller layer, context scoring
+def test_f01_family_from_title():
+    from evireview.common import family_from_title
+    assert family_from_title("Demo Curl Shampoo") == "hair_care"
+    assert family_from_title("Argan Hair Serum for Frizz") == "hair_care"  # earliest cue wins over skin "serum"
+    assert family_from_title("Demo Body Lotion") == "skin_moisturizer"
+    assert family_from_title("Demo Matte Lipstick") is None
+
+
+def test_f02_family_aspect_sets():
+    from evireview.common import aspect_names
+    hair, skin = set(aspect_names("hair_care")), set(aspect_names("skin_moisturizer"))
+    assert "lather" in hair and "lather" not in skin
+    assert "absorption" in skin and "absorption" not in hair
+    assert {"scent", "packaging", "residue"} <= hair & skin
+    assert set(aspect_names()) == set(aspect_names(None)) >= hair | skin
+
+
+def test_f03_family_quota_sampling(tmp_path):
+    import yaml
+    from evireview.ingest import run_ingest
+    raw = yaml.safe_load((ROOT / "configs/fixture.yaml").read_text())
+    raw["dataset"]["family_quotas"] = {"skin_moisturizer": 2, "hair_care": 1}
+    raw["dataset"]["dev_products"] = 3
+    raw["paths"] = {k: str(tmp_path / k) for k in raw["paths"]}
+    path = tmp_path / "cfg.yaml"
+    path.write_text(yaml.safe_dump(raw))
+    cfg = load_config(path)
+    man = run_ingest(cfg)
+    p = pd.read_parquet(cfg.p("processed") / "products.parquet")
+    assert sorted(p.family) == ["hair_care", "skin_moisturizer", "skin_moisturizer"]
+    assert man["n_dev_by_family"] == {"hair_care": 1, "skin_moisturizer": 2}
+    raw["dataset"]["family_quotas"] = {"skin_moisturizer": 5, "hair_care": 1}
+    path.write_text(yaml.safe_dump(raw))
+    with pytest.raises(ValueError, match="family quotas"):
+        run_ingest(load_config(path))
+
+
+def test_e04_other_and_off_family_aspects_rejected(built):
+    from evireview.pipeline import load_data
+    r, _, _ = load_data(built)
+    rid = r[r.family == "skin_moisturizer"].review_id.iloc[0]
+    doc = r.set_index("review_id").doc[rid]
+    quote = doc.split("\n")[1][:20]
+    base = dict(review_id=rid, aspect_term="x", polarity="positive", context="unspecified", modality="asserted", quote=quote)
+    df = apply_hard_gates([{**base, "aspect": "other"}, {**base, "aspect": "lather"}], r, "direct", "t", "test")
+    assert df.hard_reason.tolist() == ["no_matching_aspect", "aspect_not_in_family"]
+
+
+def test_m01_seller_attributes_separate_and_grounded(built):
+    p = pd.read_parquet(built.p("processed") / "products.parquet").set_index("product_id")
+    s = pd.read_parquet(built.p("graphs") / "seller_attributes.parquet")
+    ok = s[s.hard_pass]
+    for x in ok.itertuples():  # every accepted seller statement points at its verbatim span
+        assert p.meta_doc[x.product_id][int(x.start):int(x.end)] == x.quote
+    fx1 = ok[ok.product_id == "product:FXP1"]
+    assert "skin_type=oily" in set(fx1.context) and {"fragrance", "paraben"} <= set(fx1[fx1.attribute == "free_of"].value)
+    assert (ok.source_kind == "seller").all() and (ok.epistemic == "seller_claim").all()
+    e = pd.read_parquet(built.p("graphs") / "ceva" / "edges.parquet")
+    assert ((e.relation == "SELLER_TARGETS") & (e.src_id == "product:FXP1") & (e.dst_id == "context:skin_type=oily")).any()
+    c = pd.read_parquet(built.p("graphs") / "ceva" / "claims.parquet")
+    assert (c.source_kind == "review").all()  # seller text never becomes a review opinion
+
+
+def test_r02_context_query_sources(built):
+    from evireview.retrieval import ParsedQuery, get_index, graph_scores
+    idx = get_index(built)
+    assert len(idx.doc_pids) == len(idx.reviews) + int((idx.products.meta_doc.str.strip() != "").sum())
+    gs = graph_scores(idx, "ceva", ParsedQuery("q", ["residue"], "skin_type=oily", True), built)
+    assert gs["product:FXP1"]["context_source"] == ["context_reviewers"]  # "Not greasy at all on my oily skin"
+    gs = graph_scores(idx, "ceva", ParsedQuery("q", ["lather"], "hair_type=curly", False), built)
+    assert gs["product:FXP3"]["context_source"] == ["seller_target"]  # listing: "made for curly hair"

@@ -74,6 +74,21 @@ def eval_construction(cfg: Config) -> list[dict]:
     labels = read_json(ann / "judge_claims.json", {})
     samples = read_json(ann / "judge_claim_samples.json", {})
     g1 = pd.read_parquet(g / "candidates_g1.parquet") if (g / "candidates_g1.parquet").exists() else None
+    if g1 is not None and len(g1):
+        # aspect-schema fit: opinions the extractor could not place (other) and the catch-all share
+        rows.append(_row("no_matching_aspect_rate", float((g1.hard_reason == "no_matching_aspect").mean()), n=len(g1),
+                         method="g1", note="share of extracted candidates with aspect=other"))
+        if (g / "ceva" / "claims.parquet").exists():
+            ceva = pd.read_parquet(g / "ceva" / "claims.parquet")
+            rows.append(_row("effectiveness_share", float((ceva.aspect == "effectiveness").mean()) if len(ceva) else None,
+                             n=len(ceva), method="ceva"))
+            rows.append(_row("context_specified_rate", float((ceva.context != "unspecified").mean()) if len(ceva) else None,
+                             n=len(ceva), method="ceva"))
+    seller = read_json(g / "seller_schema.json", {})
+    if seller:
+        rows += [_row("seller_statements_accepted", seller["n_accepted"], "count", method="seller"),
+                 _row("seller_raw_attribute_names", seller["n_raw_attribute_names"], "count", method="seller"),
+                 _row("seller_canonical_attributes", seller["n_canonical_attributes"], "count", method="seller")]
     if g1 is not None and samples.get("g1") and labels:
         tau = read_json(g / "augment_summary.json", {}).get("tau", {}).get("tau", cfg["augmentation"]["threshold"])
         s = g1[g1.cand_id.isin(samples["g1"]) & g1.cand_id.isin(labels)].copy()
@@ -90,7 +105,7 @@ def eval_construction(cfg: Config) -> list[dict]:
     ref = read_json(ann / "t1_reference.json")
     if ref:
         gold = {(c["review_id"], c["aspect"], c["polarity"]) for c in ref["claims"]
-                if c["modality"] == "asserted"}
+                if c["modality"] == "asserted" and c["aspect"] != "other"}
         test_reviews = set(ref["reviews"]["test"])
         gold = {t for t in gold if t[0] in test_reviews}
         for v in ("g1", "ceva"):
@@ -205,6 +220,7 @@ def eval_retrieval(cfg: Config) -> tuple[list[dict], list[dict], dict]:
             ideal = [grades_map.get(p, 0) for p in all_p]
             rel = sum(1 for x in ideal if x >= 1)
             out.append({"qid": q["qid"], "type": q["type"], "split": q["split"], "system": sys_name,
+                        "context": q.get("target_context", "unspecified"),
                         "graph_weight": w, "ndcg@10": ndcg_at(ranked, ideal), "mrr@10": mrr_at(ranked),
                         "recall@10": (sum(1 for x in ranked if x >= 1) / rel) if rel else float("nan"),
                         "n_relevant": rel, "top10": [r["product_id"] for r in res["results"]],
@@ -229,6 +245,7 @@ def eval_retrieval(cfg: Config) -> tuple[list[dict], list[dict], dict]:
         b6_lat.append(b6[q["qid"]]["latency_ms"])
         b6_cost.append(b6[q["qid"]]["cost_usd"])
         per_query.append({"qid": q["qid"], "type": q["type"], "split": q["split"], "system": "B6",
+                          "context": q.get("target_context", "unspecified"),
                           "graph_weight": None, "ndcg@10": ndcg_at(ranked, ideal), "mrr@10": mrr_at(ranked),
                           "recall@10": (sum(1 for x in ranked if x >= 1) / rel) if rel else float("nan"),
                           "n_relevant": rel, "top10": b6[q["qid"]]["top10"], "parsed_aspects": None})
@@ -236,10 +253,20 @@ def eval_retrieval(cfg: Config) -> tuple[list[dict], list[dict], dict]:
         weights["B6"] = None
     df = pd.DataFrame(per_query)
     valid = df[df.n_relevant > 0]
+
+    def of_type(d: pd.DataFrame, qtype: str) -> pd.DataFrame:
+        """'context_condition' = pos/neg queries conditioned on a skin/hair type, climate or time of use."""
+        if qtype == "all":
+            return d
+        if qtype == "context_condition":
+            return d[d.context != "unspecified"]
+        return d[d.type == qtype]
+
+    qtypes = ("all", "pos_condition", "neg_condition", "context_condition")
     rows = []
     for sys_name in list(SYSTEMS) + (["B6"] if b6 else []):
-        for qtype in ("all", "pos_condition", "neg_condition"):
-            sub = valid[(valid.system == sys_name) & ((valid.type == qtype) if qtype != "all" else True)]
+        for qtype in qtypes:
+            sub = of_type(valid[valid.system == sys_name], qtype)
             for m in ("ndcg@10", "mrr@10", "recall@10"):
                 rows.append(_row(m, float(sub[m].mean()) if len(sub) else None, n=len(sub), method=sys_name,
                                  split="test", query_type=qtype, label_source="judge",
@@ -247,9 +274,9 @@ def eval_retrieval(cfg: Config) -> tuple[list[dict], list[dict], dict]:
     comparisons = []
     for a_sys, b_sys in (("B5", "B2"), ("B4", "B2"), ("B3", "B2"), ("B5", "B3"), ("B5", "B4"), ("B5", "A-budget"),
                          ("B5", "A-verify"), ("B5", "A-context"), ("B5", "B6"), ("B6", "B2")):
-        for qtype in ("all", "pos_condition", "neg_condition"):
-            a = valid[(valid.system == a_sys) & ((valid.type == qtype) if qtype != "all" else True)].sort_values("qid")
-            b = valid[(valid.system == b_sys) & ((valid.type == qtype) if qtype != "all" else True)].sort_values("qid")
+        for qtype in qtypes:
+            a = of_type(valid[valid.system == a_sys], qtype).sort_values("qid")
+            b = of_type(valid[valid.system == b_sys], qtype).sort_values("qid")
             if len(a) and len(a) == len(b):
                 d, lo, hi = paired_bootstrap(a["ndcg@10"].to_numpy(), b["ndcg@10"].to_numpy())
                 comparisons.append({"baseline": b_sys, "variant": a_sys, "metric": "ndcg@10", "query_type": qtype,
@@ -257,6 +284,7 @@ def eval_retrieval(cfg: Config) -> tuple[list[dict], list[dict], dict]:
                                     "delta": d, "ci_low": lo, "ci_high": hi, "n_queries": len(a)})
     lat = np.array(latencies) * 1000
     extra = {"n_test_queries": len(test), "n_dev_queries": len(dev),
+             "n_test_context_queries": sum(1 for q in test if q.get("target_context", "unspecified") != "unspecified"),
              "b6_latency_ms_p50": float(np.percentile(b6_lat, 50)) if b6_lat else None,
              "b6_latency_ms_p95": float(np.percentile(b6_lat, 95)) if b6_lat else None,
              "b6_cost_usd_per_query": float(np.mean(b6_cost)) if b6_cost else None,

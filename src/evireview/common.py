@@ -97,13 +97,43 @@ def evidence_id(doc_id: str, field: str, start: int, end: int) -> str:
 
 
 # ---------------------------------------------------------------- ontology
+ONTOLOGY_FILE = "aspects_v2.yaml"
+OTHER_ASPECT = "other"  # extractor escape hatch: an opinion that fits no aspect of the family (never accepted)
+
+
 @lru_cache(maxsize=1)
 def ontology() -> dict:
-    return yaml.safe_load((Path(__file__).parent / "aspects_v1.yaml").read_text())
+    return yaml.safe_load((Path(__file__).parent / ONTOLOGY_FILE).read_text())
 
 
-def aspect_names() -> list[str]:
-    return list(ontology()["aspects"].keys())
+def families() -> dict[str, dict]:
+    return ontology().get("families", {})
+
+
+def aspect_names(family: str | None = None) -> list[str]:
+    """All aspects, or those of one product family (common aspects + the family's own).
+    An unknown family (None, 'other') gets every aspect."""
+    specs = ontology()["aspects"]
+    if family not in families():
+        return list(specs)
+    return [a for a, s in specs.items() if family in s.get("families", [family])]
+
+
+@lru_cache(maxsize=1)
+def _family_patterns() -> dict[str, re.Pattern]:
+    return {f: re.compile(r"\b(" + "|".join(re.escape(c) for c in sorted(spec["title_cues"], key=len, reverse=True)) + r")\b", re.I)
+            for f, spec in families().items()}
+
+
+def family_from_title(title: str | None) -> str | None:
+    """Keyword family assignment (offline profile; the research profile classifies titles with the LLM).
+    The earliest cue in the title wins, so 'Shampoo and Conditioner' -> hair_care, 'Lotion with Shea' -> skin."""
+    best = None
+    for f, pat in _family_patterns().items():
+        m = pat.search(title or "")
+        if m and (best is None or m.start() < best[0]):
+            best = (m.start(), f)
+    return best[1] if best else None
 
 
 def contexts() -> list[str]:
@@ -128,8 +158,9 @@ def alias_set(name: str) -> set[str]:
     return {a.lower() for a in spec["aliases"]} | {name.replace("_", " ")}
 
 
-def aspects_mentioned(text: str) -> list[str]:
-    return [a for a, p in alias_patterns().items() if p.search(text)]
+def aspects_mentioned(text: str, family: str | None = None) -> list[str]:
+    allowed = set(aspect_names(family))
+    return [a for a, p in alias_patterns().items() if a in allowed and p.search(text)]
 
 
 def detect_context(text: str) -> str:

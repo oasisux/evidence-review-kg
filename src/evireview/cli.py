@@ -12,7 +12,8 @@ from .common import ROOT, load_config
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="evireview")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("doctor", "ingest", "build", "augment", "judge", "audit", "evaluate", "app", "all", "demo"):
+    for name in ("doctor", "ingest", "induce-aspects", "build", "augment", "judge", "audit", "evaluate", "app", "all",
+                 "demo"):
         p = sub.add_parser(name)
         p.add_argument("--config", default="configs/research.yaml")
         if name == "judge":
@@ -41,6 +42,10 @@ def main(argv: list[str] | None = None) -> None:
     if a.cmd in ("ingest", "all", "demo"):
         from .ingest import run_ingest
         print(json.dumps(run_ingest(cfg), indent=1))
+    if a.cmd == "induce-aspects":
+        from .induce import run_induce
+        print(json.dumps(run_induce(cfg), indent=1, ensure_ascii=False))
+        return
     if a.cmd in ("build", "all", "demo"):
         from .pipeline import run_build
         c = run_build(cfg)

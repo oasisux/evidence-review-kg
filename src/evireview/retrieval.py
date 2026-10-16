@@ -15,7 +15,7 @@ from .common import Config, aspect_names, aspects_mentioned, contexts, detect_co
 SYSTEMS = {
     "B1": {"label": "B1 BM25", "text": ["bm25"], "graph": None},
     "B2": {"label": "B2 BM25+dense (hybrid)", "text": ["bm25", "dense"], "graph": None},
-    "B3": {"label": "B3 G0 metadata (product type) + hybrid", "text": ["bm25", "dense"], "graph": "metadata"},
+    "B3": {"label": "B3 G0 metadata (product type, seller targets) + hybrid", "text": ["bm25", "dense"], "graph": "metadata"},
     "B4": {"label": "B4 G1 + hybrid", "text": ["bm25", "dense"], "graph": "g1"},
     "B5": {"label": "B5 G2 CEVA + hybrid (proposed)", "text": ["bm25", "dense"], "graph": "ceva"},
     "A-budget": {"label": "A-budget", "text": ["bm25", "dense"], "graph": "budget"},
@@ -42,7 +42,7 @@ class ParsedQuery:
 
 PARSE_SYSTEM = """Parse a beauty shopping query into structured fields.
 aspects: the product aspects the shopper's condition is about (closed set below). Pick the most specific ones; usually one.
-- "lasts all day" about makeup/polish -> wear_time; about fragrance/scent -> scent_longevity.
+- "scent lasts all day" -> scent_longevity. "softer / smoother / glowing skin" -> skin_results. "wrinkles / puffiness / dark circles" -> anti_aging. "detangles" -> detangling. "less frizz" -> frizz_control. "defines curls" -> curl_definition. "dandruff / flaky scalp" -> scalp_condition. "shinier / fuller hair" -> hair_results.
 - "container/bottle is small", "not enough product" -> size_quantity (not packaging).
 - "not greasy/sticky", "no residue" -> residue. "doesn't irritate / no breakouts" -> irritation.
 context: a skin/hair type, climate or time of use only if the query states it, else "unspecified".
@@ -60,8 +60,11 @@ def parse_query_llm(cfg: Config, q: str) -> ParsedQuery:
               "properties": {"aspects": {"type": "array", "items": {"type": "string", "enum": aspect_names()}},
                              "context": {"type": "string", "enum": contexts()},
                              "product_type": {"type": "string"}}}
-    res = LLM(cfg).json_call(stage="parse_query", model=cfg["extraction"]["model"], effort="low",
-                             system=PARSE_SYSTEM, user=q, schema=schema, max_tokens=4000)
+    try:
+        res = LLM(cfg).json_call(stage="parse_query", model=cfg["extraction"]["model"], effort="low",
+                                 system=PARSE_SYSTEM, user=q, schema=schema, max_tokens=4000)
+    except Exception:  # no API key / network / budget: fall back to rule parsing instead of failing the page
+        return parse_query(q)
     return ParsedQuery(q, res["aspects"] or parse_query(q).aspects, res["context"], bool(NEG_CUES.search(q)),
                        res["product_type"].strip().lower() or None, "llm")
 
@@ -75,7 +78,7 @@ def parse_query(q: str, cos: float = 0.40) -> ParsedQuery:
             aspects = [aspect_names()[j]]
     # "scent lasts" style queries: prefer the more specific aspect
     if "scent_longevity" in aspects:
-        aspects = [a for a in aspects if a not in ("scent", "wear_time")] or ["scent_longevity"]
+        aspects = [a for a in aspects if a != "scent"] or ["scent_longevity"]
     return ParsedQuery(q, aspects, detect_context(q), bool(NEG_CUES.search(q)))
 
 
@@ -85,15 +88,24 @@ class Index:
     products: pd.DataFrame
     bm25: BM25Okapi
     dense: np.ndarray
+    doc_pids: np.ndarray  # product of each indexed text (reviews, then seller listings when indexed)
     aggs: dict = field(default_factory=dict)
     type_emb: np.ndarray | None = None
+    seller_ctx: dict = field(default_factory=dict)
 
 
 @lru_cache(maxsize=4)
-def _build(cfg_path: str, processed: str, graphs: str) -> Index:
+def _build(cfg_path: str, processed: str, graphs: str, index_metadata: bool) -> Index:
+    """Text index over reviews; with index_metadata, every system (text baselines included) also indexes each
+    product's seller listing, so the KG's seller layer is not an information advantage over the baselines."""
+    from .seller import seller_context_targets
     reviews = pd.read_parquet(f"{processed}/reviews.parquet")
     products = pd.read_parquet(f"{processed}/products.parquet")
-    docs = reviews.doc.tolist()
+    docs, pids = reviews.doc.tolist(), reviews.product_id.tolist()
+    if index_metadata and "meta_doc" in products:
+        listed = products[products.meta_doc.fillna("").str.strip() != ""]
+        docs += listed.meta_doc.tolist()
+        pids += listed.product_id.tolist()
     bm25 = BM25Okapi([tokenize(d) for d in docs])
     dense = embed.encode(docs)
     aggs = {}
@@ -104,7 +116,11 @@ def _build(cfg_path: str, processed: str, graphs: str) -> Index:
             pass
     ptypes = products.product_type.fillna("").tolist() if "product_type" in products else [""] * len(products)
     type_emb = embed.encode([t or title[:60] for t, title in zip(ptypes, products.title)])
-    return Index(reviews, products, bm25, dense, aggs, type_emb)
+    try:
+        seller = pd.read_parquet(f"{graphs}/seller_attributes.parquet")
+    except FileNotFoundError:
+        seller = None
+    return Index(reviews, products, bm25, dense, np.array(pids), aggs, type_emb, seller_context_targets(seller))
 
 
 def type_match(idx: Index, product_type: str | None, threshold: float = 0.55) -> dict[str, bool]:
@@ -118,37 +134,53 @@ def type_match(idx: Index, product_type: str | None, threshold: float = 0.55) ->
 def get_index(cfg: Config) -> Index:
     agg = cfg.p("graphs") / "ceva" / "aggregates.parquet"
     stamp = str(agg.stat().st_mtime) if agg.exists() else "none"  # rebuild when graphs change
-    return _build(str(cfg.path) + "|" + stamp, str(cfg.p("processed")), str(cfg.p("graphs")))
+    return _build(str(cfg.path) + "|" + stamp, str(cfg.p("processed")), str(cfg.p("graphs")),
+                  bool(cfg["retrieval"].get("index_metadata", False)))
 
 
 def _product_ranking(idx: Index, scores: np.ndarray, k: int) -> list[str]:
     order = np.argsort(-scores)[:k]
     seen, out = set(), []
     for i in order:
-        p = idx.reviews.product_id.iloc[i]
+        p = idx.doc_pids[i]
         if p not in seen:
             seen.add(p)
             out.append(p)
     return out
 
 
-def graph_scores(idx: Index, variant: str, pq: ParsedQuery) -> dict[str, dict]:
+def graph_scores(idx: Index, variant: str, pq: ParsedQuery, cfg: Config | None = None) -> dict[str, dict]:
+    """Opinion score per product. For a context query ("for oily skin") each (product, aspect) uses, in order:
+    opinions of reviewers who stated that context; else all opinions, weighted by whether the seller says the
+    product targets that context (seller_target_weight) or not (no_context_weight)."""
     aggs = idx.aggs.get(variant)
     if aggs is None or not pq.aspects:
         return {}
+    r = (cfg["retrieval"] if cfg is not None else {})
+    w_seller, w_none = r.get("seller_target_weight", 1.0), r.get("no_context_weight", 0.5)
     polarity_aware = variant != "nocontext"
     ctx = pq.context if polarity_aware else "unspecified"
     sel = aggs[aggs.aspect.isin(pq.aspects)]
-    sel = sel[sel.context == ctx] if ctx != "unspecified" else sel[sel.context == "*"]
+    overall = sel[sel.context == "*"]
+    in_ctx = sel[sel.context == ctx].set_index(["product_id", "aspect"]) if ctx != "unspecified" else None
     out = {}
-    for pid, g in sel.groupby("product_id"):
-        vals = []
-        for a in g.itertuples():
+    for pid, g in overall.groupby("product_id"):
+        vals, n_pos, n_neg, n_auth, sources = [], 0, 0, 0, set()
+        for row in g.itertuples():
+            a, weight, src = row, 1.0, "all_reviewers"
+            if in_ctx is not None:
+                if (pid, row.aspect) in in_ctx.index:
+                    a, src = in_ctx.loc[(pid, row.aspect)], "context_reviewers"
+                elif ctx in idx.seller_ctx.get(pid, set()):
+                    weight, src = w_seller, "seller_target"
+                else:
+                    weight, src = w_none, "no_context_evidence"
             support = min(a.n_authors / 3, 1.0)
-            vals.append(((a.n_pos + 1) / (a.n_pos + a.n_neg + 2)) * support if polarity_aware else support)
-        out[pid] = {"g": float(np.mean(vals)) * len(vals) / len(pq.aspects),
-                    "n_pos": int(g.n_pos.sum()), "n_neg": int(g.n_neg.sum()), "n_authors": int(g.n_authors.sum()),
-                    "insufficient": bool(g.n_authors.sum() < 2)}
+            vals.append(weight * (((a.n_pos + 1) / (a.n_pos + a.n_neg + 2)) * support if polarity_aware else support))
+            n_pos, n_neg, n_auth = n_pos + int(a.n_pos), n_neg + int(a.n_neg), n_auth + int(a.n_authors)
+            sources.add(src)
+        out[pid] = {"g": float(np.mean(vals)) * len(vals) / len(pq.aspects), "n_pos": n_pos, "n_neg": n_neg,
+                    "n_authors": n_auth, "insufficient": bool(n_auth < 2), "context_source": sorted(sources)}
     return out
 
 
@@ -173,12 +205,18 @@ def search(cfg: Config, system: str, query: str, top_k: int = 10, graph_weight: 
         cands = list(dict.fromkeys(lists.get("bm25", []) + lists.get("dense", [])))
         tm = type_match(idx, pq.product_type)
         if spec["graph"] != "metadata":
-            gs = graph_scores(idx, spec["graph"], pq)
+            gs = graph_scores(idx, spec["graph"], pq, cfg)
+        targets = pq.context != "unspecified"
+
+        def seller_hit(p):
+            return targets and pq.context in idx.seller_ctx.get(p, set())
+
         def key(p):
             return (tm.get(p, True), gs.get(p, {}).get("g", 0.0))
         ranked_c = sorted(cands, key=key, reverse=True)
-        if spec["graph"] == "metadata":
-            ranked_c = [p for p in ranked_c if tm.get(p, True)] if tm else []
+        if spec["graph"] == "metadata":  # metadata only: products of the requested type the seller targets at the context
+            ranked_c = [p for p in ranked_c if tm.get(p, True) and (not targets or seller_hit(p))] \
+                if (tm or targets) else []
         lists["graph"] = ranked_c
         weights["graph"] = graph_weight
     fused: dict[str, float] = {}

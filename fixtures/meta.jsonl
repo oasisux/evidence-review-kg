@@ -1,6 +1,6 @@
-{"parent_asin": "FXP1", "title": "Demo Hydrating Face Cream", "store": "DemoLab", "price": "None", "categories": [], "details": "{\"Brand\": \"DemoLab\"}"}
+{"parent_asin": "FXP1", "title": "Demo Hydrating Face Cream", "store": "DemoLab", "price": "None", "categories": [], "details": "{\"Brand\": \"DemoLab\"}", "features": ["Lightweight cream for oily skin", "Fragrance-free and paraben-free formula"], "description": ["Hydrates for up to 24 hours."]}
 {"parent_asin": "FXP2", "title": "Demo Matte Lipstick", "store": "ColorCo", "price": "$12.99", "categories": [], "details": {"Item Form": "Cream"}}
-{"parent_asin": "FXP3", "title": "Demo Curl Shampoo", "store": "HairWorks", "price": "None", "categories": [], "details": {"Item Form": "Cream"}}
+{"parent_asin": "FXP3", "title": "Demo Curl Shampoo", "store": "HairWorks", "price": "None", "categories": [], "details": {"Item Form": "Cream"}, "features": ["Sulfate-free shampoo made for curly hair"]}
 {"parent_asin": "FXP4", "title": "Demo Gentle Cleanser", "store": "DemoLab", "price": "$12.99", "categories": [], "details": "{\"Brand\": \"DemoLab\"}"}
 {"parent_asin": "FXP5", "title": "Demo Setting Spray", "store": "ColorCo", "price": "None", "categories": [], "details": {"Item Form": "Cream"}}
-{"parent_asin": "FXP6", "title": "Demo Body Lotion", "store": "SoftCo", "price": "$12.99", "categories": [], "details": {"Item Form": "Cream"}}
+{"parent_asin": "FXP6", "title": "Demo Body Lotion", "store": "SoftCo", "price": "$12.99", "categories": [], "details": {"Item Form": "Cream"}, "features": ["Rich body lotion for dry skin"]}

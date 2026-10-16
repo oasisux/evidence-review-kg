@@ -1,1231 +1,1375 @@
 [
   {
-    "qid": "qf3f21244",
+    "qid": "qba484d9d",
     "split": "dev",
     "status": "draft",
     "type": "pos_condition",
-    "text": "Which face creams do reviewers say keep their skin hydrated all day long?",
+    "text": "Which body lotion soaks in quickly without needing to rub it in forever?",
     "product_ids": [],
     "target_aspects": [
-      "moisturization"
-    ]
-  },
-  {
-    "qid": "q23ddedf7",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "I'm looking for a headband that actually stays put during workouts without sliding off — any recommendations?",
-    "product_ids": [],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "qd9c400bc",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Are there false eyelashes that beginners find easy to put on?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "qf83c6605",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which mascara do people say lasts through a full workday without flaking?",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "q458a8835",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Looking for bath bombs with a lovely strong fragrance — which ones do reviewers rave about?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "qed2621bb",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which hair styling tools or accessories do shoppers call a great bargain for the price?",
-    "product_ids": [],
-    "target_aspects": [
-      "value_for_money"
-    ]
-  },
-  {
-    "qid": "q06176f30",
-    "split": "dev",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Can you find a leave-in conditioner with a nice lightweight texture that reviewers love?",
-    "product_ids": [],
-    "target_aspects": [
+      "absorption",
       "texture"
-    ]
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q9406ac57",
+    "qid": "q5cfee0ff",
     "split": "dev",
     "status": "draft",
     "type": "pos_condition",
-    "text": "Which facial toners do customers say really work to minimize pores and clean skin?",
+    "text": "I need a face cream that keeps dry skin hydrated all day long - any recommendations?",
     "product_ids": [],
     "target_aspects": [
+      "moisturization"
+    ],
+    "target_context": "skin_type=dry"
+  },
+  {
+    "qid": "q9726eb81",
+    "split": "dev",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a shampoo that works up a rich, foamy lather.",
+    "product_ids": [],
+    "target_aspects": [
+      "lather",
+      "cleansing"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q47d042f3",
+    "split": "dev",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which conditioner do reviewers say actually detangles curly hair easily?",
+    "product_ids": [],
+    "target_aspects": [
+      "detangling",
+      "conditioning"
+    ],
+    "target_context": "hair_type=curly"
+  },
+  {
+    "qid": "q83d6562d",
+    "split": "dev",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "What face serum gave people visible improvements in brightness and dark spots?",
+    "product_ids": [],
+    "target_aspects": [
+      "skin_results",
       "effectiveness"
-    ]
-  },
-  {
-    "qid": "q97f052a7",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which face creams don't cause stinging or breakouts on sensitive skin?",
-    "product_ids": [],
-    "target_aspects": [
-      "irritation"
-    ]
-  },
-  {
-    "qid": "q4f2bb7f8",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "I'm looking for a body lotion that doesn't leave a greasy film on the skin — any suggestions?",
-    "product_ids": [],
-    "target_aspects": [
-      "residue"
-    ]
-  },
-  {
-    "qid": "q5c82b764",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Is there a headband that reviewers say does not slip or slide off during workouts?",
-    "product_ids": [],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "qef160310",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which false eyelashes don't start peeling off after a few hours of wear?",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "q4f338bd2",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Any bath bombs whose fragrance isn't overpowering or chemical-smelling?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "q90113fe9",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "I need travel bottles that reviewers don't complain about leaking in a suitcase.",
-    "product_ids": [],
-    "target_aspects": [
-      "dispenser"
-    ]
-  },
-  {
-    "qid": "q55f77a27",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which mascara doesn't clump up or get messy while you're putting it on?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "q6275549e",
-    "split": "dev",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Show me a facial toner that doesn't leave your face feeling tight and dried out.",
-    "product_ids": [],
-    "target_aspects": [
-      "moisturization"
-    ]
-  },
-  {
-    "qid": "q14908118",
-    "split": "dev",
-    "status": "draft",
-    "type": "compare",
-    "text": "Between the Retinol & Hyaluronic Acid anti-aging face cream and the SKEDERM Ceramide moisturizer, which one do reviewers say keeps skin hydrated longer?",
-    "product_ids": [
-      "product:B00NK65R5O",
-      "product:B01GBZT5GM"
     ],
-    "target_aspects": [
-      "moisturization"
-    ]
+    "target_context": "unspecified"
   },
   {
-    "qid": "qf4ce9d71",
+    "qid": "q0ac6b9ab",
     "split": "dev",
-    "status": "draft",
-    "type": "compare",
-    "text": "How does the scent of the Schöne Naughty bath bombs compare to the SPLASHOO kids bath bombs according to reviewers?",
-    "product_ids": [
-      "product:B010TQC4R6",
-      "product:B077XDZV6L"
-    ],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "qfa514cf9",
-    "split": "dev",
-    "status": "draft",
-    "type": "compare",
-    "text": "Which is easier to put on and stays on longer: the Brightup magnetic lashes or the Self Adhesive reusable false eyelashes?",
-    "product_ids": [
-      "product:B088RGM31Z",
-      "product:B0BNWXRQ18"
-    ],
-    "target_aspects": [
-      "ease_of_application",
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "q6efa0d35",
-    "split": "dev",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "For the it Cosmetics Confidence in a Compact foundation, what do reviewers disagree about when it comes to shade match and coverage?",
-    "product_ids": [
-      "product:B01NCW8FAS"
-    ],
-    "target_aspects": [
-      "shade_match",
-      "coverage"
-    ]
-  },
-  {
-    "qid": "q8156198d",
-    "split": "dev",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "What are the main complaints about the Brightup magnetic eyelashes with eyeliner — do people find them hard to apply or do they not stay on?",
-    "product_ids": [
-      "product:B088RGM31Z"
-    ],
-    "target_aspects": [
-      "ease_of_application",
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "q7a6f8b98",
-    "split": "dev",
-    "status": "draft",
-    "type": "unanswerable",
-    "text": "Has the Tree of Life Vitamin C facial toner been clinically tested in a dermatologist-supervised lab study, and what were the measured pore-size results?",
-    "product_ids": [
-      "product:B014P8G0SS"
-    ],
-    "target_aspects": []
-  },
-  {
-    "qid": "qadc969d7",
-    "split": "dev",
-    "status": "draft",
-    "type": "unanswerable",
-    "text": "What does the SKEDERM EXHYDRO ceramide face cream currently cost at Target or Ulta, and is it certified organic by USDA?",
-    "product_ids": [
-      "product:B01GBZT5GM"
-    ],
-    "target_aspects": []
-  },
-  {
-    "qid": "q426a0941",
-    "split": "test",
     "status": "draft",
     "type": "pos_condition",
-    "text": "Which body lotion do reviewers say keeps skin moisturized all day?",
+    "text": "Is there a hair mask that keeps frizz under control in humid weather?",
     "product_ids": [],
     "target_aspects": [
-      "moisturization"
-    ]
+      "frizz_control",
+      "hair_results"
+    ],
+    "target_context": "climate=humid"
   },
   {
-    "qid": "q429ad000",
-    "split": "test",
+    "qid": "q309e824a",
+    "split": "dev",
     "status": "draft",
     "type": "pos_condition",
-    "text": "I want a body moisturizer that soaks in fast without sitting on the skin — any recommendations?",
+    "text": "Which eye cream do buyers say really softened their fine lines and wrinkles?",
     "product_ids": [],
     "target_aspects": [
-      "absorption"
-    ]
+      "anti_aging"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q510c8ec4",
-    "split": "test",
+    "qid": "q2af024bc",
+    "split": "dev",
     "status": "draft",
     "type": "pos_condition",
-    "text": "Which false eyelashes are easiest to put on for a beginner?",
+    "text": "I want a body butter with a lovely scent that lingers on the skin for hours.",
     "product_ids": [],
     "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "q94f68658",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Looking for a mascara that actually lengthens and volumizes lashes well — which one works?",
-    "product_ids": [],
-    "target_aspects": [
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "qf5ee366d",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which hair clips hold thick hair securely all day?",
-    "product_ids": [],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "qcbb475b1",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Is there a soap bar with a really pleasant fragrance?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "q9e0692e5",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which products do reviewers say leave a scent that lingers for hours?",
-    "product_ids": [],
-    "target_aspects": [
+      "scent",
       "scent_longevity"
-    ]
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "qbcf56089",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "I want a foundation with great full coverage — what do reviewers recommend?",
-    "product_ids": [],
-    "target_aspects": [
-      "coverage"
-    ]
-  },
-  {
-    "qid": "qf877d3cc",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which face cream has a lightweight, silky texture that people love?",
-    "product_ids": [],
-    "target_aspects": [
-      "texture"
-    ]
-  },
-  {
-    "qid": "qa408aeed",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Are there travel bottles with packaging that reviewers praise as sturdy and leak-proof?",
-    "product_ids": [],
-    "target_aspects": [
-      "packaging"
-    ]
-  },
-  {
-    "qid": "qce632ef0",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which product gives you a lot for the money according to reviewers?",
-    "product_ids": [],
-    "target_aspects": [
-      "value_for_money"
-    ]
-  },
-  {
-    "qid": "q32784b82",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Looking for a headband that stays comfortable for a full workday — any suggestions?",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "qcf76e3de",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which nail polish do reviewers say matches the color shown online?",
-    "product_ids": [],
-    "target_aspects": [
-      "shade_match"
-    ]
-  },
-  {
-    "qid": "q35de65c1",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Is there a soap or cleanser that produces a rich, creamy lather?",
-    "product_ids": [],
-    "target_aspects": [
-      "lather"
-    ]
-  },
-  {
-    "qid": "qb15a34d1",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which tanning lotion do reviewers find gentle enough for sensitive skin?",
-    "product_ids": [],
-    "target_aspects": [
-      "irritation"
-    ]
-  },
-  {
-    "qid": "q67807f50",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which products come with a pump or dispenser that works smoothly?",
-    "product_ids": [],
-    "target_aspects": [
-      "dispenser"
-    ]
-  },
-  {
-    "qid": "qd4429879",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "I need a face mask set that gives generous quantity per package — which one?",
-    "product_ids": [],
-    "target_aspects": [
-      "size_quantity"
-    ]
-  },
-  {
-    "qid": "q1ec2c741",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which beard butter do reviewers say smells amazing?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "q6374da98",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which lip product stays put for hours of wear?",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "qe1870caf",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Looking for a facial toner that visibly calms and improves the skin — what works?",
-    "product_ids": [],
-    "target_aspects": [
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "qeb53969e",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which eyeshadow stick blends on easily and smoothly?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application",
-      "texture"
-    ]
-  },
-  {
-    "qid": "q087c90a0",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which leave-in conditioner do reviewers say makes hair feel soft and hydrated?",
-    "product_ids": [],
-    "target_aspects": [
-      "moisturization"
-    ]
-  },
-  {
-    "qid": "qfe2dd36d",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Are there bath bombs that reviewers consider a great deal for the quantity you get?",
-    "product_ids": [],
-    "target_aspects": [
-      "value_for_money",
-      "size_quantity"
-    ]
-  },
-  {
-    "qid": "qd842d944",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which hair brush do people say glides through tangles effortlessly?",
-    "product_ids": [],
-    "target_aspects": [
-      "effectiveness",
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "qcb867f13",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which hair dye gives a vibrant color that matches the shade on the box?",
-    "product_ids": [],
-    "target_aspects": [
-      "shade_match"
-    ]
-  },
-  {
-    "qid": "q229eddd6",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which eye mask leaves skin feeling hydrated and plump after use?",
-    "product_ids": [],
-    "target_aspects": [
-      "moisturization",
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "q51ff16ae",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which products come in gift-worthy, well-designed packaging?",
-    "product_ids": [],
-    "target_aspects": [
-      "packaging"
-    ]
-  },
-  {
-    "qid": "q92e24918",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which nail drill do reviewers find comfortable and easy to control while filing?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application",
-      "hold"
-    ]
-  },
-  {
-    "qid": "qec6db4c7",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which tanning lotion do reviewers say has a nice smell rather than the usual self-tanner odor?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "q3afc45c9",
-    "split": "test",
-    "status": "draft",
-    "type": "pos_condition",
-    "text": "Which brow or eyeliner product has a long-lasting hold that survives sweat?",
-    "product_ids": [],
-    "target_aspects": [
-      "hold",
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "qc814631f",
-    "split": "test",
+    "qid": "qc81d7e0f",
+    "split": "dev",
     "status": "draft",
     "type": "neg_condition",
-    "text": "Which facial toner doesn't sting or irritate sensitive skin according to reviewers?",
+    "text": "Which body lotions don't leave a greasy film on the skin after applying?",
     "product_ids": [],
     "target_aspects": [
-      "irritation"
-    ]
-  },
-  {
-    "qid": "q4c4484f0",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "I want a body lotion that reviewers say doesn't leave a greasy film on the skin.",
-    "product_ids": [],
-    "target_aspects": [
-      "residue"
-    ]
-  },
-  {
-    "qid": "qea9de68f",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Are there soap bars that don't have an overpowering or chemical smell?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "qa3e643f5",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Looking for false eyelashes that don't leave sticky glue or eyeliner residue on the lash line.",
-    "product_ids": [],
-    "target_aspects": [
-      "residue"
-    ]
-  },
-  {
-    "qid": "qb7da1543",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which mascara doesn't flake or smudge under the eyes during the day?",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "qece9f999",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Show me hair clips that don't slip out of the hair after a few minutes.",
-    "product_ids": [],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "q8857e8c7",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Any travel bottles that reviewers say do not leak in a suitcase?",
-    "product_ids": [],
-    "target_aspects": [
-      "packaging"
-    ]
-  },
-  {
-    "qid": "qb799358b",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which products have pumps or caps that don't clog or break after a short time?",
-    "product_ids": [],
-    "target_aspects": [
-      "dispenser"
-    ]
-  },
-  {
-    "qid": "qc4e54095",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "I need a headband that doesn't give me a headache or squeeze too tight after hours of wear.",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "q14b690be",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which foundation doesn't look cakey or heavy on the skin?",
-    "product_ids": [],
-    "target_aspects": [
-      "texture"
-    ]
-  },
-  {
-    "qid": "q144c60e9",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Is there a tanning lotion that doesn't cause itching or breakouts?",
-    "product_ids": [],
-    "target_aspects": [
-      "irritation"
-    ]
-  },
-  {
-    "qid": "qa668f873",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which face mask doesn't dry out the skin or leave it feeling tight?",
-    "product_ids": [],
-    "target_aspects": [
-      "moisturization"
-    ]
-  },
-  {
-    "qid": "q968cb7d9",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Are there beard products that don't have a lingering scent that sticks around all day?",
-    "product_ids": [],
-    "target_aspects": [
-      "scent_longevity"
-    ]
-  },
-  {
-    "qid": "q3f764d0a",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which nail polish doesn't come out streaky and hard to apply evenly?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "q43e9e40c",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Looking for an eyeshadow stick that doesn't crease or fade within a couple of hours.",
-    "product_ids": [],
-    "target_aspects": [
-      "wear_time"
-    ]
-  },
-  {
-    "qid": "qa61ebeff",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which body moisturizer doesn't take forever to sink in?",
-    "product_ids": [],
-    "target_aspects": [
+      "residue",
       "absorption"
-    ]
-  },
-  {
-    "qid": "q6613fa75",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Any hair brush that doesn't snag or pull hair out while detangling?",
-    "product_ids": [],
-    "target_aspects": [
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "q12b2dbda",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which lip balm doesn't feel waxy or sticky on the lips?",
-    "product_ids": [],
-    "target_aspects": [
-      "texture"
-    ]
-  },
-  {
-    "qid": "qf50f3762",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Is there a hair dye that doesn't stain the scalp and skin badly?",
-    "product_ids": [],
-    "target_aspects": [
-      "residue"
-    ]
-  },
-  {
-    "qid": "qb3d0cfd8",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which makeup brush set doesn't shed bristles after washing?",
-    "product_ids": [],
-    "target_aspects": [
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "q59692f39",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "I want a face cream whose jar doesn't arrive damaged or messy.",
-    "product_ids": [],
-    "target_aspects": [
-      "packaging"
-    ]
-  },
-  {
-    "qid": "qf0d93294",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which products do shoppers say are NOT overpriced for what you get?",
-    "product_ids": [],
-    "target_aspects": [
-      "value_for_money"
-    ]
-  },
-  {
-    "qid": "qb032856f",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Any eye mask patches that don't slide off the face while you wear them?",
-    "product_ids": [],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "q54bc955d",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which foundation or makeup doesn't look ashy or orange on medium skin tones?",
-    "product_ids": [],
-    "target_aspects": [
-      "shade_match"
-    ]
-  },
-  {
-    "qid": "qaa6d86e6",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Looking for a scrunchie or hair tie set that isn't much smaller than pictured.",
-    "product_ids": [],
-    "target_aspects": [
-      "size_quantity"
-    ]
-  },
-  {
-    "qid": "qc48d8d2d",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which soap bar doesn't fall apart or get mushy and still lathers fine?",
-    "product_ids": [],
-    "target_aspects": [
-      "lather"
-    ]
-  },
-  {
-    "qid": "qfc07530e",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Any nail drill or manicure tool that doesn't get hot or vibrate uncomfortably in the hand?",
-    "product_ids": [],
-    "target_aspects": [
-      "texture"
-    ]
-  },
-  {
-    "qid": "q99c93e16",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which leave-in conditioner doesn't weigh hair down or leave it feeling coated?",
-    "product_ids": [],
-    "target_aspects": [
-      "residue"
-    ]
-  },
-  {
-    "qid": "qe00c7204",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Is there a magnetic eyelash kit that isn't fiddly and frustrating to put on?",
-    "product_ids": [],
-    "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "qa7ffc4f3",
-    "split": "test",
-    "status": "draft",
-    "type": "neg_condition",
-    "text": "Which concealer or brow product doesn't give patchy, uneven coverage?",
-    "product_ids": [],
-    "target_aspects": [
-      "coverage"
-    ]
-  },
-  {
-    "qid": "q8d186873",
-    "split": "test",
-    "status": "draft",
-    "type": "compare",
-    "text": "For hydration, do reviewers find the DreamMi gold collagen face masks or the 24k gold under eye masks more moisturizing?",
-    "product_ids": [
-      "product:B01CDHJQFC",
-      "product:B00WWV5PP0"
     ],
-    "target_aspects": [
-      "moisturization"
-    ]
+    "target_context": "unspecified"
   },
   {
-    "qid": "qdae332fe",
-    "split": "test",
+    "qid": "q02070af7",
+    "split": "dev",
     "status": "draft",
-    "type": "compare",
-    "text": "Which smells better according to reviewers: the Good Seed Avocado hand & body lotion or the Hempz herbal body moisturizer set?",
-    "product_ids": [
-      "product:B01LDQINFS",
-      "product:B08BXS8XGZ"
-    ],
-    "target_aspects": [
-      "scent"
-    ]
-  },
-  {
-    "qid": "qb1c4ab82",
-    "split": "test",
-    "status": "draft",
-    "type": "compare",
-    "text": "Are the EverNice magnetic lashes easier to put on than the 2021 Upgrade magnetic lash and eyeliner kit?",
-    "product_ids": [
-      "product:B087J1T1H8",
-      "product:B08BL85TKP"
-    ],
-    "target_aspects": [
-      "ease_of_application"
-    ]
-  },
-  {
-    "qid": "qe09bdcca",
-    "split": "test",
-    "status": "draft",
-    "type": "compare",
-    "text": "Between the Oursunshine travel bottles and the Vonpri silicone travel bottles, which do reviewers say leak less and hold up better?",
-    "product_ids": [
-      "product:B077D7NWK4",
-      "product:B085C74MZ2"
-    ],
-    "target_aspects": [
-      "packaging",
-      "hold"
-    ]
-  },
-  {
-    "qid": "qc3d6b6c7",
-    "split": "test",
-    "status": "draft",
-    "type": "compare",
-    "text": "Do the acrylic alligator hair clips grip hair better than the GaBBY Bows non-slip barrettes?",
-    "product_ids": [
-      "product:B07QBBJLVJ",
-      "product:B07G5R9BKW"
-    ],
-    "target_aspects": [
-      "hold"
-    ]
-  },
-  {
-    "qid": "qbfe8d5ce",
-    "split": "test",
-    "status": "draft",
-    "type": "compare",
-    "text": "For sensitive skin, which causes less stinging or reaction: the unscented coconut oil castile soap bar or the aloe vera cucumber facial toner?",
-    "product_ids": [
-      "product:B00YV1MC1E",
-      "product:B071YZ2J6S"
-    ],
+    "type": "neg_condition",
+    "text": "I'm looking for a face cream that reviewers with sensitive skin say doesn't sting, burn or cause redness.",
+    "product_ids": [],
     "target_aspects": [
       "irritation"
-    ]
+    ],
+    "target_context": "skin_type=sensitive"
   },
   {
-    "qid": "q78b494d5",
-    "split": "test",
+    "qid": "qde401dc8",
+    "split": "dev",
     "status": "draft",
-    "type": "compare",
-    "text": "Which mascara do reviewers say lengthens and volumizes better, the PrettyDiva 4D fiber lash mascara or the Lash Ease one step fiber mascara?",
-    "product_ids": [
-      "product:B07D7VDBGC",
-      "product:B07M5HB65T"
-    ],
+    "type": "neg_condition",
+    "text": "Any shampoo that doesn't leave the scalp itchy, flaky or dried out?",
+    "product_ids": [],
     "target_aspects": [
-      "effectiveness"
-    ]
+      "scalp_condition"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q16323c75",
-    "split": "test",
+    "qid": "q0fd5a8d7",
+    "split": "dev",
     "status": "draft",
-    "type": "compare",
-    "text": "Does Dermacol Make-up Cover give heavier coverage than the Fashion Fair Perfect Finish Souffle makeup?",
-    "product_ids": [
-      "product:B077W2RCN7",
-      "product:B00H2QTO0W"
-    ],
+    "type": "neg_condition",
+    "text": "Which face serums have no strong or chemical smell that people complain about?",
+    "product_ids": [],
     "target_aspects": [
-      "coverage"
-    ]
+      "scent"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q1ecabd03",
-    "split": "test",
+    "qid": "qc0762e81",
+    "split": "dev",
     "status": "draft",
-    "type": "compare",
-    "text": "Comparing the SIQUK velvet braided headbands and the 9-pack coral fleece spa headbands, which set gives you more for the pack and fits a wider range of head sizes?",
-    "product_ids": [
-      "product:B07VQZ5NMR",
-      "product:B08R698DJJ"
-    ],
+    "type": "neg_condition",
+    "text": "I have fine hair - which conditioner doesn't weigh it down or make it limp?",
+    "product_ids": [],
     "target_aspects": [
-      "size_quantity"
-    ]
+      "conditioning",
+      "hair_results"
+    ],
+    "target_context": "hair_type=fine"
   },
   {
-    "qid": "qf7458aeb",
-    "split": "test",
+    "qid": "q4d732b85",
+    "split": "dev",
     "status": "draft",
-    "type": "compare",
-    "text": "How does the raw African shea butter compare to the Vivo Per Lei shea body butter in terms of thickness and how it feels on skin?",
-    "product_ids": [
-      "product:B00EO5JV48",
-      "product:B00J14AOUW"
-    ],
+    "type": "neg_condition",
+    "text": "Looking for a hair mask that rinses out clean without leaving buildup or a coated feeling.",
+    "product_ids": [],
     "target_aspects": [
-      "texture"
-    ]
+      "residue",
+      "cleansing"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "qa3883513",
-    "split": "test",
+    "qid": "q3b2b0c15",
+    "split": "dev",
     "status": "draft",
-    "type": "disagreement",
-    "text": "What do reviewers disagree about when it comes to the Dermacol Make-up Cover foundation, especially regarding shade match and coverage?",
-    "product_ids": [
-      "product:B077W2RCN7"
-    ],
-    "target_aspects": [
-      "shade_match",
-      "coverage"
-    ]
-  },
-  {
-    "qid": "q4a1ae21d",
-    "split": "test",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "What are the main complaints about the Oursunshine silicone travel bottles?",
-    "product_ids": [
-      "product:B077D7NWK4"
-    ],
-    "target_aspects": [
-      "packaging",
-      "dispenser",
-      "size_quantity"
-    ]
-  },
-  {
-    "qid": "q7650401b",
-    "split": "test",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "Reviewers of the Splat Pink Fetish hair dye kit seem split - what do they argue about most?",
-    "product_ids": [
-      "product:B001540XWK"
-    ],
-    "target_aspects": [
-      "shade_match",
-      "wear_time",
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "q17c47715",
-    "split": "test",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "Where do opinions differ on the MRONOS magnetic eyelash and eyeliner kit?",
-    "product_ids": [
-      "product:B07XTJWHM1"
-    ],
-    "target_aspects": [
-      "ease_of_application",
-      "effectiveness"
-    ]
-  },
-  {
-    "qid": "q06fab400",
-    "split": "test",
-    "status": "draft",
-    "type": "disagreement",
-    "text": "What are the biggest criticisms people have of the Raw African Shea Butter 32 oz jars?",
-    "product_ids": [
-      "product:B00EO5JV48"
-    ],
+    "type": "neg_condition",
+    "text": "Which moisturizers don't feel heavy or shiny on oily skin?",
+    "product_ids": [],
     "target_aspects": [
       "texture",
-      "packaging",
-      "scent"
-    ]
+      "moisturization"
+    ],
+    "target_context": "skin_type=oily"
   },
   {
-    "qid": "q2cd764bd",
-    "split": "test",
+    "qid": "q066fee68",
+    "split": "dev",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Are there products whose pumps don't clog, leak or break after a few uses?",
+    "product_ids": [],
+    "target_aspects": [
+      "dispenser",
+      "packaging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qf1ef398f",
+    "split": "dev",
+    "status": "draft",
+    "type": "compare",
+    "text": "Between the Origins High Potency Night-A-Mins moisture cream and the SKEDERM EXHYDRO Ceramide face cream, which one do reviewers say hydrates better?",
+    "product_ids": [
+      "product:B00JZKAUV0",
+      "product:B01GBZT5GM"
+    ],
+    "target_aspects": [
+      "moisturization"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q1757d34e",
+    "split": "dev",
+    "status": "draft",
+    "type": "compare",
+    "text": "How do the Sauce Beauty Guacamole Whip hair mask and the Argan Oil 5 Seconds hair mask compare in terms of how well they condition hair?",
+    "product_ids": [
+      "product:B0BV1FPZY6",
+      "product:B07Z93JR1M"
+    ],
+    "target_aspects": [
+      "conditioning"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q68ab5124",
+    "split": "dev",
+    "status": "draft",
+    "type": "compare",
+    "text": "Do reviewers prefer the scent of the Earth Science Ceramide Care fragrance-free shampoo and conditioner set or the John Frieda Brilliant Brunette duo?",
+    "product_ids": [
+      "product:B071S98JST",
+      "product:B00SGCP90A"
+    ],
+    "target_aspects": [
+      "scent"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qac0beb88",
+    "split": "dev",
     "status": "draft",
     "type": "disagreement",
-    "text": "Do reviewers of the Rodan + Fields REVERSE brightening serum disagree about whether it works or causes irritation?",
+    "text": "What do reviewers of the Rodan + Fields REVERSE Brightening Complex serum disagree about, and what are the most common complaints?",
     "product_ids": [
       "product:B00I86O3WE"
     ],
     "target_aspects": [
       "effectiveness",
-      "irritation"
-    ]
-  },
-  {
-    "qid": "q225c641d",
-    "split": "test",
-    "status": "draft",
-    "type": "unanswerable",
-    "text": "Has the Dermacol Make-up Cover foundation been clinically tested by a dermatologist lab and what were the SPF test results?",
-    "product_ids": [
-      "product:B077W2RCN7"
+      "skin_results",
+      "irritation",
+      "value_for_money"
     ],
-    "target_aspects": []
+    "target_context": "unspecified"
   },
   {
-    "qid": "qb463cac2",
-    "split": "test",
+    "qid": "q99f6a7c2",
+    "split": "dev",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "For the DESIGNLINE Curl Lock Leave-In Moisturizer, what are the main complaints and where do opinions split?",
+    "product_ids": [
+      "product:B0896VG84J"
+    ],
+    "target_aspects": [
+      "dispenser",
+      "packaging",
+      "curl_definition",
+      "size_quantity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q2344729d",
+    "split": "dev",
     "status": "draft",
     "type": "unanswerable",
-    "text": "Is the Raw African Shea Butter certified organic by USDA, and which farm cooperative supplies it?",
+    "text": "Has the Rodan + Fields REVERSE Brightening Complex been proven in clinical lab trials to reduce melanin levels, and is it dermatologist-certified?",
     "product_ids": [
+      "product:B00I86O3WE"
+    ],
+    "target_aspects": [],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q0546f3b9",
+    "split": "dev",
+    "status": "draft",
+    "type": "unanswerable",
+    "text": "What does the GK HAIR Moisturizing Shampoo and Conditioner set cost at Target or Ulta compared to here, and is it certified organic by USDA?",
+    "product_ids": [
+      "product:B07R1K1SBD"
+    ],
+    "target_aspects": [],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q813aea8b",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which body lotion absorbs quickly without leaving a sticky film?",
+    "product_ids": [],
+    "target_aspects": [
+      "absorption",
+      "residue"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qbdd017cb",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "I need a face cream that keeps dry skin hydrated all day — any recommendations?",
+    "product_ids": [],
+    "target_aspects": [
+      "moisturization"
+    ],
+    "target_context": "skin_type=dry"
+  },
+  {
+    "qid": "qae3ba6f8",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a shampoo that really cleans oily roots well.",
+    "product_ids": [],
+    "target_aspects": [
+      "cleansing"
+    ],
+    "target_context": "hair_type=oily"
+  },
+  {
+    "qid": "q67ea4822",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which conditioner makes detangling easy on curly hair?",
+    "product_ids": [],
+    "target_aspects": [
+      "detangling"
+    ],
+    "target_context": "hair_type=curly"
+  },
+  {
+    "qid": "q5f297c94",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "What body butter has the most luxurious, creamy texture?",
+    "product_ids": [],
+    "target_aspects": [
+      "texture"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qa4de08e4",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which face serum gives visible results on fine lines and wrinkles?",
+    "product_ids": [],
+    "target_aspects": [
+      "anti_aging",
+      "skin_results"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qed19b1a1",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "I want a product whose scent lingers on the skin for hours — which one do reviewers praise?",
+    "product_ids": [],
+    "target_aspects": [
+      "scent",
+      "scent_longevity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q8f809439",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which hair mask leaves damaged hair noticeably softer and healthier?",
+    "product_ids": [],
+    "target_aspects": [
+      "hair_results",
+      "conditioning"
+    ],
+    "target_context": "hair_type=damaged"
+  },
+  {
+    "qid": "q625e9077",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a big-size product that reviewers say is great value for the money.",
+    "product_ids": [],
+    "target_aspects": [
+      "value_for_money",
+      "size_quantity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q4ab31dc9",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which night cream works well as an overnight moisturizer?",
+    "product_ids": [],
+    "target_aspects": [
+      "moisturization",
+      "effectiveness"
+    ],
+    "target_context": "time_of_use=night"
+  },
+  {
+    "qid": "q95d64117",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which eye cream do reviewers say actually helps with puffiness and dark circles?",
+    "product_ids": [],
+    "target_aspects": [
+      "effectiveness",
+      "anti_aging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q471c466f",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Any shampoo bar that lathers up nicely despite being solid?",
+    "product_ids": [],
+    "target_aspects": [
+      "lather"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qb0cf448b",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which product is easy to spread and apply with just a little effort?",
+    "product_ids": [],
+    "target_aspects": [
+      "ease_of_application"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qe5bcf0fe",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a hair product that tames frizz in humid weather.",
+    "product_ids": [],
+    "target_aspects": [
+      "frizz_control"
+    ],
+    "target_context": "climate=humid"
+  },
+  {
+    "qid": "qb04f0018",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which body oil sinks in fast and leaves skin silky?",
+    "product_ids": [],
+    "target_aspects": [
+      "absorption",
+      "moisturization"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q853a396e",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which face moisturizer sits well under makeup during the day?",
+    "product_ids": [],
+    "target_aspects": [
+      "texture",
+      "ease_of_application"
+    ],
+    "target_context": "time_of_use=day"
+  },
+  {
+    "qid": "qbace8b0b",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which shampoo and conditioner set leaves fine hair with more body and volume?",
+    "product_ids": [],
+    "target_aspects": [
+      "hair_results"
+    ],
+    "target_context": "hair_type=fine"
+  },
+  {
+    "qid": "qc0e299ae",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which cream is gentle enough that even sensitive skin reviewers had no problems?",
+    "product_ids": [],
+    "target_aspects": [
+      "irritation"
+    ],
+    "target_context": "skin_type=sensitive"
+  },
+  {
+    "qid": "qdfb5972e",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a shampoo that soothes an itchy, flaky scalp.",
+    "product_ids": [],
+    "target_aspects": [
+      "scalp_condition"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qfecb7f78",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which hand or body cream rescues severely dry, cracked skin in cold winter weather?",
+    "product_ids": [],
+    "target_aspects": [
+      "moisturization",
+      "skin_results"
+    ],
+    "target_context": "climate=cold"
+  },
+  {
+    "qid": "q4a8892b3",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which product comes in sturdy, well-designed packaging that arrives intact?",
+    "product_ids": [],
+    "target_aspects": [
+      "packaging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q523a8d2d",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Any lotion with a pump dispenser that works smoothly to the last drop?",
+    "product_ids": [],
+    "target_aspects": [
+      "dispenser"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q9145b48e",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which curl product gives nice defined curls without crunch?",
+    "product_ids": [],
+    "target_aspects": [
+      "curl_definition"
+    ],
+    "target_context": "hair_type=curly"
+  },
+  {
+    "qid": "qd12c2c09",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which serum reviewers say cleared up their acne-prone skin?",
+    "product_ids": [],
+    "target_aspects": [
+      "skin_results",
+      "effectiveness"
+    ],
+    "target_context": "skin_type=acne_prone"
+  },
+  {
+    "qid": "q46cd28f7",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Looking for a body lotion that feels light and comfortable in hot weather.",
+    "product_ids": [],
+    "target_aspects": [
+      "texture",
+      "residue"
+    ],
+    "target_context": "climate=hot"
+  },
+  {
+    "qid": "q21d1a0ca",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which conditioner keeps color-treated hair soft and protected?",
+    "product_ids": [],
+    "target_aspects": [
+      "conditioning",
+      "hair_results"
+    ],
+    "target_context": "hair_type=color_treated"
+  },
+  {
+    "qid": "q616c1ef8",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which shea butter is praised for how effectively it softens rough skin?",
+    "product_ids": [],
+    "target_aspects": [
+      "effectiveness",
+      "moisturization"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q394c3a96",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Any shampoo with a fresh scent that people genuinely love?",
+    "product_ids": [],
+    "target_aspects": [
+      "scent"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qe2b1738b",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which leave-in or hair mist makes thick hair easier to comb through?",
+    "product_ids": [],
+    "target_aspects": [
+      "detangling",
+      "ease_of_application"
+    ],
+    "target_context": "hair_type=thick"
+  },
+  {
+    "qid": "qd529a41a",
+    "split": "test",
+    "status": "draft",
+    "type": "pos_condition",
+    "text": "Which small bottle of serum lasts a long time and is worth the price?",
+    "product_ids": [],
+    "target_aspects": [
+      "value_for_money",
+      "size_quantity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q3a2c7e04",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I want a body lotion that doesn't leave a greasy film on my skin after applying it.",
+    "product_ids": [],
+    "target_aspects": [
+      "residue"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q62e8e790",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which face cream do reviewers say doesn't sting or cause redness on sensitive skin?",
+    "product_ids": [],
+    "target_aspects": [
+      "irritation"
+    ],
+    "target_context": "skin_type=sensitive"
+  },
+  {
+    "qid": "q7d1dcb8e",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Looking for a shampoo that doesn't leave my scalp itchy or flaky.",
+    "product_ids": [],
+    "target_aspects": [
+      "scalp_condition"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q2101d338",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Is there a conditioner that doesn't weigh down fine hair or leave it limp?",
+    "product_ids": [],
+    "target_aspects": [
+      "residue",
+      "conditioning"
+    ],
+    "target_context": "hair_type=fine"
+  },
+  {
+    "qid": "q5c3a49af",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I'd like a body butter without an overpowering perfumed smell.",
+    "product_ids": [],
+    "target_aspects": [
+      "scent"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qe7a8d87d",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which face serum doesn't trigger breakouts on acne-prone skin?",
+    "product_ids": [],
+    "target_aspects": [
+      "skin_results",
+      "irritation"
+    ],
+    "target_context": "skin_type=acne_prone"
+  },
+  {
+    "qid": "q696d003c",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Looking for a hair mask that doesn't leave hair oily or heavy after rinsing.",
+    "product_ids": [],
+    "target_aspects": [
+      "residue"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q7ea18372",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Any body oil whose bottle doesn't leak or spill during shipping?",
+    "product_ids": [],
+    "target_aspects": [
+      "packaging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qc1a79aeb",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I want something with a pump that doesn't clog or break after a few uses.",
+    "product_ids": [],
+    "target_aspects": [
+      "dispenser"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q258c322a",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "In hot weather, which moisturizer doesn't just sit on top of the skin without absorbing?",
+    "product_ids": [],
+    "target_aspects": [
+      "absorption"
+    ],
+    "target_context": "climate=hot"
+  },
+  {
+    "qid": "qd25cd510",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Is there a leave-in product that doesn't leave my hair frizzy in humid weather?",
+    "product_ids": [],
+    "target_aspects": [
+      "frizz_control"
+    ],
+    "target_context": "climate=humid"
+  },
+  {
+    "qid": "qbf365161",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I'm tired of lotions whose scent disappears within an hour — which ones don't fade so fast?",
+    "product_ids": [],
+    "target_aspects": [
+      "scent_longevity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qc7585f8a",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which products do buyers not complain about being overpriced for what you get?",
+    "product_ids": [],
+    "target_aspects": [
+      "value_for_money"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q590580c0",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Looking for something that doesn't run out after just a couple of weeks of use.",
+    "product_ids": [],
+    "target_aspects": [
+      "size_quantity"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q3808ec54",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which eye cream doesn't burn or make my sensitive eyes water?",
+    "product_ids": [],
+    "target_aspects": [
+      "irritation"
+    ],
+    "target_context": "skin_type=sensitive"
+  },
+  {
+    "qid": "q100b0c3f",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I need a shampoo that doesn't strip color-treated hair or fade the dye.",
+    "product_ids": [],
+    "target_aspects": [
+      "cleansing",
+      "hair_results"
+    ],
+    "target_context": "hair_type=color_treated"
+  },
+  {
+    "qid": "q877f9f99",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Is there a conditioner that doesn't leave curly hair tangled and hard to comb?",
+    "product_ids": [],
+    "target_aspects": [
+      "detangling"
+    ],
+    "target_context": "hair_type=curly"
+  },
+  {
+    "qid": "q939f62d2",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which shampoo bar doesn't barely foam — I don't want one that refuses to lather.",
+    "product_ids": [],
+    "target_aspects": [
+      "lather"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qf1d38240",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Looking for a facial moisturizer that isn't thick and sticky on oily skin.",
+    "product_ids": [],
+    "target_aspects": [
+      "texture"
+    ],
+    "target_context": "skin_type=oily"
+  },
+  {
+    "qid": "qdc5c7bcd",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which body lotion doesn't leave skin feeling dry again an hour later in cold winter weather?",
+    "product_ids": [],
+    "target_aspects": [
+      "moisturization"
+    ],
+    "target_context": "climate=cold"
+  },
+  {
+    "qid": "qd1915895",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Any cream that doesn't clog pores or cause little bumps on the face?",
+    "product_ids": [],
+    "target_aspects": [
+      "skin_results"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q42c646a1",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "I want a daytime face serum that doesn't pill or ball up under makeup.",
+    "product_ids": [],
+    "target_aspects": [
+      "residue",
+      "ease_of_application"
+    ],
+    "target_context": "time_of_use=day"
+  },
+  {
+    "qid": "qe500bfd9",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which hair treatment doesn't leave hair stiff or crunchy afterwards?",
+    "product_ids": [],
+    "target_aspects": [
+      "hair_results"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qf63df93c",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Is there a body butter that isn't rock hard and difficult to spread?",
+    "product_ids": [],
+    "target_aspects": [
+      "ease_of_application",
+      "texture"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q5b9244a3",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which conditioner doesn't make oily hair greasy by the end of the day?",
+    "product_ids": [],
+    "target_aspects": [
+      "conditioning",
+      "residue"
+    ],
+    "target_context": "hair_type=oily"
+  },
+  {
+    "qid": "q3cdfe8b5",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Looking for a gentle cleanser or shampoo bar that doesn't irritate the skin or scalp at all.",
+    "product_ids": [],
+    "target_aspects": [
+      "irritation"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q80b877b0",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which firming or cellulite cream don't people say did absolutely nothing for them?",
+    "product_ids": [],
+    "target_aspects": [
+      "effectiveness"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q83b4aaa2",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Is there a hair oil without a strong chemical or rancid smell?",
+    "product_ids": [],
+    "target_aspects": [
+      "scent"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qd1d0d911",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Any shea butter whose jar or container doesn't arrive cracked and messy?",
+    "product_ids": [],
+    "target_aspects": [
+      "packaging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q9aa0fa6e",
+    "split": "test",
+    "status": "draft",
+    "type": "neg_condition",
+    "text": "Which styling product doesn't leave thick hair coated or sticky at the roots?",
+    "product_ids": [],
+    "target_aspects": [
+      "residue"
+    ],
+    "target_context": "hair_type=thick"
+  },
+  {
+    "qid": "q531bf532",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Between the Botanic Hearth Shea Butter and the Raw African Shea Butter jar, which one has the better texture to work with?",
+    "product_ids": [
+      "product:B071FBNMN2",
       "product:B00EO5JV48"
     ],
-    "target_aspects": []
+    "target_aspects": [
+      "texture"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q2315ecd5",
+    "qid": "qc92b80ba",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "How do reviewers compare the scent of Sol de Janeiro Brazilian Kiss Lip Butter versus the Bath & Body Works Watermelon Lemonade Ultra Shea Cream?",
+    "product_ids": [
+      "product:B01N5CJPSX",
+      "product:B01FERSKA0"
+    ],
+    "target_aspects": [
+      "scent"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qeeafd124",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Which cleanses hair better according to reviews: the TRUSS Equilibrium Shampoo or the ColorProof SuperRich Moisture Shampoo?",
+    "product_ids": [
+      "product:B077TBSVK8",
+      "product:B007CMT6TA"
+    ],
+    "target_aspects": [
+      "cleansing"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q4ad53721",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "For anti-aging results, do reviewers prefer the OZNaturals 2.5 Retinol Serum or the Eye Diamond Smooth and Firm Eye Cream?",
+    "product_ids": [
+      "product:B01NB1ZBA1",
+      "product:B016P7WU2W"
+    ],
+    "target_aspects": [
+      "anti_aging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q2f7cbee7",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Is the Murad Hydration Intense Recovery Cream or the Colonial Dames Vitamin E Cream more moisturizing according to reviewers?",
+    "product_ids": [
+      "product:B08SQZ1B3W",
+      "product:B07TVFCPGP"
+    ],
+    "target_aspects": [
+      "moisturization"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q4dd51b65",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Which is the better value for the money, the Lot of 10 Avon Moisture Therapy Hand Creams or the Corn Huskers Lotion 4-pack?",
+    "product_ids": [
+      "product:B00T2HC1V8",
+      "product:B00AJOJ0GW"
+    ],
+    "target_aspects": [
+      "value_for_money"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qaccd021c",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Comparing the Tangie Citrus Solid Conditioner Bar and the B.O.B Solid Conditioner Bar, which conditions hair better?",
+    "product_ids": [
+      "product:B07MVM8GMM",
+      "product:B0BN113VWD"
+    ],
+    "target_aspects": [
+      "conditioning"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q1dad4c11",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Do reviewers say the Gio Naturals Moroccan Argan Oil or the Sky Organics Fractionated Coconut Oil leaves less greasy residue?",
+    "product_ids": [
+      "product:B00ZPQB9RW",
+      "product:B01I2MU2JQ"
+    ],
+    "target_aspects": [
+      "residue"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q915ac248",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Which packaging holds up better in reviews, the Dr Adorable Avocado Butter tub or the INOAR Argan Oil bottle?",
+    "product_ids": [
+      "product:B00P472PNE",
+      "product:B00HSV1UL2"
+    ],
+    "target_aspects": [
+      "packaging"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qdb50e73c",
+    "split": "test",
+    "status": "draft",
+    "type": "compare",
+    "text": "Between the Eva NYC Satin Dream Leave-In Cream and the FX Curls Up Reactivator, which controls frizz better?",
+    "product_ids": [
+      "product:B01N48ALAE",
+      "product:B00GMP6FW4"
+    ],
+    "target_aspects": [
+      "frizz_control"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qc470587f",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "What do reviewers of the Murad Hydration Intense Recovery Cream disagree about?",
+    "product_ids": [
+      "product:B08SQZ1B3W"
+    ],
+    "target_aspects": [
+      "moisturization",
+      "texture",
+      "residue"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q49356f85",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "What are the main complaints about the InstaNatural Cellulite Cream?",
+    "product_ids": [
+      "product:B00PKIE760"
+    ],
+    "target_aspects": [
+      "effectiveness",
+      "scent",
+      "skin_results"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q8e1412e3",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "Do reviewers of the Ethique Saving Face solid face serum agree on how it feels and whether it leaves residue?",
+    "product_ids": [
+      "product:B0769YSRJR"
+    ],
+    "target_aspects": [
+      "residue",
+      "texture",
+      "moisturization"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qd41cfbda",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "What's the split opinion on the OZNaturals 2.5 Retinol Serum?",
+    "product_ids": [
+      "product:B01NB1ZBA1"
+    ],
+    "target_aspects": [
+      "effectiveness",
+      "size_quantity",
+      "value_for_money"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q0b5fe620",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "What issues do people raise about the Argan Oil Shampoo and Conditioner Set?",
+    "product_ids": [
+      "product:B01GOWKAD4"
+    ],
+    "target_aspects": [
+      "cleansing",
+      "conditioning",
+      "hair_results"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qa326e367",
+    "split": "test",
+    "status": "draft",
+    "type": "disagreement",
+    "text": "Where do reviews of the Herbivore Jasmine Body Oil conflict with each other?",
+    "product_ids": [
+      "product:B00QQZ586E"
+    ],
+    "target_aspects": [
+      "scent",
+      "scent_longevity",
+      "absorption",
+      "value_for_money"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q1068993b",
     "split": "test",
     "status": "draft",
     "type": "unanswerable",
-    "text": "How much cheaper is the Wet Brush Original Detangler at Target or Walmart compared to Amazon right now?",
+    "text": "Is the OZNaturals 2.5 Retinol Serum clinically proven in a dermatologist-run trial to reduce wrinkle depth by a measured percentage?",
     "product_ids": [
-      "product:B0797GW888"
+      "product:B01NB1ZBA1"
     ],
-    "target_aspects": []
+    "target_aspects": [
+      "anti_aging"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q0fc6eb09",
+    "qid": "q26e3d7ca",
     "split": "test",
     "status": "draft",
     "type": "unanswerable",
-    "text": "Can the Sky-shop Fungus Nail Repair Oil cure a diagnosed onychomycosis infection according to clinical trials?",
+    "text": "How much cheaper is the Botanic Hearth Shea Butter at Walmart or Target compared to its current online price?",
     "product_ids": [
-      "product:B01AYTGWA8"
+      "product:B071FBNMN2"
     ],
-    "target_aspects": []
+    "target_aspects": [
+      "value_for_money"
+    ],
+    "target_context": "unspecified"
   },
   {
-    "qid": "q43f9af4e",
+    "qid": "q2a2ba222",
     "split": "test",
     "status": "draft",
     "type": "unanswerable",
-    "text": "What is the exact percentage of hyaluronic acid in the 24k Gold Under Eye Masks and is it vegan-certified?",
+    "text": "Does the Sky Organics Fractionated Coconut Oil carry USDA Organic and Leaping Bunny certifications, and when were they issued?",
     "product_ids": [
-      "product:B00WWV5PP0"
+      "product:B01I2MU2JQ"
     ],
-    "target_aspects": []
+    "target_aspects": [],
+    "target_context": "unspecified"
   },
   {
-    "qid": "qd53d1119",
+    "qid": "q210b87ef",
     "split": "test",
     "status": "draft",
     "type": "unanswerable",
-    "text": "Is the LOVATIC Teeth Whitening Pen approved by the ADA, and are its peroxide levels verified by an independent lab?",
+    "text": "What is the exact pH value and preservative concentration measured in the lab for the B.O.B Moisturizing Shampoo Bar?",
     "product_ids": [
-      "product:B01I0SJXQA"
+      "product:B0BN12F234"
     ],
-    "target_aspects": []
+    "target_aspects": [],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "qe7b20621",
+    "split": "test",
+    "status": "draft",
+    "type": "unanswerable",
+    "text": "Can the Murad Hydration Intense Recovery Cream be used to medically treat eczema or rosacea according to a doctor's prescription?",
+    "product_ids": [
+      "product:B08SQZ1B3W"
+    ],
+    "target_aspects": [
+      "irritation"
+    ],
+    "target_context": "unspecified"
+  },
+  {
+    "qid": "q1578912c",
+    "split": "test",
+    "status": "draft",
+    "type": "unanswerable",
+    "text": "What percentage of copper peptides is actually in The Ordinary Buffet + Copper Peptides 1%, as verified by independent third-party testing?",
+    "product_ids": [
+      "product:B07CZSFHZM"
+    ],
+    "target_aspects": [],
+    "target_context": "unspecified"
   }
 ]

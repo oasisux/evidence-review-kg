@@ -115,7 +115,9 @@ with tabs[0]:
     c = st.columns(3)
     c[0].metric("선택 상품", man.get("n_selected_products"))
     c[1].metric("리뷰", man.get("n_reviews_kept"))
-    c[2].metric("적격 상품 (리뷰≥15)", man.get("n_eligible_products"))
+    c[2].metric("적격 상품", man.get("n_eligible_products"))
+    if man.get("n_selected_by_family"):
+        st.caption("상품군별 상품 수: " + ", ".join(f"{k} {v}" for k, v in man["n_selected_by_family"].items()))
     ledger = pd.DataFrame(evaluation().get("cost", []))
     st.subheader("데이터 manifest")
     st.json(man, expanded=False)
@@ -152,6 +154,13 @@ with tabs[1]:
         st.subheader("aspect별 의견 분포 (독립 작성자 기준)")
         show = ag[["aspect", "n_pos", "n_neg", "n_neutral", "n_mixed", "n_authors", "disagreement", "contested"]]
         st.dataframe(show.sort_values("n_authors", ascending=False), hide_index=True, width="stretch")
+    seller_path = G / "seller_attributes.parquet"
+    if seller_path.exists():
+        sa = pd.read_parquet(seller_path)
+        sa = sa[(sa.product_id == pid) & sa.hard_pass]
+        if len(sa):
+            st.subheader("판매자 표방 속성 (상품 설명 문구, 리뷰 근거 아님)")
+            st.dataframe(sa[["attribute", "value", "context", "quote"]], hide_index=True, width="stretch")
     try:
         from pyvis.network import Network
         net = Network(height="520px", width="100%", directed=True, bgcolor="#ffffff", font_color="#222")

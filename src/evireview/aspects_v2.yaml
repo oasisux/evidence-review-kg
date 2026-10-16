@@ -1,0 +1,137 @@
+# Beauty aspect dictionary v2: common aspects + per-family aspects for the two sampled product families.
+# Aliases are matched case-insensitively on word boundaries. An aspect without `families` applies to every family.
+# Per-family lists are refined only from dev data (`evireview induce-aspects`), then frozen here.
+# 2026-10-16 induction on 300 dev reviews per family (reports/aspect_induction.json): split skin_results into
+# skin_results + anti_aging; split conditioning into conditioning + detangling + frizz_control; added curl_definition.
+# Dropped from v1 (no sampled family uses them): coverage, shade_match, wear_time, hold.
+version: aspects-v2
+domain: beauty
+families:
+  skin_moisturizer:
+    description: Leave-on products whose main job is to moisturize face or body skin - lotion, cream, body butter, facial moisturizer, face serum, eye cream, facial or body oil. NOT self-tanners or bronzers, sunscreen-first products, medicated, antibacterial or pain-relief creams, beard products, patches or masks, cleansers, makeup.
+    title_cues: [moisturizer, moisturiser, moisturizing cream, face cream, facial cream, night cream, day cream, eye cream, body lotion, hand lotion, hand cream, lotion, body butter, face serum, facial serum, serum]
+  hair_care:
+    description: Products whose main job is to wash, condition or treat hair and scalp - shampoo, conditioner, co-wash, hair mask, leave-in conditioner, hair oil or serum, scalp treatment. NOT styling products (gel, pomade, wax, mousse, hairspray, texturizing or heat-protectant spray), hair color, dye, developer or toner, beard products, wigs, hair extensions or braiding hair, tools, brushes, massagers, caps, elastics, clips or other accessories.
+    title_cues: [shampoo, conditioner, co-wash, cowash, hair mask, leave-in, leave in, hair oil, hair serum, hair treatment]
+aspects:
+  # ---------------------------------------------------------------- common
+  texture:
+    description: How the product feels physically - consistency, thickness, smoothness, creaminess, runniness.
+    aliases: [texture, consistency, feel, feels, creamy, silky, runny, watery, gritty, lightweight, light weight]
+  scent:
+    description: The smell or fragrance of the product.
+    aliases: [scent, smell, smells, smelled, fragrance, odor, aroma, perfume, scented, unscented, stinks]
+  scent_longevity:
+    description: How long the scent or fragrance lasts on skin or hair after use.
+    aliases: [long lasting scent, scent lasts, smell lasts, smell lingers, scent lingers, fades quickly, longevity]
+  residue:
+    description: Greasy, oily, sticky, tacky or heavy residue left on skin or hair after use, or buildup that weighs hair down.
+    aliases: [greasy, oily, sticky, tacky, residue, film, heavy, weighs down, weighed down, slick, buildup, build up]
+  irritation:
+    description: A reaction caused by the product - burning, stinging, itching, rash, breakouts or allergic reaction - or gentleness on sensitive skin or scalp.
+    aliases: [irritation, irritated, irritating, burn, burning, itch, itchy, rash, breakout, breakouts, broke out, allergic, reaction, gentle, sting, stings]
+  packaging:
+    description: Packaging quality, container, leaks, damage on arrival, seal.
+    aliases: [packaging, package, container, bottle, jar, leaked, leaking, leak, broken, arrived, seal, sealed, box]
+  dispenser:
+    description: The pump, spray, applicator, dropper, cap or other dispensing mechanism.
+    aliases: [pump, spray, sprayer, nozzle, applicator, dropper, dispenser, tube, cap, lid]
+  size_quantity:
+    description: Product size, amount or quantity received relative to expectation, and how long the supply lasts.
+    aliases: [size, small, tiny, amount, quantity, ounce, oz, ml, travel size, big, large, a little goes a long way]
+  value_for_money:
+    description: Price and whether the product is worth the money.
+    aliases: [price, value, worth, expensive, cheap, overpriced, money, cost, bargain, deal, affordable]
+  ease_of_application:
+    description: How easy the product is to apply, spread, work through hair or rinse out.
+    aliases: [easy to use, easy to apply, apply, application, applies, spreads, rinses, rinse out, goes on]
+  effectiveness:
+    description: Overall verdict that the product works or does not, ONLY when no more specific aspect describes the result (as experienced by the reviewer, not a verified health claim).
+    aliases: [works, worked, effective, results, difference, does the job, did nothing, doesn't work, does not work, useless]
+  # ---------------------------------------------------------------- skin_moisturizer
+  moisturization:
+    description: How well the product hydrates skin or hair, how long the hydration lasts, or whether it dries it out.
+    families: [skin_moisturizer, hair_care]
+    aliases: [moisturizing, moisturizes, moisturize, hydrating, hydrated, hydration, dry, drying, dried out, moisture, nourishing]
+  absorption:
+    description: How quickly and fully the product absorbs or sinks into skin.
+    families: [skin_moisturizer]
+    aliases: [absorbs, absorb, absorbed, soaks in, sinks in, absorption]
+  skin_results:
+    description: Visible changes to skin tone and surface the reviewer attributes to the product - softness, smoothness, glow, brightness, dark spots, redness (as experienced, not a verified health claim).
+    families: [skin_moisturizer]
+    aliases: [soft skin, smooth skin, skin feels, glow, glowing, brighter, brightening, dark spots, redness, complexion, even tone]
+  anti_aging:
+    description: Signs of aging the reviewer says the product changed - wrinkles, fine lines, firmness, sagging, puffiness, dark circles (as experienced, not a verified health claim).
+    families: [skin_moisturizer]
+    aliases: [wrinkles, wrinkle, fine lines, firmer, firmness, tightening, sagging, puffiness, puffy, dark circles, younger looking, plump]
+  # ---------------------------------------------------------------- hair_care
+  lather:
+    description: How much the product foams or lathers.
+    families: [hair_care]
+    aliases: [lather, lathers, foam, foams, suds, bubbles]
+  cleansing:
+    description: How well the product cleans hair and scalp, or whether it strips hair or leaves it dirty.
+    families: [hair_care]
+    aliases: [cleans, clean, cleansing, squeaky clean, stripped, stripping, strips, dirty]
+  conditioning:
+    description: Softness, smoothness and manageability of hair after use (tangles are detangling, frizz is frizz_control).
+    families: [hair_care]
+    aliases: [manageable, manageability, soft hair, smooth hair, silky hair, conditioned, conditioning]
+  detangling:
+    description: How well the product removes or prevents tangles and knots so hair combs through easily.
+    families: [hair_care]
+    aliases: [detangle, detangles, detangling, detangler, tangles, tangled, knots, comb through, combs through]
+  frizz_control:
+    description: How well the product reduces or prevents frizz and flyaways, including in humidity.
+    families: [hair_care]
+    aliases: [frizz, frizzy, frizz free, flyaways, fly aways, poofy]
+  curl_definition:
+    description: How well the product defines, shapes or holds curls and waves.
+    families: [hair_care]
+    aliases: [curl definition, defined curls, defines curls, defines my curls, curl pattern, ringlets, waves]
+  scalp_condition:
+    description: Effect on the scalp's ongoing condition - dandruff, flaking, oiliness, dryness or itch relief (an acute reaction to the product is irritation).
+    families: [hair_care]
+    aliases: [scalp, dandruff, flakes, flaking, flaky, itchy scalp, dry scalp, oily scalp]
+  hair_results:
+    description: Visible changes to hair the reviewer attributes to the product - shine, volume, thickness, growth, breakage, color retention (as experienced, not a verified health claim).
+    families: [hair_care]
+    aliases: [shine, shiny, volume, fuller, thicker, growth, grow, breakage, split ends, color fading, lustrous]
+contexts:
+  - unspecified
+  - skin_type=oily
+  - skin_type=dry
+  - skin_type=sensitive
+  - skin_type=combination
+  - skin_type=acne_prone
+  - hair_type=curly
+  - hair_type=fine
+  - hair_type=thick
+  - hair_type=color_treated
+  - hair_type=oily
+  - hair_type=damaged
+  - climate=humid
+  - climate=dry
+  - climate=cold
+  - climate=hot
+  - time_of_use=day
+  - time_of_use=night
+context_cues:
+  skin_type=oily: [oily skin]
+  skin_type=dry: [dry skin]
+  skin_type=sensitive: [sensitive skin]
+  skin_type=combination: [combination skin, combo skin]
+  skin_type=acne_prone: [acne prone, acne-prone, acne]
+  hair_type=curly: [curly hair, curls, curly]
+  hair_type=fine: [fine hair, thin hair]
+  hair_type=thick: [thick hair]
+  hair_type=color_treated: [color treated, color-treated, colored hair, dyed hair, bleached]
+  hair_type=oily: [oily hair, greasy hair, oily scalp]
+  hair_type=damaged: [damaged hair, dry hair, brittle hair]
+  climate=humid: [humid, humidity]
+  climate=dry: [dry climate, arid]
+  climate=cold: [winter, cold weather]
+  climate=hot: [summer, hot weather, heat]
+  time_of_use=day: [during the day, daytime, morning]
+  time_of_use=night: [at night, overnight, night time, nighttime, before bed]

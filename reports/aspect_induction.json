@@ -1,0 +1,1976 @@
+{
+  "method": "EDC on dev reviews: open extraction -> definitions -> map to dictionary or cluster",
+  "dictionary": "aspects-v2",
+  "match_cos": 0.55,
+  "merge_cos": 0.75,
+  "families": {
+    "skin_moisturizer": {
+      "family": "skin_moisturizer",
+      "n_reviews": 300,
+      "n_statements": 565,
+      "n_raw_names": 188,
+      "mapped_share": 0.6673,
+      "existing_aspect_counts": {
+        "texture": 56,
+        "scent": 49,
+        "scent_longevity": 0,
+        "residue": 2,
+        "irritation": 14,
+        "packaging": 14,
+        "dispenser": 3,
+        "size_quantity": 7,
+        "value_for_money": 9,
+        "ease_of_application": 3,
+        "effectiveness": 63,
+        "moisturization": 49,
+        "absorption": 24,
+        "skin_results": 84
+      },
+      "unused_existing_aspects": [
+        "scent_longevity"
+      ],
+      "proposed_new_aspects": [
+        {
+          "name": "overall_quality",
+          "definition": "Judges the overall quality of the product.",
+          "n_statements": 32,
+          "share": 0.0566,
+          "members": [
+            "overall_quality",
+            "overall_satisfaction",
+            "overall_impression",
+            "overall_feel",
+            "quality"
+          ],
+          "examples": [
+            "great product",
+            "I absolutely love this product",
+            "Very luxurious"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "greasiness",
+          "definition": "Judges how greasy or oily the product feels on the skin.",
+          "n_statements": 13,
+          "share": 0.023,
+          "members": [
+            "greasiness"
+          ],
+          "examples": [
+            "It is not greasy"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "anti_aging_effect",
+          "definition": "Judges the overall effectiveness of the product in combating signs of aging.",
+          "n_statements": 12,
+          "share": 0.0212,
+          "members": [
+            "anti_aging_effect",
+            "anti_aging",
+            "anti_aging_appearance"
+          ],
+          "examples": [
+            "before this product i start to feel my face changing and I was really shocked just after one week",
+            "smooth, younger looking",
+            "My skin looks younger"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "sleep_aid_effect",
+          "definition": "Judges how well the product helps with falling asleep or aiding sleep.",
+          "n_statements": 9,
+          "share": 0.0159,
+          "members": [
+            "sleep_aid_effect",
+            "sleep_quality"
+          ],
+          "examples": [
+            "wouldn't call it a sleep aid",
+            "I stay in REM state longer according to my Fitbit"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "breakouts",
+          "definition": "Judges whether the product causes or prevents breakouts on the skin.",
+          "n_statements": 9,
+          "share": 0.0159,
+          "members": [
+            "breakouts",
+            "acne_breakout",
+            "breakout_suitability"
+          ],
+          "examples": [
+            "Broke out my face",
+            "Every time I used this product I broke out in painful cystic acne",
+            "If you are prone to breakouts (I’m in my forties and get hormonal break outs) this is the moisturizer for you."
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "wrinkle_reduction",
+          "definition": "Judges how well the product reduces the appearance of wrinkles.",
+          "n_statements": 9,
+          "share": 0.0159,
+          "members": [
+            "wrinkle_reduction",
+            "anti_wrinkle_effect",
+            "wrinkles"
+          ],
+          "examples": [
+            "hopeful the wrinkles around my eyes will diminish",
+            "It was like pouring plain water on my face. No signs of tightening",
+            "causing more wrinkles to become visible"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "makeup_compatibility",
+          "definition": "Judges how well the product works as a base for or with makeup.",
+          "n_statements": 7,
+          "share": 0.0124,
+          "members": [
+            "makeup_compatibility"
+          ],
+          "examples": [
+            "it acts like a makeup primer, blurring lines and pores"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "dark_circles",
+          "definition": "Judges how well the product helps with dark circles under the eyes.",
+          "n_statements": 6,
+          "share": 0.0106,
+          "members": [
+            "dark_circles",
+            "dark_circles_reduction"
+          ],
+          "examples": [
+            "helping with the dark circles",
+            "was amazed at the results in only an hour after application"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "ingredients",
+          "definition": "Judges the specific ingredients included in the product and their perceived benefits.",
+          "n_statements": 6,
+          "share": 0.0106,
+          "members": [
+            "ingredients",
+            "ingredient_quality"
+          ],
+          "examples": [
+            "This also has macadamia nut oil for antioxidant purposes",
+            "It is full of good, emollient ingredients"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "stretch_mark_reduction",
+          "definition": "Judges how well the product reduces the appearance of stretch marks.",
+          "n_statements": 5,
+          "share": 0.0088,
+          "members": [
+            "stretch_mark_reduction"
+          ],
+          "examples": [
+            "it doesn't look like it will make old marks disappear, but they faded a bit"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "fine_lines",
+          "definition": "Judges the product's effect on reducing or improving the appearance of fine lines.",
+          "n_statements": 5,
+          "share": 0.0088,
+          "members": [
+            "fine_lines",
+            "fine_lines_effect",
+            "fine_lines_reduction"
+          ],
+          "examples": [
+            "Not sure I'm seeing any big difference in my fine lines",
+            "Love it for the fine lines around my eyes and under my eyes for tiredness",
+            "it helps to reduce fine lines around my eyes"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "puffiness_reduction",
+          "definition": "Judges how well the product reduces puffiness.",
+          "n_statements": 5,
+          "share": 0.0088,
+          "members": [
+            "puffiness_reduction",
+            "puffiness"
+          ],
+          "examples": [
+            "I wanted something for puffiness and does not deliver",
+            "I was looking for something with arnica to help with puffiness so this was perfect"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "skin_tightening",
+          "definition": "Judges how much the product tightens the skin.",
+          "n_statements": 4,
+          "share": 0.0071,
+          "members": [
+            "skin_tightening"
+          ],
+          "examples": [
+            "My \"turkey neck waddle\" is no longer the first thing I see in the mirror."
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "soothing",
+          "definition": "Judges how soothing the product feels on the skin.",
+          "n_statements": 4,
+          "share": 0.0071,
+          "members": [
+            "soothing",
+            "soothing_effect"
+          ],
+          "examples": [
+            "This is a wonderful, soothing, softening, and healing cream",
+            "It is soothing as soon as you put it on"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "product_usage_amount",
+          "definition": "Judges how much of the product is required per use.",
+          "n_statements": 3,
+          "share": 0.0053,
+          "members": [
+            "product_usage_amount"
+          ],
+          "examples": [
+            "you really don't have to use much to get the job done"
+          ],
+          "nearest_existing": "size_quantity"
+        },
+        {
+          "name": "sensitive_skin_suitability",
+          "definition": "Judges how suitable the product is for sensitive skin.",
+          "n_statements": 3,
+          "share": 0.0053,
+          "members": [
+            "sensitive_skin_suitability",
+            "suitability_for_sensitive_skin"
+          ],
+          "examples": [
+            "Not good to sensitive skin.",
+            "I have bee using it daily as a first step in the am. It has not cause acne and I have the most sensitive skin ever."
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "skin_healing",
+          "definition": "Judges how well the product helps heal the skin.",
+          "n_statements": 3,
+          "share": 0.0053,
+          "members": [
+            "skin_healing"
+          ],
+          "examples": [
+            "it already is healing my skin faster then anything I have ever tried before"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "product_longevity",
+          "definition": "Judges how long the product lasts before running out.",
+          "n_statements": 3,
+          "share": 0.0053,
+          "members": [
+            "product_longevity"
+          ],
+          "examples": [
+            "it doesn't last too long"
+          ],
+          "nearest_existing": "scent_longevity"
+        },
+        {
+          "name": "pore_size",
+          "definition": "Judges how the product affects the size of pores.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "pore_size"
+          ],
+          "examples": [
+            "My pores look smaller"
+          ],
+          "nearest_existing": "absorption"
+        },
+        {
+          "name": "restless_leg_relief",
+          "definition": "Judges how well the product relieves restless leg symptoms.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "restless_leg_relief"
+          ],
+          "examples": [
+            "magnesium makes a difference"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "muscle_relaxation",
+          "definition": "Judges how well the product helps relax muscles.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "muscle_relaxation",
+            "relaxation_effect"
+          ],
+          "examples": [
+            "seems to work, relaxing muscles",
+            "Helps me to relax"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "authenticity",
+          "definition": "Judges whether the product is genuine or a fake/counterfeit.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "authenticity"
+          ],
+          "examples": [
+            "this is the real thing"
+          ],
+          "nearest_existing": "value_for_money"
+        },
+        {
+          "name": "face_use",
+          "definition": "Judges how well the product performs when used on the face.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "face_use",
+            "facial_use"
+          ],
+          "examples": [
+            "amazing even for your face",
+            "I use it as a face moisturizer as well when my usual just isn't enough"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "oil_control",
+          "definition": "Judges how well the product controls oiliness on the skin.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "oil_control"
+          ],
+          "examples": [
+            "I leave it off my nose, which tends to get oily"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "eczema_relief",
+          "definition": "Judges how well the product relieves eczema symptoms.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "eczema_relief"
+          ],
+          "examples": [
+            "Truly the only thing that made my eczema completely disappear"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "itch_relief",
+          "definition": "Judges how effectively the product relieves itching.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "itch_relief"
+          ],
+          "examples": [
+            "combating the itching"
+          ],
+          "nearest_existing": "irritation"
+        },
+        {
+          "name": "spf",
+          "definition": "Judges whether the product includes SPF/sun protection.",
+          "n_statements": 2,
+          "share": 0.0035,
+          "members": [
+            "spf",
+            "spf_protection"
+          ],
+          "examples": [
+            "I just wish it came with SPF",
+            "I just wished the lotion had SPF protection."
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "product_condition",
+          "definition": "Judges the physical condition of the product upon use or receipt.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "product_condition"
+          ],
+          "examples": [
+            "Dried out and crusty on top"
+          ],
+          "nearest_existing": "value_for_money"
+        },
+        {
+          "name": "authenticity_organic",
+          "definition": "Judges whether the product's claim of being organic is believable.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "authenticity_organic"
+          ],
+          "examples": [
+            "This product claims to be organic , but it honestly doesn't seem like it is"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "morning_grogginess",
+          "definition": "Judges whether the product causes grogginess the morning after use.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "morning_grogginess"
+          ],
+          "examples": [
+            "the melatonin is not strong to promote grogginess in the morning"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "relaxation_experience",
+          "definition": "Judges how relaxing the experience of using the product feels.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "relaxation_experience"
+          ],
+          "examples": [
+            "makes me feel  relax after use"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "pump_functionality",
+          "definition": "Judges how well the pump mechanism works.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "pump_functionality"
+          ],
+          "examples": [
+            "is a pump bottle with no stem to pump the product up"
+          ],
+          "nearest_existing": "dispenser"
+        },
+        {
+          "name": "infection_prevention",
+          "definition": "Judges how well the product prevents infection.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "infection_prevention"
+          ],
+          "examples": [
+            "prevents infection very well"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "acne_prevention",
+          "definition": "Judges how well the product prevents acne.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "acne_prevention"
+          ],
+          "examples": [
+            "Prevents acne"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "routine_simplification",
+          "definition": "Judges how well the product simplifies the user's beauty routine.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "routine_simplification"
+          ],
+          "examples": [
+            "i like to use this instead of two separate products and it even simplify my beauty routine"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "shelf_life_freshness",
+          "definition": "Judges how well the product stays fresh over its shelf life.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "shelf_life_freshness"
+          ],
+          "examples": [
+            "you can’t depend on it being fresh"
+          ],
+          "nearest_existing": "scent_longevity"
+        },
+        {
+          "name": "dryness",
+          "definition": "Judges whether the product causes or worsens skin dryness.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "dryness"
+          ],
+          "examples": [
+            "actually has caused the skin under my eyes to become dry"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "purity",
+          "definition": "Judges how clean or pure the product is perceived to be.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "purity"
+          ],
+          "examples": [
+            "Clean and pure lotion"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "scar_smoothing",
+          "definition": "Judges how well the product smooths out scars.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "scar_smoothing"
+          ],
+          "examples": [
+            "smooths out old scars"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "pore_clogging",
+          "definition": "Judges whether the product clogs the user's pores.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "pore_clogging"
+          ],
+          "examples": [
+            "it doesn't appear to be clogging my pores"
+          ],
+          "nearest_existing": "absorption"
+        },
+        {
+          "name": "under_eye_tiredness",
+          "definition": "Judges how well the product reduces the tired appearance under the eyes.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "under_eye_tiredness"
+          ],
+          "examples": [
+            "I feel like this cream is helping to keep me from looking tired around the eyes"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "sun_spot_reduction",
+          "definition": "Judges how well the product reduces the appearance of sun spots.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "sun_spot_reduction"
+          ],
+          "examples": [
+            "these spots are diminishing"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "label_language",
+          "definition": "Judges the language used on the product's packaging or instructions.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "label_language"
+          ],
+          "examples": [
+            "all directions in a foreign language no English at all"
+          ],
+          "nearest_existing": "packaging"
+        },
+        {
+          "name": "finish",
+          "definition": "Judges the texture or look the product leaves on the skin after application.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "finish"
+          ],
+          "examples": [
+            "feels almost like a satin finish, almost like a primer"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "skin_sensation",
+          "definition": "Judges the sensation, such as stinging or tingling, felt on the skin.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "skin_sensation"
+          ],
+          "examples": [
+            "it does not sting"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "lip_line_reduction",
+          "definition": "Judges the product's effect on reducing lines around the lips.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "lip_line_reduction"
+          ],
+          "examples": [
+            "shown no improvement on diminishing lines around my lips"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "tingling_sensation",
+          "definition": "Judges whether the product causes a tingling sensation upon application.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "tingling_sensation"
+          ],
+          "examples": [
+            "has a tingling feeling when applied"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "age_spots",
+          "definition": "Judges how well the product reduces or removes age spots.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "age_spots"
+          ],
+          "examples": [
+            "it has erased the age spots that began creeping out"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "makeup_filler_effect",
+          "definition": "Judges how well the product fills in lines or pores like a makeup filler.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "makeup_filler_effect"
+          ],
+          "examples": [
+            "it works great as a filler"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "hand_cream_comparison",
+          "definition": "Judges how the product performs compared to regular hand creams.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "hand_cream_comparison"
+          ],
+          "examples": [
+            "It works better then regulars hand creams"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "protection",
+          "definition": "Judges how well the product protects the skin from external elements.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "protection"
+          ],
+          "examples": [
+            "protects my skin from the harsh elements in my life"
+          ],
+          "nearest_existing": "absorption"
+        },
+        {
+          "name": "weight_under_makeup",
+          "definition": "Judges how light or heavy the product feels when worn under makeup.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "weight_under_makeup"
+          ],
+          "examples": [
+            "Light enough to wear under makeup without feeling heavy or greasy"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "portability",
+          "definition": "Judges how easy the product is to carry or transport.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "portability"
+          ],
+          "examples": [
+            "Easily thrown into my purse into my makeup bag"
+          ],
+          "nearest_existing": "packaging"
+        },
+        {
+          "name": "skin_suppleness",
+          "definition": "Judges how supple the skin feels after use.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "skin_suppleness"
+          ],
+          "examples": [
+            "improved suppleness as well"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "under_eye_improvement",
+          "definition": "Judges how much the product improves the appearance of the under-eye area.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "under_eye_improvement"
+          ],
+          "examples": [
+            "Somewhat improvement under the eyes, but not much"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "muscle_recovery",
+          "definition": "Judges how well the product aids in muscle recovery.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "muscle_recovery"
+          ],
+          "examples": [
+            "it works so well"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "heaviness",
+          "definition": "Judges how heavy or light the product feels on the skin.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "heaviness"
+          ],
+          "examples": [
+            "this doesn't make my skin feel heavy"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "skin_plumping",
+          "definition": "Judges how much the product plumps up the skin.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "skin_plumping"
+          ],
+          "examples": [
+            "make the skin plump"
+          ],
+          "nearest_existing": "skin_results"
+        },
+        {
+          "name": "speed_of_results",
+          "definition": "Judges how quickly visible results appear after use.",
+          "n_statements": 1,
+          "share": 0.0018,
+          "members": [
+            "speed_of_results"
+          ],
+          "examples": [
+            "Seeing visible results after just 3 days."
+          ],
+          "nearest_existing": "skin_results"
+        }
+      ],
+      "mapping": {
+        "absorption": "absorption",
+        "absorption_speed": "absorption",
+        "acne_breakout": "NEW:breakouts",
+        "acne_mark_fading": "skin_results",
+        "acne_prevention": "NEW:acne_prevention",
+        "age_spots": "NEW:age_spots",
+        "anti_aging": "NEW:anti_aging_effect",
+        "anti_aging_appearance": "NEW:anti_aging_effect",
+        "anti_aging_effect": "NEW:anti_aging_effect",
+        "anti_wrinkle_effect": "NEW:wrinkle_reduction",
+        "application": "skin_results",
+        "application_feel": "texture",
+        "application_process": "ease_of_application",
+        "application_smoothness": "skin_results",
+        "authenticity": "NEW:authenticity",
+        "authenticity_organic": "NEW:authenticity_organic",
+        "bottle_size": "size_quantity",
+        "breakout_suitability": "NEW:breakouts",
+        "breakouts": "NEW:breakouts",
+        "brightening": "skin_results",
+        "brightening_effect": "skin_results",
+        "brightness": "skin_results",
+        "complexion_improvement": "skin_results",
+        "container_size": "size_quantity",
+        "dark_circles": "NEW:dark_circles",
+        "dark_circles_reduction": "NEW:dark_circles",
+        "dark_spot_fading": "skin_results",
+        "dark_spot_treatment": "skin_results",
+        "dry_patches": "skin_results",
+        "dry_skin_relief": "moisturization",
+        "dryness": "NEW:dryness",
+        "dryness_relief": "moisturization",
+        "ease_of_application": "ease_of_application",
+        "eczema_relief": "NEW:eczema_relief",
+        "effectiveness": "effectiveness",
+        "efficacy": "effectiveness",
+        "efficacy_dry_skin": "moisturization",
+        "efficacy_speed": "effectiveness",
+        "face_use": "NEW:face_use",
+        "facial_use": "NEW:face_use",
+        "fill_amount": "size_quantity",
+        "fine_lines": "NEW:fine_lines",
+        "fine_lines_effect": "NEW:fine_lines",
+        "fine_lines_reduction": "NEW:fine_lines",
+        "fine_lines_wrinkles": "skin_results",
+        "finish": "NEW:finish",
+        "firmness": "texture",
+        "fragrance": "scent",
+        "freshness_feel": "skin_results",
+        "gentleness": "texture",
+        "greasiness": "NEW:greasiness",
+        "hand_cream_comparison": "NEW:hand_cream_comparison",
+        "healing_effect": "skin_results",
+        "heaviness": "NEW:heaviness",
+        "hydration": "moisturization",
+        "hydration_feel": "moisturization",
+        "infection_prevention": "NEW:infection_prevention",
+        "ingredient_quality": "NEW:ingredients",
+        "ingredients": "NEW:ingredients",
+        "initial_feel": "texture",
+        "irritation": "irritation",
+        "irritation_sensitivity": "irritation",
+        "itch_relief": "NEW:itch_relief",
+        "label_language": "NEW:label_language",
+        "lip_line_reduction": "NEW:lip_line_reduction",
+        "makeup_compatibility": "NEW:makeup_compatibility",
+        "makeup_filler_effect": "NEW:makeup_filler_effect",
+        "melasma_improvement": "skin_results",
+        "moisture_barrier": "moisturization",
+        "moisture_barrier_repair": "moisturization",
+        "moisturization": "moisturization",
+        "moisturizing": "moisturization",
+        "moisturizing_duration": "moisturization",
+        "moisturizing_effect": "moisturization",
+        "moisturizing_effectiveness": "moisturization",
+        "morning_grogginess": "NEW:morning_grogginess",
+        "muscle_recovery": "NEW:muscle_recovery",
+        "muscle_relaxation": "NEW:muscle_relaxation",
+        "odor": "scent",
+        "oil_control": "NEW:oil_control",
+        "oiliness": "texture",
+        "oily_residue": "residue",
+        "overall_complexion": "skin_results",
+        "overall_effect": "effectiveness",
+        "overall_effectiveness": "effectiveness",
+        "overall_efficacy": "effectiveness",
+        "overall_feel": "NEW:overall_quality",
+        "overall_impression": "NEW:overall_quality",
+        "overall_quality": "NEW:overall_quality",
+        "overall_satisfaction": "NEW:overall_quality",
+        "overall_skin_appearance": "skin_results",
+        "package_size": "size_quantity",
+        "packaging": "packaging",
+        "packaging_seal": "packaging",
+        "packaging_usability": "packaging",
+        "pain_relief": "effectiveness",
+        "pore_appearance": "skin_results",
+        "pore_clogging": "NEW:pore_clogging",
+        "pore_size": "NEW:pore_size",
+        "portability": "NEW:portability",
+        "price": "value_for_money",
+        "product_amount_needed": "size_quantity",
+        "product_condition": "NEW:product_condition",
+        "product_longevity": "NEW:product_longevity",
+        "product_usage_amount": "NEW:product_usage_amount",
+        "protection": "NEW:protection",
+        "puffiness": "NEW:puffiness_reduction",
+        "puffiness_reduction": "NEW:puffiness_reduction",
+        "pump_dispenser": "dispenser",
+        "pump_dispensing": "dispenser",
+        "pump_functionality": "NEW:pump_functionality",
+        "purity": "NEW:purity",
+        "quality": "NEW:overall_quality",
+        "radiance": "skin_results",
+        "redness_reduction": "skin_results",
+        "relaxation_effect": "NEW:muscle_relaxation",
+        "relaxation_experience": "NEW:relaxation_experience",
+        "residue": "residue",
+        "restless_leg_relief": "NEW:restless_leg_relief",
+        "routine_simplification": "NEW:routine_simplification",
+        "scar_appearance": "skin_results",
+        "scar_smoothing": "NEW:scar_smoothing",
+        "scent": "scent",
+        "sensation": "texture",
+        "sensitive_skin_suitability": "NEW:sensitive_skin_suitability",
+        "shelf_life_freshness": "NEW:shelf_life_freshness",
+        "shine": "skin_results",
+        "size_value": "size_quantity",
+        "skin_appearance": "skin_results",
+        "skin_clarity": "skin_results",
+        "skin_clearing": "skin_results",
+        "skin_dryness": "skin_results",
+        "skin_elasticity": "skin_results",
+        "skin_feel": "skin_results",
+        "skin_feel_after_use": "skin_results",
+        "skin_feel_look": "skin_results",
+        "skin_firmness": "skin_results",
+        "skin_glow": "skin_results",
+        "skin_healing": "NEW:skin_healing",
+        "skin_improvement": "skin_results",
+        "skin_irritation": "irritation",
+        "skin_plumping": "NEW:skin_plumping",
+        "skin_quality_improvement": "skin_results",
+        "skin_reaction": "skin_results",
+        "skin_sensation": "NEW:skin_sensation",
+        "skin_smoothness": "skin_results",
+        "skin_softness": "skin_results",
+        "skin_suppleness": "NEW:skin_suppleness",
+        "skin_texture": "skin_results",
+        "skin_tightening": "NEW:skin_tightening",
+        "skin_tone": "skin_results",
+        "skin_tone_evenness": "skin_results",
+        "skin_tone_texture": "skin_results",
+        "sleep_aid_effect": "NEW:sleep_aid_effect",
+        "sleep_quality": "NEW:sleep_aid_effect",
+        "smoothing_effect": "skin_results",
+        "softness": "skin_results",
+        "soothing": "NEW:soothing",
+        "soothing_effect": "NEW:soothing",
+        "speed_of_results": "NEW:speed_of_results",
+        "spf": "NEW:spf",
+        "spf_protection": "NEW:spf",
+        "spreadability": "ease_of_application",
+        "stickiness": "texture",
+        "stretch_mark_reduction": "NEW:stretch_mark_reduction",
+        "suitability_all_skin_types": "skin_results",
+        "suitability_for_sensitive_skin": "NEW:sensitive_skin_suitability",
+        "suitability_for_skin_types": "skin_results",
+        "sun_spot_reduction": "NEW:sun_spot_reduction",
+        "symptom_relief": "effectiveness",
+        "texture": "texture",
+        "texture_application": "texture",
+        "texture_consistency": "texture",
+        "texture_feel": "texture",
+        "texture_finish": "texture",
+        "texture_thickness": "texture",
+        "texture_weight": "texture",
+        "tingling_sensation": "NEW:tingling_sensation",
+        "under_eye_improvement": "NEW:under_eye_improvement",
+        "under_eye_tiredness": "NEW:under_eye_tiredness",
+        "value": "value_for_money",
+        "value_for_amount": "value_for_money",
+        "value_for_money": "value_for_money",
+        "visible_results": "skin_results",
+        "weight_under_makeup": "NEW:weight_under_makeup",
+        "wrinkle_reduction": "NEW:wrinkle_reduction",
+        "wrinkles": "NEW:wrinkle_reduction",
+        "youthful_appearance": "skin_results"
+      }
+    },
+    "hair_care": {
+      "family": "hair_care",
+      "n_reviews": 300,
+      "n_statements": 592,
+      "n_raw_names": 212,
+      "mapped_share": 0.6959,
+      "existing_aspect_counts": {
+        "texture": 17,
+        "scent": 74,
+        "scent_longevity": 4,
+        "residue": 15,
+        "irritation": 8,
+        "packaging": 19,
+        "dispenser": 1,
+        "size_quantity": 3,
+        "value_for_money": 16,
+        "ease_of_application": 9,
+        "effectiveness": 23,
+        "moisturization": 37,
+        "lather": 6,
+        "cleansing": 6,
+        "conditioning": 68,
+        "scalp_condition": 16,
+        "hair_results": 90
+      },
+      "unused_existing_aspects": [],
+      "proposed_new_aspects": [
+        {
+          "name": "overall_quality",
+          "definition": "Judges the general quality of the product.",
+          "n_statements": 35,
+          "share": 0.0591,
+          "members": [
+            "overall_quality",
+            "overall_satisfaction",
+            "overall_performance",
+            "product_quality"
+          ],
+          "examples": [
+            "Quality the same",
+            "So far so good",
+            "Not even close as advertised"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "detangling",
+          "definition": "Judges how well the product detangles hair.",
+          "n_statements": 27,
+          "share": 0.0456,
+          "members": [
+            "detangling"
+          ],
+          "examples": [
+            "great for knots"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "frizz_control",
+          "definition": "Judges how well the product controls or reduces frizz.",
+          "n_statements": 18,
+          "share": 0.0304,
+          "members": [
+            "frizz_control"
+          ],
+          "examples": [
+            "it really controls the frizz"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "curl_definition",
+          "definition": "Judges how well the product defines or shapes curls.",
+          "n_statements": 13,
+          "share": 0.022,
+          "members": [
+            "curl_definition",
+            "curl_hold"
+          ],
+          "examples": [
+            "in place with my curls",
+            "to hold my curls"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "eyelash_growth",
+          "definition": "Judges how well the product promotes eyelash growth, length, and fullness.",
+          "n_statements": 12,
+          "share": 0.0203,
+          "members": [
+            "eyelash_growth",
+            "eyebrow_growth",
+            "eyelash_strength",
+            "lash_growth",
+            "brow_lash_growth",
+            "eyelash_eyebrow_growth",
+            "eyelash_eyebrow_thickness"
+          ],
+          "examples": [
+            "I have already noticed my eyelashes growing back after only several weeks of use",
+            "hope my eye brown will grow fast",
+            "I didn’t lose any of my eyelashes all weekend and they are silky"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "product_longevity",
+          "definition": "Judges how long the product lasts before running out.",
+          "n_statements": 5,
+          "share": 0.0084,
+          "members": [
+            "product_longevity"
+          ],
+          "examples": [
+            "you can get 4-5 uses out of 1 packet"
+          ],
+          "nearest_existing": "scent_longevity"
+        },
+        {
+          "name": "applicator_included",
+          "definition": "Judges whether the product comes with an applicator or accessory tool included.",
+          "n_statements": 4,
+          "share": 0.0068,
+          "members": [
+            "applicator_included"
+          ],
+          "examples": [
+            "Comes with an eyebrow/lash & lip wand"
+          ],
+          "nearest_existing": "dispenser"
+        },
+        {
+          "name": "amount_needed",
+          "definition": "Judges how much product is needed to achieve the desired effect.",
+          "n_statements": 4,
+          "share": 0.0068,
+          "members": [
+            "amount_needed",
+            "product_amount_needed",
+            "product_usage_amount"
+          ],
+          "examples": [
+            "you don't need to use a lot",
+            "A little goes a long way with this product",
+            "It doesn’t take much product to get the job done"
+          ],
+          "nearest_existing": "size_quantity"
+        },
+        {
+          "name": "authenticity",
+          "definition": "Judges whether the product is a genuine, authentic version of the brand item.",
+          "n_statements": 3,
+          "share": 0.0051,
+          "members": [
+            "authenticity",
+            "ingredient_authenticity"
+          ],
+          "examples": [
+            "Don’t know if this is the real thing or not.",
+            "Fake or changed ingredients"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "skin_absorption",
+          "definition": "Judges how well the product absorbs into the skin.",
+          "n_statements": 3,
+          "share": 0.0051,
+          "members": [
+            "skin_absorption",
+            "absorption_speed"
+          ],
+          "examples": [
+            "My skin absorbs the oil very well",
+            "absorbs<br />Quickly"
+          ],
+          "nearest_existing": "moisturization"
+        },
+        {
+          "name": "bottle_size",
+          "definition": "Judges whether the size of the product's container is adequate for its price or needs.",
+          "n_statements": 3,
+          "share": 0.0051,
+          "members": [
+            "bottle_size"
+          ],
+          "examples": [
+            "didnt realize it was 2 oz"
+          ],
+          "nearest_existing": "size_quantity"
+        },
+        {
+          "name": "manageability",
+          "definition": "Judges how manageable the product makes the user's hair.",
+          "n_statements": 3,
+          "share": 0.0051,
+          "members": [
+            "manageability"
+          ],
+          "examples": [
+            "soft and manageable"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "allergic_reaction",
+          "definition": "Judges whether the product causes allergic reactions.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "allergic_reaction",
+            "allergy_safety"
+          ],
+          "examples": [
+            "causes no allergy issues",
+            "I am allergic to a lot of shampoos and this one is great"
+          ],
+          "nearest_existing": "irritation"
+        },
+        {
+          "name": "dry_eye_relief",
+          "definition": "Judges how well the product relieves dry eye symptoms when used as drops.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "dry_eye_relief",
+            "eye_dryness_relief"
+          ],
+          "examples": [
+            "using it as a drop for dry eye in the evenings before bed",
+            "its helped too cause my eyes are so severe dry"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "hold",
+          "definition": "Judges how well the product holds a hairstyle in place.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "hold"
+          ],
+          "examples": [
+            "not enough hold to last a week"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "pump_durability",
+          "definition": "Judges the durability and sturdiness of the product's pump mechanism.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "pump_durability",
+            "pump_functionality"
+          ],
+          "examples": [
+            "The pump top was broken and leaking inside the bag",
+            "the pump sprayer is terrible. It doesn’t work"
+          ],
+          "nearest_existing": "dispenser"
+        },
+        {
+          "name": "split_end_repair",
+          "definition": "Judges how well the product repairs or improves split ends.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "split_end_repair"
+          ],
+          "examples": [
+            "have been using once a week as a mask for my split ends and they have dramatically gotten better"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "heat_protection",
+          "definition": "Judges how well the product protects hair from heat damage.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "heat_protection",
+            "protection"
+          ],
+          "examples": [
+            "Heat protection - I don't use heat, so can't say",
+            "Protects - didn't notice"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "cap_functionality",
+          "definition": "Judges how well the product's cap works.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "cap_functionality"
+          ],
+          "examples": [
+            "the tube cap gets stuck after a couple uses"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "color_safe",
+          "definition": "Judges whether the product is suitable for use on both colored and non-colored hair.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "color_safe",
+            "color_safety"
+          ],
+          "examples": [
+            "Great shampoo and conditioner for colored hair as well as without colored hair too",
+            "finding a shampoo that is safe for my color"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "spray_mechanism",
+          "definition": "Judges how well the spray mechanism of the product functions during application.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "spray_mechanism",
+            "spray_nozzle"
+          ],
+          "examples": [
+            "the spray detangler should be sprayed into hands before working in to hair bc it doesn’t have a great spray stream",
+            "The spray nozzle sprays nicely"
+          ],
+          "nearest_existing": "dispenser"
+        },
+        {
+          "name": "dispenser_design",
+          "definition": "Judges the design and usability of the product's dispenser.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "dispenser_design"
+          ],
+          "examples": [
+            "I wish they would go back to the pump easier to use as well"
+          ],
+          "nearest_existing": "dispenser"
+        },
+        {
+          "name": "skin_sensitivity",
+          "definition": "Judges how well the product works on sensitive skin.",
+          "n_statements": 2,
+          "share": 0.0034,
+          "members": [
+            "skin_sensitivity",
+            "skin_sensitivity_reaction"
+          ],
+          "examples": [
+            "Works well on my sensitive skin",
+            "I do not have a sensitivity reaction"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "expiration_date",
+          "definition": "Judges the expiration date or shelf life printed on the product.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "expiration_date"
+          ],
+          "examples": [
+            "Expiration date on this is 2009"
+          ],
+          "nearest_existing": "scent_longevity"
+        },
+        {
+          "name": "color",
+          "definition": "Judges the color of the product itself.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "color"
+          ],
+          "examples": [
+            "amber colored"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "mat_prevention",
+          "definition": "Judges how well the product prevents mats or tangles in hair or fur.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "mat_prevention"
+          ],
+          "examples": [
+            "preventing mats in my dog"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "nail_growth",
+          "definition": "Judges whether the product promotes nail growth.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "nail_growth"
+          ],
+          "examples": [
+            "help my nails grow"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "makeup_removal",
+          "definition": "Judges how effectively the product removes makeup.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "makeup_removal"
+          ],
+          "examples": [
+            "immediately removed my makeup with this product"
+          ],
+          "nearest_existing": "ease_of_application"
+        },
+        {
+          "name": "ingredient_safety",
+          "definition": "Judges whether the product's ingredients are safe and free of harsh chemicals.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "ingredient_safety"
+          ],
+          "examples": [
+            "no harsh chemicals in the products"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "versatility",
+          "definition": "This aspect judges how well the product can be used in multiple ways or for multiple purposes.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "versatility"
+          ],
+          "examples": [
+            "This product is so versatile and effective"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "bottle_design",
+          "definition": "Judges the design and functionality of the product's bottle.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "bottle_design"
+          ],
+          "examples": [
+            "Bottle opens and sits on lid allowing product to leak out"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "edge_regrowth",
+          "definition": "Judges how well the product promotes regrowth of hairline edges.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "edge_regrowth"
+          ],
+          "examples": [
+            "I see a little results around my edges"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "gentleness",
+          "definition": "Judges how gentle the product is during use.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "gentleness"
+          ],
+          "examples": [
+            "gentle cleansing"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "post_treatment_care",
+          "definition": "Judges the product's role or effectiveness in aftercare following a treatment.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "post_treatment_care"
+          ],
+          "examples": [
+            "use this Shampoo and Conditioner for post care"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "product_efficiency",
+          "definition": "Judges how far the product goes or how efficiently it is used.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "product_efficiency"
+          ],
+          "examples": [
+            "A little goes a long way"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "application_feel",
+          "definition": "Judges how the product feels during application.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "application_feel"
+          ],
+          "examples": [
+            "It brushes in nicely"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "eyelash_brush_applicator",
+          "definition": "Judges the quality and usability of the eyelash brush applicator.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "eyelash_brush_applicator"
+          ],
+          "examples": [
+            "The eye lash  brush which I am trying out I like that too"
+          ],
+          "nearest_existing": "ease_of_application"
+        },
+        {
+          "name": "applicator_design",
+          "definition": "Judges the design and usability of the product's applicator.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "applicator_design"
+          ],
+          "examples": [
+            "the dropper makes it so easy to use"
+          ],
+          "nearest_existing": "texture"
+        },
+        {
+          "name": "long_term_damage_repair",
+          "definition": "Judges whether the product's repairing effects last after it is washed out.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "long_term_damage_repair"
+          ],
+          "examples": [
+            "it only does that while it's IN your hair, once washed out your hair goes back to normal"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "fill_level",
+          "definition": "Judges how full the product container is upon receipt.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "fill_level"
+          ],
+          "examples": [
+            "The bottle felt a little light"
+          ],
+          "nearest_existing": "size_quantity"
+        },
+        {
+          "name": "wash_and_go_styling",
+          "definition": "This aspect judges how well the product performs for quick, low-effort wash and go styling.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "wash_and_go_styling"
+          ],
+          "examples": [
+            "great for wash and go styling"
+          ],
+          "nearest_existing": "cleansing"
+        },
+        {
+          "name": "wave_definition",
+          "definition": "This aspect judges how well the product defines waves in the hair.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "wave_definition"
+          ],
+          "examples": [
+            "the wave was more defined"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "usage_frequency",
+          "definition": "Judges how often the product needs to be used to achieve results.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "usage_frequency"
+          ],
+          "examples": [
+            "you only need to use it once a week at most"
+          ],
+          "nearest_existing": "effectiveness"
+        },
+        {
+          "name": "conditioner_usage",
+          "definition": "Judges how much conditioner is used up or consumed with use.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "conditioner_usage"
+          ],
+          "examples": [
+            "so I used up my conditioner a lot faster"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "conditioner_thickness",
+          "definition": "Judges the thickness or consistency of the conditioner.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "conditioner_thickness"
+          ],
+          "examples": [
+            "Conditioner is super think"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "skin_glow",
+          "definition": "Judges how much glow the product gives to the skin.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "skin_glow"
+          ],
+          "examples": [
+            "has made my skin super glowy and soft"
+          ],
+          "nearest_existing": "hair_results"
+        },
+        {
+          "name": "wash_frequency",
+          "definition": "This aspect judges how the product affects how often the hair needs to be washed.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "wash_frequency"
+          ],
+          "examples": [
+            "I can go longer without having to wash it"
+          ],
+          "nearest_existing": "conditioning"
+        },
+        {
+          "name": "breakout_causing",
+          "definition": "Judges whether the product causes skin breakouts.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "breakout_causing"
+          ],
+          "examples": [
+            "It hasn't caused my sensitive-skin any breakouts like other oils have"
+          ],
+          "nearest_existing": "irritation"
+        },
+        {
+          "name": "instructions_clarity",
+          "definition": "Judges how clear and complete the product's instructions for use are.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "instructions_clarity"
+          ],
+          "examples": [
+            "There are no directions for the use of the tools."
+          ],
+          "nearest_existing": "ease_of_application"
+        },
+        {
+          "name": "spray_mist_quality",
+          "definition": "Judges the quality of the mist produced by the product's spray.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "spray_mist_quality"
+          ],
+          "examples": [
+            "the spray is a nice mist"
+          ],
+          "nearest_existing": "scent"
+        },
+        {
+          "name": "hold_duration",
+          "definition": "Judges how long the product's hold lasts.",
+          "n_statements": 1,
+          "share": 0.0017,
+          "members": [
+            "hold_duration"
+          ],
+          "examples": [
+            "holds up all day"
+          ],
+          "nearest_existing": "size_quantity"
+        }
+      ],
+      "mapping": {
+        "absorption_speed": "NEW:skin_absorption",
+        "allergic_reaction": "NEW:allergic_reaction",
+        "allergy_safety": "NEW:allergic_reaction",
+        "amount_needed": "NEW:amount_needed",
+        "appearance": "hair_results",
+        "application_feel": "NEW:application_feel",
+        "applicator_design": "NEW:applicator_design",
+        "applicator_included": "NEW:applicator_included",
+        "authenticity": "NEW:authenticity",
+        "bottle_design": "NEW:bottle_design",
+        "bottle_size": "NEW:bottle_size",
+        "breakage": "hair_results",
+        "breakout_causing": "NEW:breakout_causing",
+        "brow_lash_growth": "NEW:eyelash_growth",
+        "cap_functionality": "NEW:cap_functionality",
+        "cleaning_efficacy": "cleansing",
+        "cleanliness": "cleansing",
+        "cleansing": "cleansing",
+        "color": "NEW:color",
+        "color_enhancement": "hair_results",
+        "color_protection": "hair_results",
+        "color_retention": "hair_results",
+        "color_safe": "NEW:color_safe",
+        "color_safety": "NEW:color_safe",
+        "color_treated_hair": "hair_results",
+        "conditioner_thickness": "NEW:conditioner_thickness",
+        "conditioner_usage": "NEW:conditioner_usage",
+        "conditioning": "conditioning",
+        "conditioning_effect": "conditioning",
+        "conditioning_softness": "conditioning",
+        "consistency": "texture",
+        "curl_control": "conditioning",
+        "curl_definition": "NEW:curl_definition",
+        "curl_hold": "NEW:curl_definition",
+        "damage_repair": "hair_results",
+        "damaged_hair_repair": "hair_results",
+        "dandruff": "scalp_condition",
+        "detangling": "NEW:detangling",
+        "dispenser_design": "NEW:dispenser_design",
+        "dispensing": "dispenser",
+        "dry_eye_relief": "NEW:dry_eye_relief",
+        "dryness": "moisturization",
+        "ease_of_application": "ease_of_application",
+        "ease_of_use": "ease_of_application",
+        "edge_regrowth": "NEW:edge_regrowth",
+        "effect_on_dry_hair": "cleansing",
+        "effectiveness": "effectiveness",
+        "effectiveness_comparison": "effectiveness",
+        "effectiveness_for_dry_damaged_hair": "hair_results",
+        "effectiveness_on_coarse_hair": "hair_results",
+        "effectiveness_on_damage": "hair_results",
+        "efficacy": "effectiveness",
+        "expiration_date": "NEW:expiration_date",
+        "eye_dryness_relief": "NEW:dry_eye_relief",
+        "eyebrow_growth": "NEW:eyelash_growth",
+        "eyelash_brush_applicator": "NEW:eyelash_brush_applicator",
+        "eyelash_eyebrow_growth": "NEW:eyelash_growth",
+        "eyelash_eyebrow_thickness": "NEW:eyelash_growth",
+        "eyelash_growth": "NEW:eyelash_growth",
+        "eyelash_strength": "NEW:eyelash_growth",
+        "fill_level": "NEW:fill_level",
+        "fragrance": "scent",
+        "fragrance_free": "scent",
+        "fragrance_strength": "scent",
+        "friction": "conditioning",
+        "frizz": "conditioning",
+        "frizz_control": "NEW:frizz_control",
+        "gentleness": "NEW:gentleness",
+        "gray_coverage": "hair_results",
+        "greasiness": "residue",
+        "hair_appearance": "hair_results",
+        "hair_color_lightening": "hair_results",
+        "hair_condition_result": "hair_results",
+        "hair_effect": "hair_results",
+        "hair_fallout": "hair_results",
+        "hair_feel": "conditioning",
+        "hair_fullness": "hair_results",
+        "hair_growth": "hair_results",
+        "hair_health": "hair_results",
+        "hair_health_appearance": "hair_results",
+        "hair_improvement": "hair_results",
+        "hair_look_feel": "hair_results",
+        "hair_loss": "hair_results",
+        "hair_moisture": "moisturization",
+        "hair_renewal_feel": "conditioning",
+        "hair_repair": "hair_results",
+        "hair_shedding": "hair_results",
+        "hair_softness": "conditioning",
+        "hair_strength": "hair_results",
+        "hair_texture_feel": "texture",
+        "heat_protection": "NEW:heat_protection",
+        "hold": "NEW:hold",
+        "hold_duration": "NEW:hold_duration",
+        "hydration": "moisturization",
+        "ingredient_authenticity": "NEW:authenticity",
+        "ingredient_safety": "NEW:ingredient_safety",
+        "ingredients_quality": "effectiveness",
+        "instructions_clarity": "NEW:instructions_clarity",
+        "itchy_scalp_relief": "scalp_condition",
+        "keratin_maintenance": "conditioning",
+        "lash_growth": "NEW:eyelash_growth",
+        "lather": "lather",
+        "leave_in_use": "conditioning",
+        "long_term_damage_repair": "NEW:long_term_damage_repair",
+        "long_term_effect": "hair_results",
+        "longevity": "scent_longevity",
+        "look_and_feel": "hair_results",
+        "makeup_removal": "NEW:makeup_removal",
+        "manageability": "NEW:manageability",
+        "mat_prevention": "NEW:mat_prevention",
+        "moisture_retention_duration": "moisturization",
+        "moisture_sealing": "conditioning",
+        "moisturizing": "moisturization",
+        "moisturizing_duration": "moisturization",
+        "nail_growth": "NEW:nail_growth",
+        "oil_consistency": "texture",
+        "overall_effectiveness": "effectiveness",
+        "overall_performance": "NEW:overall_quality",
+        "overall_quality": "NEW:overall_quality",
+        "overall_satisfaction": "NEW:overall_quality",
+        "package_size": "size_quantity",
+        "packaging": "packaging",
+        "packaging_accuracy": "packaging",
+        "packaging_cap_design": "packaging",
+        "packaging_completeness": "packaging",
+        "packaging_condition": "packaging",
+        "packaging_description_accuracy": "packaging",
+        "packaging_integrity": "packaging",
+        "packaging_leak": "packaging",
+        "packaging_leakage": "packaging",
+        "packaging_size": "size_quantity",
+        "packaging_type": "packaging",
+        "post_treatment_care": "NEW:post_treatment_care",
+        "price": "value_for_money",
+        "price_value": "value_for_money",
+        "product_amount_needed": "NEW:amount_needed",
+        "product_consistency": "texture",
+        "product_efficiency": "NEW:product_efficiency",
+        "product_longevity": "NEW:product_longevity",
+        "product_quality": "NEW:overall_quality",
+        "product_quantity": "size_quantity",
+        "product_usage_amount": "NEW:amount_needed",
+        "protection": "NEW:heat_protection",
+        "protein_sensitivity": "conditioning",
+        "pump_durability": "NEW:pump_durability",
+        "pump_functionality": "NEW:pump_durability",
+        "residue": "residue",
+        "results": "effectiveness",
+        "results_speed": "effectiveness",
+        "rinse_ease": "ease_of_application",
+        "rinse_out": "ease_of_application",
+        "scalp_cleanliness": "cleansing",
+        "scalp_condition_relief": "scalp_condition",
+        "scalp_effect": "scalp_condition",
+        "scalp_exfoliation": "scalp_condition",
+        "scalp_flakiness": "scalp_condition",
+        "scalp_gentleness": "scalp_condition",
+        "scalp_health": "scalp_condition",
+        "scalp_irritation": "irritation",
+        "scalp_itchiness": "scalp_condition",
+        "scalp_itching": "scalp_condition",
+        "scalp_reaction": "scalp_condition",
+        "scalp_relief": "scalp_condition",
+        "scalp_suitability": "scalp_condition",
+        "scent": "scent",
+        "scent_persistence": "scent_longevity",
+        "shine": "hair_results",
+        "silkiness": "conditioning",
+        "skin_absorption": "NEW:skin_absorption",
+        "skin_effect": "effectiveness",
+        "skin_feel": "texture",
+        "skin_glow": "NEW:skin_glow",
+        "skin_hydration": "moisturization",
+        "skin_moisturizing": "moisturization",
+        "skin_reaction": "irritation",
+        "skin_sensitivity": "NEW:skin_sensitivity",
+        "skin_sensitivity_reaction": "NEW:skin_sensitivity",
+        "smoothness": "conditioning",
+        "softening": "conditioning",
+        "softness": "conditioning",
+        "split_end_repair": "NEW:split_end_repair",
+        "spray_mechanism": "NEW:spray_mechanism",
+        "spray_mist_quality": "NEW:spray_mist_quality",
+        "spray_nozzle": "NEW:spray_mechanism",
+        "straightening_effect": "conditioning",
+        "strand_strength": "hair_results",
+        "strength": "hair_results",
+        "style_longevity": "scent_longevity",
+        "styling_ease": "conditioning",
+        "suitability_for_hair_types": "hair_results",
+        "suitability_hair_type": "hair_results",
+        "texture": "texture",
+        "texture_consistency": "texture",
+        "texture_during_application": "conditioning",
+        "texture_feel": "conditioning",
+        "thickening_effect": "hair_results",
+        "thickness": "hair_results",
+        "treatment_effectiveness": "hair_results",
+        "usage_frequency": "NEW:usage_frequency",
+        "value": "value_for_money",
+        "value_for_money": "value_for_money",
+        "value_for_price": "value_for_money",
+        "versatility": "NEW:versatility",
+        "volume": "hair_results",
+        "volume_hold": "hair_results",
+        "volumizing": "hair_results",
+        "wash_and_go_styling": "NEW:wash_and_go_styling",
+        "wash_frequency": "NEW:wash_frequency",
+        "wave_definition": "NEW:wave_definition",
+        "weigh_down": "hair_results",
+        "weight_feel": "hair_results",
+        "weightlessness": "hair_results"
+      }
+    }
+  }
+}

@@ -1,675 +1,751 @@
 {
-  "product:B077W2RCN7|coverage": {
+  "product:B007CMT6TA|scalp_condition": {
     "labels": {
-      "review:69c0c3d7cef5c6ea12b4e19355924557": "none",
-      "review:b3c614c20c88f870f2c49e89361db6de": "positive",
-      "review:ba5a357031aa412680629e4dce9371fc": "positive",
-      "review:d2c33726ffc8453ea14d714fbe00d13d": "positive",
-      "review:33abf427521cc4d2b006b56f2ec20141": "positive",
-      "review:4bd22e2b1c2386e94a174c4203c90782": "positive",
-      "review:eabc12c96c8e9131a72534d1d707ed75": "positive",
-      "review:c2f38826b45637994c2bafd2a8bfb620": "positive",
-      "review:76b4e084423eb424a5c5cdcef99cbfca": "positive",
-      "review:a667bf0b4551f45eed3493b81fae86d3": "positive",
-      "review:335fae17658a68d48155f3cc4093bff7": "none",
-      "review:396ef40dd18cd601d564a6b2002f0cb0": "positive",
-      "review:036be670d61536b40b9d031fb8943cb8": "positive",
-      "review:6763fb5684e2d74c796e13886faefeff": "positive",
-      "review:550be8f2299a19395a0913f9f1547435": "positive",
-      "review:3438f48b8bc0a577b740945b381fe695": "negative",
-      "review:b1dab8138bd65ab9083d185110a85f08": "positive",
-      "review:771b5c20930adf2999e4750943781e65": "positive",
-      "review:f540b940ad3b5dbe6f5a8795628d5f75": "negative",
-      "review:e4fb9668cdb6816db0a7b81596adab14": "positive",
-      "review:386fbadf193af6e7947fc6dde7b4d96b": "none",
-      "review:3ecc2e30fe0b5a56d0d5acdbf3c62051": "positive",
-      "review:57b70deefa9566299a69740dc24a5a4c": "none",
-      "review:a9fe00caaeb4838e8bbb70f492c353c6": "negative",
-      "review:8ab2a0a45266b86281525eb61861b452": "positive"
+      "review:a3dfe5a1836748a8209425d57fd5c624": "none",
+      "review:4429ee214784f57aac1b260fb14f4b1d": "none",
+      "review:94077e6f07dec36068ccb7d5e236c82a": "none",
+      "review:2aaca8a8c93e46c311af619b5d75626c": "none",
+      "review:217234386074113d219a5d05f2dfb1f0": "positive",
+      "review:1010eb0211b16d0c6314a667f678f482": "none",
+      "review:c2b1c133214b9a4d292222a271817c4a": "positive",
+      "review:3a80803fa58df8447536e1b0214498b5": "negative",
+      "review:8aaf292eef7366cd813da1ca8842b2c9": "none",
+      "review:a38afd701a1751d307dc3d029b5a2ef5": "none",
+      "review:35ec551c91773b2bcf8473fee34327e2": "none",
+      "review:235dfe59df7ca6f020364ea46708a6b9": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B001540XWK|effectiveness": {
+  "product:B08QKXY1KN|scent": {
     "labels": {
-      "review:b9ffdc664a3b4e41ce9ccb0c949cf0b2": "mixed",
-      "review:62c8e8a18ac10970ff4dd61cc330649e": "positive",
-      "review:e03fe3171acf0cbbc77b2145cfc547f4": "negative",
-      "review:9f94916c42616fc75940af2289eb2c9a": "mixed",
-      "review:c48227cddee35a230dc8e454a873ad1c": "positive",
-      "review:efb90b22455d788cbf73830f02684c40": "positive",
-      "review:43c8d5b5800c44377326809bb2222191": "positive",
-      "review:af8443806348a0849a6c0ae682074b1e": "positive",
-      "review:7deade6d2331fc3c5fd7d0fd40e507fe": "positive",
-      "review:a6cc29cd3de09a0729a5d052bc06316b": "positive",
-      "review:5c42f70e239797c56661ccf54f8ea64b": "negative",
-      "review:f1a6851189c32652c3c69fc037ee5049": "mixed",
-      "review:0df15450c343660a6cf433b5012f4d02": "mixed",
-      "review:4562d2745118def9ea463425f16d90d2": "negative",
-      "review:d9ec649780a305c592df552f44c7e6c8": "negative",
-      "review:1aebb224262595fa9638edfa40cc1497": "mixed"
+      "review:f15c6649397aa48bc7674dd151e3e624": "positive",
+      "review:3219aecc8dd27c38be7f942c966a8cb6": "positive",
+      "review:7e4573fad0131014f89dac12474dcaba": "negative",
+      "review:22375c60db05e5a3f8acef80c07bec57": "positive",
+      "review:736059ee5f000bf210d5ac1f023fd995": "positive",
+      "review:a30885a35e16a8f123bbc898169356f9": "negative",
+      "review:07ec0497444bb96fc0f7f45c888445f6": "positive",
+      "review:0854271adfd1cd754c9667f42d8553b6": "positive",
+      "review:1f0be7b940dd46b77282263b356ac0dc": "positive",
+      "review:94bc8e3055a7a48fc1511ee7e2b71609": "positive",
+      "review:37e6940f086fd3b3e58baa559ce5fb1d": "positive",
+      "review:5553f2dec6daaefcd15805c553b89b3f": "positive",
+      "review:a3ecc4e71c224421058755fa943387cc": "mixed",
+      "review:7fb2c0cf8462b70843b48d938f43b4ce": "positive",
+      "review:84d973b3024b23549fb74cfdf1af04e8": "negative"
     },
     "stratum": "in_kg"
   },
-  "product:B01CDHJQFC|packaging": {
+  "product:B01I2MU2JQ|scent": {
     "labels": {
-      "review:2cbe5f906dac5882642ac89d00393fbd": "mixed",
-      "review:6f1535fbd3162f248c6fb4f4ebdb26f3": "positive",
-      "review:7042a145e39cd28554c4dd040a67daf3": "none"
+      "review:58328e0074fdb1968831dd678e9270a1": "positive",
+      "review:600959c0bd3c7666970f2e80c091d521": "positive",
+      "review:ae1f42eed57c8a8dd6bc8eb792d60121": "positive",
+      "review:16e5eee5267cd6d29494c4183dbf0243": "negative",
+      "review:807a71aaa43428812c37ab00271952d4": "positive",
+      "review:d0c378d6b7a950a621cc9ef6a4fe817c": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07HHCHF7Y|shade_match": {
+  "product:B016P7WU2W|value_for_money": {
     "labels": {
-      "review:5dc660baf0cea97457364fd2c44f673c": "none",
-      "review:c7ecd3533fa34671bc7c5a8543ef2dbc": "positive",
-      "review:d6746bcb34414c0932aaf10af25ab9d5": "positive",
-      "review:04014101e286e1b96711120f655ec4f1": "positive",
-      "review:3078233e734e735130749742a3392242": "none",
-      "review:605b423b374915891026c95f148403e0": "positive",
-      "review:b7f315a9811b44f0b5a5c47c23dd4ce2": "positive",
-      "review:32cfb669f25993ef8c0a0041f37cc98c": "negative",
-      "review:473f53cc2ee9d154eb153fb1995c9e64": "positive",
-      "review:ba39978b125e82d3e29b7c265781ec55": "positive",
-      "review:0a4ab086b28dd4580803a6cfce312962": "positive",
-      "review:815e2e1a1bcdfe1af2f4a74498773e72": "positive",
-      "review:d58c1c95d3bee8e2b5a0aa21e1835948": "positive",
-      "review:9f2e12aa568d3c7f3c482d8b0cb972a8": "positive",
-      "review:5f2c681ac8472002b61e23c8b4841e36": "positive",
-      "review:35fae7c397c805f3e155ae60ab67bafe": "positive",
-      "review:d296f96fd3eb3e826d8160ab5d1d1681": "positive",
-      "review:d5d6d8866ac2197300eafa9f9ee96312": "positive",
-      "review:3b35ece92ecf238fe209dd8f56af6957": "negative",
-      "review:555d246098092bf0968fc20ac3e43b3b": "positive",
-      "review:e35a55072a11c6265db893f75e045881": "positive",
-      "review:60f5aa2af2b2c7b237f7241d7f8a614e": "none",
-      "review:6238b6933d1a8b6d4a633472f3ae9e29": "positive",
-      "review:470d856c2cf68fa0fde4c8c6e2af81aa": "none",
-      "review:3bfd9a0533aadd550ad1aa9b0f957691": "negative"
+      "review:c8efa027e91efa4b45dbb33482d38364": "positive",
+      "review:ed2cc96e945b5e785755f39f7d84ea60": "positive",
+      "review:59be1c6f3c8be5a841c43aa9aa95337e": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07HHCHF7Y|packaging": {
+  "product:B00HSV1UL2|conditioning": {
     "labels": {
-      "review:5dc660baf0cea97457364fd2c44f673c": "positive",
-      "review:8980b3166cbd56f8cc587a6a70ec4f04": "positive"
+      "review:2b4307f962d64f60fdef39efab2dda3c": "none",
+      "review:e8a55b6886ac4404a29c01f277890446": "none",
+      "review:c7c0b283fbeb7659aea4a25aba7ae3b0": "positive",
+      "review:675db4ac58f6937e9278bda357ec55ae": "positive",
+      "review:49aea93b69e4d8ae4ecc497526c7f04c": "positive",
+      "review:84e6b686b01c5000d2d60a6a6f3fdd52": "none",
+      "review:ecca7c067944bdf27e56ed64969957a7": "none",
+      "review:50ae3210933bf4c4fe0aba1a0eacab7c": "none",
+      "review:22ad7ba612c31a80554ca4de3eab1582": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B093K8398V|ease_of_application": {
+  "product:B00PKIE760|scent": {
     "labels": {
-      "review:24012c3b54119fbf01aa06034edb45bc": "positive",
-      "review:fea13b701d7f5a02f5c442dc9ad1b12d": "positive",
-      "review:1c5adc406968bad3854bf00a2b52a856": "positive",
-      "review:9227ccccd93984a7fa2494c813110f04": "positive",
-      "review:f18195ef9e8d5236f4c5eed01c2732f2": "positive",
-      "review:3b872b328d511f348a813bd776bf547c": "positive",
-      "review:f6f9fcc93d3e868f4f6fb63f9904bc28": "positive",
-      "review:a98957dc1ca1197ef8558cc891d2661f": "positive",
-      "review:ae2bda389dc2cf1727f51ae0842e55aa": "positive",
-      "review:42ab65def132d8ad7ac0454c9e50a8cf": "positive",
-      "review:ccc3ae783417b1e9200ac8b46d80b0fd": "positive",
-      "review:97453a0b5d8fe2ce7b4969b034e28c50": "positive",
-      "review:46d59166a9d1ab62f3c83917cf58bd05": "positive"
+      "review:d4f1ef5f9022967ed9a98b4ed92e5c71": "positive",
+      "review:e213e96a1acced3a8c86eb3157bbd213": "negative",
+      "review:54ae25fa6eb9ddb68b362a31d2a9dabd": "negative",
+      "review:28a75abee5a4e85ea45f40f712d7d5e8": "positive",
+      "review:ba4eda064a94f7810c8f0b37844ec687": "negative",
+      "review:d43143cdce5c75455d913fc9cc7d728a": "positive",
+      "review:9de339e9f9e452f3bc357a76d7910c77": "positive",
+      "review:41fd28771571d00c3638a945db4f2738": "negative",
+      "review:f8063d420db2e7a47d2b7dd0a6cdedce": "negative",
+      "review:a37cf11ae241fe4d53e15252bddad192": "positive",
+      "review:fe60015350becde16a42abbc4f47b585": "positive",
+      "review:ba9802e9f25cd53f2496cef355bfb5f4": "positive",
+      "review:3148b07843508e09a4c7c9536dd1a6fb": "negative",
+      "review:d47d62e081a7572c2a8654839fbb06a1": "positive",
+      "review:01cd6647e9cccc50a0db7883f392162e": "positive",
+      "review:ed3d5308faea5c99b169faefebf265c4": "positive",
+      "review:d73148a12ee6cb7240a3992cea3068a6": "positive",
+      "review:5b676586974dfc9b1fc7c89e638c93ff": "positive",
+      "review:598907278a6c1484a91ebf330d8d8b42": "negative",
+      "review:0fe5fb6bc85e5bbc3f12f8324f6a09e0": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B00EO5JV48|effectiveness": {
+  "product:B08XJWLLKQ|hair_results": {
     "labels": {
-      "review:e493cf92526b6d077512d7b805180e8d": "positive",
-      "review:d839d4f6d5bd6e29c47c1bb15811f119": "positive",
-      "review:b4798c19a0de1e3e29e40da386cdbd3d": "positive",
-      "review:9f91d185577b05890f7b92560556abba": "positive",
-      "review:7b198841a2fc6c1e30e78d8367774837": "positive",
-      "review:3f3c931d1f41380e2a5efb4a896552ad": "positive"
+      "review:1b8bbe9f523586e2fb384e2960ed2e0f": "positive",
+      "review:2bebed17b439767f8ff552fe90b0e133": "positive",
+      "review:55e623d02cdbc3ffc9ab6b4b4b3aa703": "positive",
+      "review:ad75c6f0b265c23f4e5717cc778a9bff": "none",
+      "review:9ee1cbf4461afd49f167dad4a4bf20e4": "positive",
+      "review:46291027d453d5a7c4852c19de08f703": "none",
+      "review:3f44f367aa79da8f0c98a214ab290ffe": "positive",
+      "review:d5bc7ea1ea591e76c078bd5c329f8f96": "negative",
+      "review:05872e526c5e211751fb2b670470d81c": "negative",
+      "review:75f27f216e5b7aa420174354018c7964": "none",
+      "review:c17a337f2179b750a3cac004c2df9cf0": "none",
+      "review:e2dc4daed92e44c013ce3790e42c9513": "none",
+      "review:df27ea1ae14e68aba69c3cc83cf9fbf8": "positive",
+      "review:6169de7d0e23dcdc727de0971a2eea77": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B0006B0W42|size_quantity": {
+  "product:B00J14AOUW|scent": {
     "labels": {
-      "review:a11d61efe1df417b25772040b640040d": "positive",
-      "review:7ab7e357aacd2f57fdd7ea0b4089126b": "positive",
-      "review:80a4f071593fbe414fc47f696783f39d": "positive",
-      "review:a362603befd8326366ca74f2545011e1": "positive"
+      "review:a14a0e4cd5549c58d1df2cc61d755930": "positive",
+      "review:d87350c9a6432dee82fe3257ea137282": "positive",
+      "review:6c37a03e26e289d030107deb03245350": "positive",
+      "review:66b3502d5c397c5c718141e589c07b72": "positive",
+      "review:df141f86a3a2212f0c94df7cb5ee593b": "negative",
+      "review:d92f41f537383852e4d5acf4b3895087": "positive",
+      "review:97f9c8e6b3a357727d57feb62b3213c4": "positive",
+      "review:91ca1f16a8290295a52568d7ac62bf92": "positive",
+      "review:cc26fd2565432c8dafe5a9697ff41df9": "positive",
+      "review:cb781b5404ebb1038a42984cdc30c6c3": "positive",
+      "review:63c54bf8a88fdea47c54ba209cfa0cfd": "negative",
+      "review:608a34aeec66775f4e5193c78a4826d5": "negative",
+      "review:fb7ec4c15702362b311f89d3008d2ff7": "positive",
+      "review:0ecb480e2701e4484031c38073884053": "positive",
+      "review:1cfee69f6ef871daa331767e60e7a0c8": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07S5GYK14|value_for_money": {
+  "product:B083F76L79|absorption": {
     "labels": {
-      "review:40cbb767203f03c0df7f1e32b537b6f6": "positive",
-      "review:aeba3db5e7873fc0a056f0d75e9d8a67": "positive",
-      "review:60dcff6d86248280b24e65c8a3a066c6": "positive",
-      "review:e1747a741afcd96c94399809649cc422": "negative",
-      "review:dbbdaef762e3852836ef580270dbf5dd": "positive",
-      "review:99dbf502c53d27e52b35c307b6a1fe5b": "positive",
-      "review:4f3e5676fc3f51a5f70e53c153bb3e43": "positive",
-      "review:37de24d973f7a9c4c879597b29310bb7": "positive"
+      "review:2b6d3b8478306ba7aa3292a8f4834ad4": "positive",
+      "review:8c59b7ac9b2a85a9307697b498caed68": "positive",
+      "review:068de545054d441005ce8fe62d953810": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B00SEEM64M|value_for_money": {
+  "product:B077TBSVK8|moisturization": {
     "labels": {
-      "review:9ad8bef2f52e088305d500b68309d5b7": "negative",
-      "review:04c04bd37e587e15de13f0d029cdb477": "positive"
+      "review:413ac5555160f7cffa76f4a8b2bc4ccd": "positive",
+      "review:69bb7b0f1c5eab6d9de77fa7eec90bdc": "none",
+      "review:7bc15ca8e5677765b447d0872c934860": "negative",
+      "review:2b8d027d6a93043c0a726b0004e2b9e8": "positive",
+      "review:515dad57dc1ba15c055d7e7237cb7e0f": "positive",
+      "review:14c362c2126ad9372bf670aa68a40554": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B093Q2JQ9P|size_quantity": {
+  "product:B00PKIE760|value_for_money": {
     "labels": {
-      "review:b0614512e561467f40f1af930cf5ba6e": "negative"
+      "review:d4f1ef5f9022967ed9a98b4ed92e5c71": "none",
+      "review:fd409d7fdf652a485305a5bb3f47d7d3": "negative",
+      "review:fe60015350becde16a42abbc4f47b585": "positive",
+      "review:97962fea6e64f3db74f44abb4d963768": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B0862832XB|effectiveness": {
+  "product:B00RUKJGYY|hair_results": {
     "labels": {
-      "review:35a38df7e01278cef4667909aaf78b97": "positive",
-      "review:86fb00d29daec45290bbf5985b1892d8": "negative"
+      "review:73c21a8bad205503f733fcd21dc7a40a": "positive",
+      "review:18f4f29fee9e046c609f2fc3e170c895": "positive",
+      "review:c9e3e9bd26754a52bc9e6d4fa0c4443b": "positive",
+      "review:7cef30f30d2ded1c0f024524e64cdf4c": "none",
+      "review:f4506ced152e969f00dd064a5e53d01d": "positive",
+      "review:21b6c26d34d8d6ccb71f39505a4e75e9": "positive",
+      "review:9c7249628419c147dc72fad590090193": "mixed"
     },
     "stratum": "in_kg"
   },
-  "product:B00YV1MC1E|residue": {
+  "product:B08RZ16QK6|detangling": {
     "labels": {
-      "review:2f921ddf3ca7bd28f00b3e0f6c28ef3b": "negative",
-      "review:6b6af9714871b9f7c7b3f583e475c61a": "none",
-      "review:8d4a3753e4684a232a6d91a202f19e23": "none"
+      "review:e0048e5a724d194f9c988e80c61965a8": "positive",
+      "review:6823e4739e9a2666ce2efa1f2c44a9fa": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07HHCHF7Y|coverage": {
+  "product:B00QQZ586E|ease_of_application": {
     "labels": {
-      "review:a73e71be9e3f327da78c8071d907ce72": "positive",
-      "review:473f53cc2ee9d154eb153fb1995c9e64": "positive",
-      "review:60ffb9de521c11e588da85d15d4891b4": "positive",
-      "review:555d246098092bf0968fc20ac3e43b3b": "none",
-      "review:6238b6933d1a8b6d4a633472f3ae9e29": "none"
+      "review:cbb2802c058225c22547a6951dc4ec0d": "neutral",
+      "review:447031f33ae133e46cb25a2ef4b0d543": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B01LYJX8SH|value_for_money": {
+  "product:B08XJWLLKQ|size_quantity": {
     "labels": {
-      "review:3cef5f1d180561e599c9994f7c94e234": "positive",
-      "review:475242091aac224c5cadb8e8fcb62801": "negative",
-      "review:928a129982f51d3836378524624f0f74": "negative",
-      "review:99219944fbc67886295724b4596edfe0": "positive",
-      "review:23399e057eb5c45a05fd38b678c3ed92": "positive",
-      "review:ff638ee98a9073fd05fc2f6205dad7ff": "positive",
-      "review:f2b8da649bff0d74c1ef4b8b06c3ee71": "positive",
-      "review:32119308bb5ad3e984610e2de4c21c57": "positive"
+      "review:c129eaee1f7284b5bedfb962a45ef0a0": "none",
+      "review:37015270f57f36e580dd76dffe903f51": "negative",
+      "review:46291027d453d5a7c4852c19de08f703": "none",
+      "review:1d2ac09dc94c7df63a96eb1cf122cce2": "negative"
     },
     "stratum": "in_kg"
   },
-  "product:B07XTJWHM1|size_quantity": {
+  "product:B07MVM8GMM|scent_longevity": {
     "labels": {
-      "review:3b620b1550ae74c96da8313144e64e5e": "negative",
-      "review:08fdbdb797a075b655b58e9e3cd21e7f": "negative",
-      "review:585e7cf09d02fcb5a0906c42cc78e5ee": "none"
+      "review:90318cf43728b575f901aa18f409cbf7": "none",
+      "review:46555f3aee2b1fc0085e0a9b710c8ac6": "none",
+      "review:e6b7a8f43ae96a16be4adf101e52e345": "positive",
+      "review:33ec8c09699860f664a9fe2844deb5c0": "none",
+      "review:2254901b69b8d9bdc22771d5df8d1e80": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B010VSZRUI|size_quantity": {
+  "product:B08XJWLLKQ|residue": {
     "labels": {
-      "review:e6bd6522684f2c0f51043b25a03e7777": "positive",
-      "review:d36fb7ffd5422dc0b1fb0ace5dc5f95c": "positive",
-      "review:421f83c4d30ec4e559b68a289c417942": "positive",
-      "review:2fd5b78d211e1f73336fd1da8d862574": "positive",
-      "review:7dda0fa045407584935255d1a8688231": "positive",
-      "review:d5eb91ff69a5eac1374249d0bfc8ffec": "positive",
-      "review:762de731f49040db33335fff2cd459d5": "positive",
-      "review:c9b3a13c4d66d272e768539d0d80d473": "positive"
+      "review:1b8bbe9f523586e2fb384e2960ed2e0f": "negative",
+      "review:39ca6bb091d838f896b5dc3ed2644b41": "negative",
+      "review:55e623d02cdbc3ffc9ab6b4b4b3aa703": "positive",
+      "review:c129eaee1f7284b5bedfb962a45ef0a0": "positive",
+      "review:9e5fa2bb31b6aef1d429f8f5c2c196df": "positive",
+      "review:46291027d453d5a7c4852c19de08f703": "none",
+      "review:3f44f367aa79da8f0c98a214ab290ffe": "none",
+      "review:95fa1c11a50c400cb4b8a6f3e5475f45": "positive",
+      "review:a08aef10e9fb44d946b73572cc74e448": "positive",
+      "review:13e4545b578fd4a576076ca220317756": "negative",
+      "review:d5bc7ea1ea591e76c078bd5c329f8f96": "positive",
+      "review:6aa444443bc6f6be7b65bafcc933e638": "negative",
+      "review:c17a337f2179b750a3cac004c2df9cf0": "none",
+      "review:df27ea1ae14e68aba69c3cc83cf9fbf8": "positive",
+      "review:6169de7d0e23dcdc727de0971a2eea77": "positive",
+      "review:f524a36134e700c9d4bd4228745d08b1": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B00EO5JV48|moisturization": {
+  "product:B0941YDPSW|scalp_condition": {
     "labels": {
-      "review:b72c844cb4cff91f19546d8a1311ddb0": "positive",
-      "review:ae2c1728a31cc96e16e91d391b005894": "positive",
-      "review:573fca331b323fb734e868c1471618ea": "positive",
-      "review:af63da29b74a8cc841aca3bed3e05cc3": "positive",
-      "review:5645bbe881e8325bb7ea7e49ee4645cc": "positive",
-      "review:f54f7ff4af507da7f06b1101e329148e": "positive",
-      "review:78aadb89203e53a3255b19af197c02ad": "positive",
-      "review:12f25fb7f5c7a2246c921ab3c42cad5b": "positive",
-      "review:5a1eef0b07608188bc5ba6220b96aa2c": "positive"
+      "review:c77bfd526d2a31ab5c1aab83ed881726": "none",
+      "review:1b8498bf082b73991a8f4fd0757355d0": "positive",
+      "review:aecf46b92bd11637cc07b676ccad9b5e": "positive",
+      "review:912244cd2ee7094a94ede9a2aec7ceeb": "positive",
+      "review:900af113ca3c75589d9b4cb5d96a8d0c": "none",
+      "review:86470aaabf25392df0f7d330b7f1f472": "none",
+      "review:0eabec79d0dcbe73ec34c9d7a4156469": "none",
+      "review:a92118511408fdcc8d56c0a40c7285e6": "none",
+      "review:18299912579cd6bad673f04a1b040e3e": "positive",
+      "review:9da97496e79df541fa20a750410cc692": "none",
+      "review:19f2daa75756b4f97df0e9a91611cf48": "none",
+      "review:c8805807efac0072d2a4d4230b2337bd": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B01AYTGWA8|moisturization": {
+  "product:B07ZL27PLL|effectiveness": {
     "labels": {
-      "review:893ecd2498a11b4cd5ad01438e29325c": "positive",
-      "review:a37d9f6f40443918a51474346792fa53": "positive",
-      "review:2b8e83d0cf528a3a44492245f947ba8b": "positive",
-      "review:d74090a30a63ef5a9b05ee329094e1a7": "positive",
-      "review:ce211482c629cab9a2615ae1ddcc9bfc": "positive",
-      "review:dd17aa4e409a0d13400b573a5e8fac9e": "positive",
-      "review:1a4ea1175e4c642edbf6ecb62eda6085": "positive",
-      "review:7c12af699948bf973ac2a892238d260d": "positive",
-      "review:994206ca9f551aa59b8d846d7c692bc1": "positive",
-      "review:c5097c9a318f73400583f44004c536cd": "positive",
-      "review:f17f761dc9eaa5bb60f0ab89c8402493": "positive",
-      "review:fffd7fa564a9e31493272be2d304d059": "none"
+      "review:4651ad72724f99b5be8afa3e92a18af8": "positive",
+      "review:7078089721620434d960de5b760b1231": "positive",
+      "review:e3c32536fe4a1b9f18f3e650ed2eb033": "positive",
+      "review:c13f4d19caa9a4c3ebd9511dacdbca10": "positive",
+      "review:6af2ab28f4bec960328a36694d7da1a0": "positive",
+      "review:5531d51c3443e4043e3f7593bc8f0dfc": "positive",
+      "review:c53b34e86f8c5f36882382c27f6a732f": "positive",
+      "review:222fa251e599d8d1d6469ef614719549": "negative",
+      "review:0cfc0ba8f4ec0e0053efd4d8e7724bfd": "positive",
+      "review:7a81b3c4cdcc83f9f124ff9057de0d8e": "positive",
+      "review:1e85f532e9fa88c2a0afed55436b8448": "positive",
+      "review:0a631403ff6f46bc50e0d113d24d47b6": "positive",
+      "review:8c9d78350451cc8872418a9087cce95b": "positive",
+      "review:26285c1b5b29bc735dc00d431e1616ec": "positive",
+      "review:4c7330740984d5237b29d8d9d29b89df": "positive",
+      "review:911123c80ad5dd54106b2ea6cbbdf01b": "positive",
+      "review:27a7f8a4bb78207988eeaf288f1391f2": "positive",
+      "review:423ea93f8956c2fd75be77f8e681efc3": "positive",
+      "review:5c1a154ce9129b9fe5aeccbcb5178394": "positive",
+      "review:f8020979290ce4215fda6145560c77ff": "positive",
+      "review:80144221d2277eb9d49fb2f066991e55": "positive",
+      "review:cb032158f2bd5ce207daa0ceac07b9c4": "negative",
+      "review:e27f1819ec8c2426c3afff2bd5dff3c8": "positive",
+      "review:c7527c84e94f74d71fe0382ca013bf06": "positive",
+      "review:c3c27201cc5d20a415be8faed694f742": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B01CDHJQFC|scent": {
+  "product:B071FBNMN2|skin_results": {
     "labels": {
-      "review:b72cb85994c36262b9de7ce49b2d5d6f": "negative",
-      "review:555189cdb356cfa05e08095a245cfa4f": "negative"
+      "review:1bebc70d547b521fe1489195b8ab4fd6": "positive",
+      "review:7b35141e4f8886153850efeffb06e419": "positive",
+      "review:0e2ed4199991043e6a51f26dd6a18482": "positive",
+      "review:3a1d491714b915dd002153d49775cae1": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B0BN113VWD|lather": {
+  "product:B0BYDRR4ZR|irritation": {
     "labels": {
-      "review:710eb92ce0d3f0959d7b4a54bf2f1072": "positive",
-      "review:fe4537a31a50a86834ea533722f37dcf": "negative"
+      "review:d0567b419a3e965fa026aac6c96194d2": "negative",
+      "review:f5fcd0f73e1088abb6ab0cee10bc17ca": "negative",
+      "review:aedc6cb0509a0c5ea7eaa83defcb3d3c": "negative"
     },
     "stratum": "in_kg"
   },
-  "product:B07G5R9BKW|hold": {
+  "product:B08SQZ1B3W|moisturization": {
     "labels": {
-      "review:8bbac527624ed032cb441b1c5f284235": "positive",
-      "review:266cca23c66483056d5f017038f4d472": "none",
-      "review:e7b33a8f2ea2556326a956e61345d96d": "positive",
-      "review:856545a4c98905feb1cea8bbff61fcac": "positive",
-      "review:c9ae0a313c35138973216bf44be42bc5": "positive",
-      "review:8958224a8379ab4e155e534413daf1c4": "mixed",
-      "review:d0e7e6e648b56c35978e60a226166a64": "positive",
-      "review:b877e3668713206998837af59b56c742": "none",
-      "review:2d4e96103292675e682564f41d7d0723": "positive",
-      "review:730aac483f5e053e2f39960584c55587": "positive",
-      "review:599636b93f518cd770e6b6ada35c6a61": "positive",
-      "review:c79b88eb2561f285cc264fb7cc8e9502": "positive",
-      "review:1756afac124ec3e12213734af6664b75": "positive"
+      "review:9b35822b7f451443562ce5f2123ae027": "neutral",
+      "review:5504e75325ff667ebc7aee23ab861531": "negative",
+      "review:4e229d0b1a139fdbc8abf5e81014d4c5": "none",
+      "review:7786f5edf1b4fd9b1579f01c6c66cccc": "positive",
+      "review:58a5adbf341fd42ac9536f524609c77c": "positive",
+      "review:bf12a2e635fef39f12d1c7c9f120697d": "positive",
+      "review:5a4050ff4b8de239b81e134539e6fa71": "positive",
+      "review:086de64b04d7f9f622b62654625ad801": "positive",
+      "review:7d26c82c7bbaf97bae525dd2b2ea1131": "positive",
+      "review:73f64cdd5288e5c8a48e6fa8ea096e78": "positive",
+      "review:b656fad6352ebcfa07a0c472aa002522": "positive",
+      "review:fcdd0994c449965ce6c3504474ebbecd": "positive",
+      "review:5cf1c96e035ffc07a0e57ced962e4cc1": "positive",
+      "review:c1efa6735ee825f5cc1a5d3828ca2a99": "positive",
+      "review:7f9a18c1970104876771cd3eb8db51e4": "positive",
+      "review:9ebb6f72237fa486f5b730b7bbc68445": "negative",
+      "review:49d8d263e88cbd00702989f2547661d2": "positive",
+      "review:d55a805af37d78a411d2c2a31b631510": "positive",
+      "review:e856168cbc5e3e8d9a869871fdc089f8": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B08BL85TKP|texture": {
+  "product:B00QQZ586E|scent_longevity": {
     "labels": {
-      "review:255b1522b1059c3ee7e9e6a3854bd694": "none",
-      "review:f9dd0794a25f6c2d1687e9f58c970b45": "none",
-      "review:48d85087cdd06c51f842860086197260": "positive",
-      "review:e154bba7ee6b9f03b2c4d6a048a33cb0": "mixed",
-      "review:3fca8f9559d9a94a46cf451bdb8143c9": "none",
-      "review:77c1742851101fa390ddca84d8cd98dd": "none",
-      "review:ece351fef397b9e9100da3c4690a0098": "none",
-      "review:2916b88b395b5231d1052fedd34d69d3": "none",
-      "review:4117d666651a2049db3560bf554ed0f3": "none",
-      "review:c2489278c54b15d531a3d97ee3359c64": "none"
+      "review:2a423ff3b4c6038022a6977c6e7e26a1": "none",
+      "review:d03b0251eb882f1afa7c0a4b0182bbab": "none",
+      "review:cbb2802c058225c22547a6951dc4ec0d": "positive",
+      "review:3b78d86f2073454c00617218fe85c3de": "mixed",
+      "review:ba086a6ced1ad7836bf887ec9390d676": "positive",
+      "review:d774c1ba318bc996ae2f6e916b621a2d": "none",
+      "review:5399ff7f0babef5102856869fa303146": "positive",
+      "review:a00878c5e16616b35c1e3571675ddf39": "none",
+      "review:2809fb71a63c7d7dfe6889f9a1c58c73": "negative",
+      "review:e1c60c8a27ae14cf60287f57b0acbd78": "none",
+      "review:447031f33ae133e46cb25a2ef4b0d543": "none",
+      "review:38023680e56b2d7c63d7d8f94a62b712": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B00H2QTO0W|shade_match": {
+  "product:B006UNQ1RM|packaging": {
     "labels": {
-      "review:741bb16b300fe4286e21d1f996ac2f68": "negative",
-      "review:e60e0cd169421ef1e2c8957e4a7f68ad": "negative",
-      "review:77e9b02cdf4e9f28ec0e5515ffea06bd": "positive",
-      "review:4de1be33d629f14535d6e85d392a9d13": "positive",
-      "review:5915a67435b07021c9e5be896d1b4f1a": "negative",
-      "review:fdd60b702c523aa73bb358422b9210d7": "positive",
-      "review:51ab6a46ab08a440d978bcb74efe0e92": "positive",
-      "review:ee474c3d505107b41180468ebb3871d4": "positive"
+      "review:2c571d982c0ab5ab23631ea09ab879d1": "none",
+      "review:9f97bd63cab010e15cc4ff4b8f24bb99": "none",
+      "review:39fa54c2ee95716d3b691aa8c8f88e44": "none",
+      "review:29d36f4c2b8c67980584264fbdd36da2": "none",
+      "review:cb436f450b07488ddcccde6a861ee6f6": "none",
+      "review:966593b622fd814fa6accb94399b1efc": "negative",
+      "review:4499ba4fd58aa9bcebe75d5ae49ddb29": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B07KFSKF81|texture": {
+  "product:B0859CYSTM|irritation": {
     "labels": {
-      "review:01aea7e02ebc9d68e37d32cc44ba4d95": "positive",
-      "review:3b538e1761f8d7ffe69404378b71af51": "positive"
+      "review:37a16f07f30404cb2b8ff8cae037ec4b": "positive",
+      "review:36a89eb1d289af063f0c87dffd905ec3": "none",
+      "review:f4c0ca9beb3ac2352f11fcd42eacddb5": "mixed",
+      "review:99dfa697e2347bd4be543963cf2aa789": "positive",
+      "review:08247cbccc2cf0486effb98b681e1e93": "positive",
+      "review:1bfe7787ad1da7e4fc15c9563cd74763": "positive",
+      "review:de5d9cb4b5c41eb619b76425338fbbc4": "positive",
+      "review:bbc1f5e08a01aca69124862f6df7fd89": "positive",
+      "review:fe518ab8965285f4d178d24cdbc58286": "none",
+      "review:ac649568b3817c0bfb468b2f5f44906c": "positive",
+      "review:f8f769ee73c8d96ecfad16a48bba332f": "positive",
+      "review:729b5d564bb491d3804a4c1fb7917521": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B089F4YSHW|irritation": {
+  "product:B00NN2RNWK|value_for_money": {
     "labels": {
-      "review:5e6a4328c9b408531189cada5d2ff9fb": "positive"
+      "review:d68190f4bb47e8b31f6ff7b322b2d1ce": "neutral",
+      "review:ebe71e5df401949fcc6cba3e9051ff1c": "positive",
+      "review:13b732a10f7e26a9fc46618240e21d52": "positive",
+      "review:4282f1fd7ac1ff3ac85b8168c3c60be5": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B01I0SJXQA|residue": {
+  "product:B071FBNMN2|moisturization": {
     "labels": {
-      "review:7f59443a70a417c47709d5b6b4141df0": "none"
+      "review:eb9e9e465528158e5504993d825cb3bf": "positive",
+      "review:6a9ec1caf4f4f8a425366bc57f535c0d": "positive",
+      "review:127018b8a4007de1e516fdf1e3dc1aa5": "none",
+      "review:79d081919fa4d85c3190a113cec665d7": "positive",
+      "review:bb53f5017f9e6e7b748473c1fee8c841": "positive",
+      "review:a348446ebbb922b648d5abead7134e27": "positive",
+      "review:1bebc70d547b521fe1489195b8ab4fd6": "positive",
+      "review:03295927143a686fd8f4254ff705d553": "positive",
+      "review:5b70068c8762b0f54ede1a69846148ef": "positive",
+      "review:71894c4a83272bd8b3f06b74c8678e06": "positive",
+      "review:3c88855a809b74d1f73c0eac02378b18": "positive",
+      "review:583a01639b5f4598ea050533a7c0092c": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07M5HB65T|effectiveness": {
+  "product:B00QQZ586E|texture": {
     "labels": {
-      "review:11e5476acbee3129ac724c96d7969094": "positive",
-      "review:fe15f156e27f4bff4d16202adc0dae3c": "negative",
-      "review:d931b7eadaa4e67dfba2fd659b1305e4": "negative",
-      "review:5c0143a4c354f8b7261ea21598e35831": "negative",
-      "review:a2150d334899f3a05a70a5da2981ede1": "positive",
-      "review:b30e082c21b4aa525a98d39a1de396d8": "negative",
-      "review:b4727fefbae7574d9cc8357b66a0fa53": "mixed",
-      "review:08f9779db3509fe2262404f34c51ecc3": "negative",
-      "review:5879f5a5c70a4c5ef2165f2d2059ba40": "negative",
-      "review:db2f0a7f53f6518d86581c4a8db3ed14": "negative",
-      "review:21379b3bc6b136be4c36cd3b920cf817": "negative",
-      "review:5c47f2834fb1d408df0be9744d4e1150": "negative",
-      "review:a3f09044312abc68ad981779f2ade754": "negative",
-      "review:6e084d0575104a9ab8359b25a2d12656": "positive"
+      "review:d03b0251eb882f1afa7c0a4b0182bbab": "none",
+      "review:a00878c5e16616b35c1e3571675ddf39": "none",
+      "review:447031f33ae133e46cb25a2ef4b0d543": "positive",
+      "review:5177769253d9eb1144f02b61ce8da9c5": "positive",
+      "review:caf215783e6078b07e60d82e9eedd10e": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B09DC29XVD|shade_match": {
+  "product:B000NHZSKC|scent_longevity": {
     "labels": {
-      "review:46587afa75661bbd7a7ad00b70aeda87": "negative",
-      "review:3cef0d921c46178a1c65b9f453fbfd5a": "none",
-      "review:7079b7624d7384aa6f70b879fbefbddb": "negative",
-      "review:b4867447af3de1937c0f2d02db5666db": "negative",
-      "review:a8b82343f90e34b925f3aeecc5c96593": "negative",
-      "review:612f343101e55310334999845b59526e": "negative",
-      "review:61c14e67916f72d64980a1ad55d7b26c": "negative",
-      "review:31bdf18815eb2e937ab3d5b1818ecf77": "negative",
-      "review:2ecfd2cfad01d75d04deff33679e823a": "negative",
-      "review:a7feb16c580104520dc4eacd4401a943": "none",
-      "review:2f2e545704705f3afef0e2d81ddf6cdf": "negative",
-      "review:70d72d4a25ecd16f8bd2fc32608ce100": "negative",
-      "review:c5e07384a1cdc7ead344fd6343d0d685": "negative"
+      "review:be748854912997589ce04d5922f6acea": "none",
+      "review:84a904620685ef285baf4effff0ea157": "negative",
+      "review:74060a995a7540e88d38f02f71296241": "none",
+      "review:ae1cac8591bf63486702a42e3cdd009d": "negative"
     },
     "stratum": "in_kg"
   },
-  "product:B0756WQCV5|packaging": {
+  "product:B00T5GD1TC|effectiveness": {
     "labels": {
-      "review:cc48334ac0e882a60671b4cc3ff41e94": "none",
-      "review:c7943bce02070e351542b07bcecd6787": "positive"
+      "review:dac357f0578a194c2a21d3a394450d4a": "positive",
+      "review:87408138382d0aea1af5fb734ea603fd": "positive",
+      "review:1fe50fbcb25d8a63eb7089a20bc30129": "negative",
+      "review:6926932fce227ee1c809f1feea71083d": "positive",
+      "review:611d0119eeb26d0f5690a97b04d72a69": "mixed",
+      "review:0ccc66cdd245b2e307a320bca6ea46ca": "positive",
+      "review:fc9e49282a66588cea3c263016e36db0": "negative",
+      "review:3df125eb07671efe4456786744f1c32e": "positive",
+      "review:77c727d2b4da2cee5b498d375b74b831": "positive",
+      "review:acf4b5f777612b865d0d32c468eb9a6a": "negative",
+      "review:51cdc8af0f8f647c9dbc834b69e649a0": "neutral",
+      "review:216027d396fd115da581cd6b6876c4a6": "positive",
+      "review:05e350d82bb7bda29edf16cea11a3b66": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B00EO5JV48|absorption": {
+  "product:B00T2HC1V8|scent": {
     "labels": {
-      "review:573fca331b323fb734e868c1471618ea": "mixed",
-      "review:0e15f12dd1981f5a06d131f37d1f5214": "negative",
-      "review:12f25fb7f5c7a2246c921ab3c42cad5b": "positive"
+      "review:7fa99412412867a277220dcfa3a3fc47": "positive",
+      "review:24d5b3a313470ed8acc0d72a29e504b5": "positive",
+      "review:ee19e5758140ba9e4b0df05229ba5636": "positive",
+      "review:b412002b603c46ce4ae9d10a0eb6c80a": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B0797GW888|shade_match": {
+  "product:B01JD1DJZE|irritation": {
     "labels": {
-      "review:1c2e38ff6d848d71c00b96d23901ac15": "negative",
-      "review:4e0d4f55d2c20881afa8822afd029e56": "positive",
-      "review:9f81763622448ef600777a7e9a485c92": "negative"
+      "review:094b3f9ac0d8ff09092a2d639474db57": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B01LDQINFS|absorption": {
+  "product:B08QKXY1KN|value_for_money": {
     "labels": {
-      "review:be744d02407d8a1749f7cc9115771a55": "positive",
-      "review:5d4e8b0ff74dec669e1e2b421cda55da": "positive",
-      "review:c565cc62efc1d9119415fc7cf42936d0": "positive"
+      "review:3347087c8a23363c03fa68830d19fa56": "negative",
+      "review:736059ee5f000bf210d5ac1f023fd995": "positive",
+      "review:07ec0497444bb96fc0f7f45c888445f6": "positive",
+      "review:1f0be7b940dd46b77282263b356ac0dc": "positive",
+      "review:37e6940f086fd3b3e58baa559ce5fb1d": "positive",
+      "review:90295c0d589e93758b26ebe9b8ebd303": "positive",
+      "review:5553f2dec6daaefcd15805c553b89b3f": "none",
+      "review:46a7da135c0fe36de363813b744208b8": "none",
+      "review:85131fed2c7bdbd28409f22ee6a8328d": "positive",
+      "review:c5ef555c0c846028126d3c839b1b86b1": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B07TN5XJVH|ease_of_application": {
+  "product:B0BG6WX4DH|detangling": {
     "labels": {
-      "review:badc45227b8159a32686829a81397177": "negative",
-      "review:64de8908f9dc36ff5e93ca06468da94e": "positive",
-      "review:9d9f0341f939ff14ae71ff1d65fd1f7a": "positive",
-      "review:79859340853df27d08450d7847676272": "negative",
-      "review:2267ce12f65c15c5a3cd19ba1f1d6b53": "positive",
-      "review:55d54d7e45696974442077a593f79f26": "positive"
+      "review:5bd21465ba81522bdde8bede13f636b0": "mixed",
+      "review:043726348ccfa60198495b507035b05d": "negative",
+      "review:301d66d32cea2feaf6c8042f065ef26a": "positive",
+      "review:bdae89d34096037f9ddcee97be9dcba6": "none",
+      "review:6fd833a21d77c99341dbb5f4da82e35d": "negative",
+      "review:6172dd64d7d28037c4c57e2c1601e975": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B01MFF26HH|value_for_money": {
+  "product:B0BN12F234|residue": {
     "labels": {
-      "review:9fc493c3adbac280430239432ed69689": "positive",
-      "review:d398cb07bcc2fa0640bdb0705d7921fb": "positive",
-      "review:4e8d723ee9d71ab4ab3c65b013247f02": "negative",
-      "review:7d25c50a8808e791743d32095f863cc9": "mixed",
-      "review:693b9477863dca6b9fffe9b52f743a80": "positive",
-      "review:b41953f36edd11142aacbc043d9c2b77": "positive",
-      "review:1a0aa8e27bae4e1947a4b60436f9230c": "negative",
-      "review:fd57a6231a27e4eb95699ec8b9434cfa": "mixed",
-      "review:097ddcabd7813bdade7ff7b61398adc8": "positive",
-      "review:25942048c5bcbe319d852d70e4221961": "negative",
-      "review:328aa9b8f3956d16ff0f2cde2d91d7cb": "negative"
+      "review:a78f3ceaca535e1bb07f10c2adf90fda": "negative",
+      "review:56e966dea801f041a9c536112abc2c31": "positive",
+      "review:d9bb85b6e01099b60f403890e93487a9": "positive",
+      "review:274268a31a36aef358bc73f9a0c7ac92": "positive",
+      "review:01f0e154e6cff9bbd4fa2f0dfea9734e": "none",
+      "review:0e14eef918e71e195c4b41736133a4a1": "negative",
+      "review:907800d28c8ce36d6026b9094c9b5527": "none",
+      "review:28b240ca771fd43defdd847b5b41ead2": "negative",
+      "review:d0d3a18a47194e71de3dc5d31625bdbf": "none",
+      "review:98fefdc2a5282c2b44ed81aefc6f48e3": "negative"
     },
     "stratum": "in_kg"
   },
-  "product:B0756WQCV5|ease_of_application": {
+  "product:B016P7WU2W|anti_aging": {
     "labels": {
-      "review:6b2c98bbdf172669586a8cc49ef46021": "positive",
-      "review:7d546e21b4bfeb89ffec98afc0281776": "positive"
+      "review:fdc3a949f2715001766badff0ffafc1f": "negative",
+      "review:88fb990e45a9cee63ac3310056b02222": "positive",
+      "review:c8efa027e91efa4b45dbb33482d38364": "neutral",
+      "review:01f107ccafa09a6bde1221fc5399f38d": "positive",
+      "review:6efb96bb91f4525661149ed2d0fdd518": "positive",
+      "review:ed2cc96e945b5e785755f39f7d84ea60": "positive",
+      "review:e8224d772628b22a343f3238e62ce174": "positive",
+      "review:910e29a13d895ac2cae39ac2d9c55087": "positive",
+      "review:fc9993cd99104aea99046a3d619fc71c": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B01I0SJXQA|value_for_money": {
+  "product:B0B8SFDJN9|scent": {
     "labels": {
-      "review:8279e600b607d1d2a60e9034b8ca9eeb": "negative",
-      "review:5e22c6e5005c5136d87fcb9d5d372c55": "none",
-      "review:e56e8ce920982e5f2c4aea621ccbd003": "positive"
+      "review:63f8e2667e122686e378888c0d6677e3": "positive",
+      "review:25d1a9c768d53e13079623a98a1692bd": "positive",
+      "review:2c1153dec62c07b071560c55ec213271": "neutral",
+      "review:218a56e6376308895b992beec14d59ac": "neutral",
+      "review:f23a7a29cbca04739d119df402e15ce6": "positive",
+      "review:9ce9f5973371cd9991b48eb066dd8e9e": "positive",
+      "review:077d9354424d2a53f25e7f09c57a590b": "positive",
+      "review:d44c06477562f8a7df690b37e719d6be": "positive",
+      "review:cbcc09f1827e5442d679a003c5700018": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B08BXNM5W5|size_quantity": {
+  "product:B00RUKJGYY|texture": {
     "labels": {
-      "review:397f65abfef359a1805295bb168a2eb2": "positive",
-      "review:a07f2938ecd282b3d8037d6ace25dfe9": "positive",
-      "review:c679c4090098db030261aba4415eef13": "negative",
-      "review:746852eb53dc8f4fa54d0505e0552f4b": "negative",
-      "review:e129d6c34d2500e83afac89ad269c9df": "negative"
+      "review:35338365aef3ee929c3c5f0f508a0298": "none",
+      "review:88fb46c9379d889e92687b7e49cb6d33": "none",
+      "review:3197e2dc2eb689517521ffbe1ef87c35": "none",
+      "review:c6530f804e596e50d24adf68abf1b7ed": "none",
+      "review:7cef30f30d2ded1c0f024524e64cdf4c": "positive",
+      "review:8d5bcc4f8b556e4f0dd1f71dc6a425be": "none",
+      "review:5d475e32b718c72551c210cc0d0383af": "none",
+      "review:51cf16ff5c64ba1f0658a4aa509bf2d1": "none",
+      "review:50cf3f691356cc60029066a7f09ed251": "none",
+      "review:9c7249628419c147dc72fad590090193": "none",
+      "review:849efa2de9f0a276685d43f7064481d5": "none",
+      "review:3e2e636c66ee83c9ba1d292701706aed": "positive",
+      "review:da5574f03db4d23861d1ccbd4c9a0e44": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B00I86O3WE|packaging": {
+  "product:B000NHZSKC|scalp_condition": {
     "labels": {
-      "review:f01a20879d2f5e740b24b81a2f8f17dc": "negative",
-      "review:b050004cb23817844648930aa0703f55": "none",
-      "review:5e25cd9f1bdce929ed0253328bbc2367": "negative",
-      "review:a7158fcfa19ca62a410fe0d9a17f3b03": "none",
-      "review:186a98778054b33546a293cc55113373": "negative",
-      "review:dc1fe7baf500674a23da897d238977d9": "neutral"
+      "review:3919e092d460a71284dd34463e2b23cc": "negative",
+      "review:16c236b88cba120a87871420d9b73cdc": "none",
+      "review:025a3c64dec73f1033d66a0033a3b26e": "neutral",
+      "review:99584c2c25f47cca73c2ecc425f36d6e": "none",
+      "review:3536f757b57ba448899bcd9b16aa3b05": "none",
+      "review:05e281913614873f1b1b619cf999bc4f": "none",
+      "review:240b0a0b85de1f2e143fc51c70d0055a": "none",
+      "review:1ab87f3a08911af782db2d22f03d36a0": "none",
+      "review:23ee044d49c8f66a0ab2d5de16bf87e2": "none",
+      "review:cf992ed0481582390422160d2447c242": "none"
     },
     "stratum": "in_kg"
   },
-  "product:B01MG5ZN04|moisturization": {
+  "product:B08RZ16QK6|scent": {
     "labels": {
-      "review:aff7721cf826bf17b52386cc657c0399": "positive",
-      "review:a5ccf528c3a90be05c5d78c7294d070c": "positive",
-      "review:cfea7e3e175d8b01e4e1431a27e109e7": "positive",
-      "review:93dd8c272296817a81342d93d096d0b5": "positive",
-      "review:be60e3d56173924974816371a14aaade": "negative",
-      "review:d1e9e7e7263f87c3e1576f7718414805": "positive",
-      "review:77efe4eaeb188d4601c063f01b5f49e2": "positive",
-      "review:86a7e8bc91c04b9a5e96752ed9c72a6c": "positive",
-      "review:045875e76db6f181b2d65b37a5a3d0af": "positive",
-      "review:e9b4bb5dbd4bc03c201fc89ad969b387": "positive"
+      "review:cb881da9317b0a38e67a553beb96b907": "negative",
+      "review:1145f91e7b81156d8d3404aa964b3dbe": "negative",
+      "review:9d571046ebe2e9427734d6dded6d099d": "positive",
+      "review:90b4dc9808adeec53f563b01276db575": "positive",
+      "review:a9fd0156d2e1a6030cf657c434cfa5c7": "negative",
+      "review:56d99d231fa8770559152e0abc293e51": "positive"
     },
     "stratum": "in_kg"
   },
-  "product:B09DC29XVD|hold": {
+  "product:B004GHIEZQ|dispenser": {
     "labels": {
-      "review:61c14e67916f72d64980a1ad55d7b26c": "none",
-      "review:7c88b451751cda3f75f59333a75b4429": "none",
-      "review:f0e12a20ae40ab1504b1d641cd73e917": "none",
-      "review:5f135468122cccce2eff077a8b9aef97": "none"
+      "review:25d8a102377d285266e69c9286cbad6c": "neutral",
+      "review:557e52f3451c5dd87aeb084e503c3f18": "neutral",
+      "review:ddc9d84633fd2a320fff5104fdeaab1f": "negative"
     },
     "stratum": "kg_sparse"
   },
-  "product:B089F4YSHW|moisturization": {
+  "product:B0BG6WX4DH|texture": {
     "labels": {
-      "review:dc57e20f8bc5323cf535d04ee92af5d6": "none",
-      "review:566fd9d99345352f1b1c0a658983c6bb": "none",
-      "review:06226ee0845ee32ccecf460ae3233dfc": "none",
-      "review:0812ccbb9c21327b446aa50abc418502": "none"
+      "review:39c4796e38330e6a3c3a9f9a6596097d": "none",
+      "review:b5330ab2626c1c1c1d6a2d4490ad1875": "none",
+      "review:1ce3bb93b5b55af82f33ee4b5e2a707d": "none",
+      "review:7b87310951629711587666a801563dc8": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B00J7QCNDU|scent_longevity": {
+  "product:B08JQS9FVP|residue": {
     "labels": {
-      "review:60856f62f037b3546f6865cab8446266": "none",
-      "review:3430be3e49185e0169282937a3d27fc9": "none",
-      "review:e1d125feb6342aed7cd7bf4d5e951979": "none"
+      "review:e12e0bd2a3b2d3951f366b4ef7888ffc": "negative",
+      "review:c631b2d30a64debb97f12860c647b236": "none",
+      "review:47fc698c29e6621295da243e68003736": "positive",
+      "review:e7a0366b51ee2491a47a35de68fcdea8": "none",
+      "review:49437c6c6ed11c82f6d78525d07075e7": "negative",
+      "review:e2c12c918fedb0fd74dddd05fff8cb65": "positive",
+      "review:3fe98b8153b404d96c9ddb3192cb9122": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B08C7C9FPZ|hold": {
+  "product:B07CZSFHZM|residue": {
     "labels": {
-      "review:6d4d53c29c8d268c33b823e7cdff3621": "none",
-      "review:2ec06fa71eb7b7044cdb92c64423caf4": "none",
-      "review:4167a19e5d14d863276c14e6c26d8c38": "none",
-      "review:432491b96433a9446fc1df7f7a414403": "none",
-      "review:64d8f636effcbbc08c0b9e80692aa27f": "none",
-      "review:b5e83ff58441f235331286b1c66f9a3d": "none",
-      "review:a43f87250c137e8c1274e5fcd04b9a77": "none",
-      "review:6d5ba3b7a1c188a163e40f156b7faaa7": "none"
+      "review:919a69f5edd90b94bce5de09ba72b9e4": "none",
+      "review:7c0837d38fff324894b463b29b4b9d01": "none",
+      "review:7c8612036c29751bd4f3b00cfae9b68e": "negative"
     },
     "stratum": "kg_sparse"
   },
-  "product:B019FRDBBI|size_quantity": {
+  "product:B007CMT6TA|ease_of_application": {
     "labels": {
-      "review:5c3556354608862e391a96623f4c5808": "positive",
-      "review:ef88aff29fde77930286d1bb10eb164e": "positive",
-      "review:4ee0995eb2ad78e06aac86534d3b20c4": "positive",
-      "review:0f2684287c0cbcd379bc97acae2752f3": "none",
-      "review:97d852572913f446280783cc0dc49bc5": "positive"
+      "review:7e2a3dbac60301a31abb5724403254df": "none",
+      "review:ceccad45b1f31f9d5acbf04a0a2a3199": "none",
+      "review:94077e6f07dec36068ccb7d5e236c82a": "none",
+      "review:d810933ca8e5e5e414114e6801213c90": "none",
+      "review:217234386074113d219a5d05f2dfb1f0": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B07QPFYT5M|packaging": {
+  "product:B000TFW8WE|dispenser": {
     "labels": {
-      "review:5c4a006b814fd41b0040b90f70a91f84": "none",
-      "review:395da325621ea37fcfcb9a78337c2e04": "none",
-      "review:65846e2a8f453d31a94355dd26f684c7": "none"
+      "review:3b802be8b47344004eae113568219a02": "negative",
+      "review:a9743aee51ee7f2e01b41b3e51c861a8": "negative",
+      "review:f07083b447010a34d2fe173fd09da226": "negative"
     },
     "stratum": "kg_sparse"
   },
-  "product:B08BL85TKP|dispenser": {
+  "product:B01IAEUA3Y|moisturization": {
     "labels": {
-      "review:dd9acbfaa970f98901df891c782f7c1e": "none",
-      "review:77c1742851101fa390ddca84d8cd98dd": "none",
-      "review:2916b88b395b5231d1052fedd34d69d3": "none"
+      "review:cf31a405bd5dbaff2054a6c2820999a1": "none",
+      "review:c38b73adc6d10a2a22e0b02a38593f8f": "negative",
+      "review:9cde7fc4e324b94a27afff497ffc4281": "none",
+      "review:bd7b326eea1b30c901266fbbab33f389": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B01AB4B2UG|hold": {
+  "product:B097545V9C|scalp_condition": {
     "labels": {
-      "review:f33ec7ef6492d1d8353d50891565cc80": "none",
-      "review:f8079a9c164c22e38aee52958f0ab97d": "positive",
-      "review:3e4e3ee36fae5fb6f1a9c23edb997ef1": "none",
-      "review:16e9a8b284f825b21a55e3223cb218f4": "none",
-      "review:d21e8912fa4b305a91d43a6a312abd94": "none",
-      "review:0f4d41cc97d613cff42f4c52e949e509": "none",
-      "review:d34a7433ec5fa74de1cc68eb1a57cf7e": "none",
-      "review:479e5177845fd14e6ea96a084036d0d5": "none",
-      "review:2dd69817452f281fb43233bb8fdaee2c": "none",
-      "review:5ea3938b7aab87abc565f9606c1d989d": "none"
+      "review:83481ab9c806571216919f70613ec777": "none",
+      "review:b767990c459d869f00f1abfd674f90c5": "none",
+      "review:5bd16758ee9fcf1eff39983f45283203": "none",
+      "review:58b8e455a5bc9e37deb66642944f6d63": "none",
+      "review:104e0a8d2094e39e21b2ec45e1ece09c": "none",
+      "review:20f07d29526c5e3810837c687ff1c845": "none",
+      "review:9275761126dbfa8a6cdd3f3a0d7f4f40": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B0BN113VWD|dispenser": {
+  "product:B001O707QU|scalp_condition": {
     "labels": {
-      "review:4195d6a16eb763ad780709507cdd4ef2": "none",
-      "review:fe48110c301aa7a47f9bfe317a4eec21": "none",
-      "review:83df702dd6ea14806d4d9859a47b08fc": "none"
+      "review:06a7ad38a8d3b9c12e20304ad6aba629": "none",
+      "review:6240cee5d30c192483449c1d5bde22ef": "none",
+      "review:16585d423b59d82a048e08419a160cbc": "none",
+      "review:496e4c666fdc8f249b3e2b51f7d97b79": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B08M57D1G1|ease_of_application": {
+  "product:B007CMT6TA|packaging": {
     "labels": {
-      "review:cd8fe9d682d4f86116497ff22849c2fc": "positive",
-      "review:2e5c91679621252119deb2c0a207515c": "none",
-      "review:22e6e60bcd9886a4d5b5a6c374001481": "neutral",
-      "review:19ddd2a7531fdf1aeaa15e92c327383a": "positive"
+      "review:a3dfe5a1836748a8209425d57fd5c624": "none",
+      "review:b387eb8baebddd0df2bec7421dc2a0f8": "none",
+      "review:35246d8f8328cd947a7ec39d4989b05f": "none",
+      "review:a38afd701a1751d307dc3d029b5a2ef5": "none",
+      "review:d291375cb20b8d6b3037acdf4b3e2fa3": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B01MTQW0BK|moisturization": {
+  "product:B015WVW8EW|texture": {
     "labels": {
-      "review:75eabe88ca7390d59716ed4f359f9074": "none",
-      "review:75388b7d8c2c49860b47b591a3afe0f2": "none",
-      "review:b2d3787587d8a7176e4299a701690c0a": "none",
-      "review:c96f58d97568130631984995247d0ef5": "none",
-      "review:d9d5e1b85d989c556b43c58ca6ea99e8": "none"
+      "review:443b245924cc1bb9621850ca02c68c4d": "none",
+      "review:a45df1236f1b74c51dcdcdcfa8699721": "negative",
+      "review:23df5427152cb4337b809fe9a8c61d6c": "none",
+      "review:0ea616e695ad7d43d28a01207e260c1f": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B085C74MZ2|value_for_money": {
+  "product:B09PGNLLQK|ease_of_application": {
     "labels": {
-      "review:c5b572994ef34e18711e408f597f8532": "positive",
-      "review:a0a9d13772fff8609e6367226d86ddec": "negative",
-      "review:b8ee63ad150f65bbacab1ffbb05959fe": "none",
-      "review:e9c3118240ac2d5173ac46162bfa7121": "positive",
-      "review:fee2531e5fe037a63d4e63040db24f4c": "none"
+      "review:8128a000ec63ce753b76f78b33590bfc": "negative",
+      "review:3a30ef5e4d61c7a50b5f5aceb6d27d4c": "none",
+      "review:74bb79c45829edfee4effbb176fb416f": "none",
+      "review:0c183486ca74f8a8f1709dd9eb30e706": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B087J1T1H8|moisturization": {
+  "product:B00HSV1UL2|cleansing": {
     "labels": {
-      "review:392973eae6bd88b23acffe8a570a844e": "none",
-      "review:90234eb0f6aabda51c791e727f6f8472": "none",
-      "review:c011cfce145a0a0c52fa38dbbed60108": "none",
-      "review:0ecfa0c79055b6fe64669818feaf3813": "none",
-      "review:3f76357065f87181a52af807e28cb46f": "none"
+      "review:2b4307f962d64f60fdef39efab2dda3c": "none",
+      "review:cf124635345b03f85136dd7f199ead60": "none",
+      "review:44eed52b2bb8ca76d108670cf077775f": "none",
+      "review:675db4ac58f6937e9278bda357ec55ae": "none",
+      "review:1ced29148b0a3e84f74a46137375c7cf": "none",
+      "review:49aea93b69e4d8ae4ecc497526c7f04c": "none",
+      "review:50ae3210933bf4c4fe0aba1a0eacab7c": "none",
+      "review:22ad7ba612c31a80554ca4de3eab1582": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B0756WQCV5|hold": {
+  "product:B00Y14CKRW|ease_of_application": {
     "labels": {
-      "review:ce3e260844bf0f0614970dfde53ed72e": "none",
-      "review:e6accab98cb2c7896485b173edce1976": "positive",
-      "review:c9bfc3d8465a11282fbe51250f5ed34e": "none",
-      "review:02b14d96c3dc33fd70716b7d35d3cb4a": "none",
-      "review:30bbeee5f3338600b08d9b9a6bccabd3": "negative",
-      "review:25a2f60c5ce516a0bd89e9d69b5402bd": "none",
-      "review:0319a52b42a5eda12f8aa26d2dcce014": "none",
-      "review:1ba6ce1fffe1b93e3e4f47382a02ee04": "none",
-      "review:9b2873e6a147c46c6e12a2be53967cb6": "none",
-      "review:7d546e21b4bfeb89ffec98afc0281776": "none",
-      "review:f126ba1a8da2306dd0b3cd03b2f94b54": "none"
+      "review:28b8ec1be02eee80c82425c3cfc96722": "none",
+      "review:eae52f32b07fdd61906e14b65a0c2e9f": "none",
+      "review:2d28b0aef3101a4383b1d8555066f3a5": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B00HDOZY1G|dispenser": {
+  "product:B08RZ16QK6|residue": {
     "labels": {
-      "review:8cc2736ca7b3a8421a21fa5f59aedd02": "none",
-      "review:c0432e7336ba51c2aeb35cdad7f06a08": "none",
-      "review:3bdc425c88fd36206824b3a564f1d1cd": "none",
-      "review:1feef353a5504df8164df69b635a3c75": "none"
+      "review:e0048e5a724d194f9c988e80c61965a8": "none",
+      "review:4f3668dad8b4f711644d31cd8cec15f9": "none",
+      "review:f15348f2b7aed82a599cbe20a9dc5b65": "negative",
+      "review:5675e4e418b5252610917a0142035fa2": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B01MT63D1M|moisturization": {
+  "product:B000TFW8WE|residue": {
     "labels": {
-      "review:8f3a19d836f5c72cdbcdb79b14d1fb86": "none",
-      "review:26b7ba4cf67fe52e62a88c1da7b0c7b1": "none",
-      "review:a3c1e492206894ecc162e79812e9ef18": "none",
-      "review:a8e4a295103c5e287753c0e95b14bc0d": "none",
-      "review:810705be5358f393dff2cf8bd615a67a": "none"
+      "review:bb5b07a38de0154cfac5cb7a875d1929": "negative",
+      "review:6afe5d2c5c7cc61f29adec1464db8b53": "positive",
+      "review:853114e1d859c594c07dea3d6f08c170": "positive"
     },
     "stratum": "kg_sparse"
   },
-  "product:B0070IAT38|dispenser": {
+  "product:B077TBSVK8|scent_longevity": {
     "labels": {
-      "review:1526dc801e0c79cdcfeb8f5f94dc8513": "none",
-      "review:6105984074db3737d1de1e800d01658e": "none",
-      "review:f25404d6e57a31c0e94b5198729e0538": "none",
-      "review:02e9a6e4e9a126160e9a5d17e8566d89": "none"
+      "review:219a246b189a5696d4e2489e11e8a40d": "none",
+      "review:916b8404916aff7c5c6a8d5ee3453f11": "none",
+      "review:9a98412aa3e63ccbe2d32df61d3e5250": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B0756WQCV5|texture": {
+  "product:B000NHZSKC|texture": {
     "labels": {
-      "review:c9bfc3d8465a11282fbe51250f5ed34e": "none",
-      "review:88fbbcced246e39651ea4a704f86ebc6": "positive",
-      "review:30bbeee5f3338600b08d9b9a6bccabd3": "negative",
-      "review:92db9f79195d37491f87112c2db8fbf9": "positive",
-      "review:0319a52b42a5eda12f8aa26d2dcce014": "none"
+      "review:07d2485ee2b317678bfde0289949e48e": "none",
+      "review:16c236b88cba120a87871420d9b73cdc": "none",
+      "review:05587d874c3158677596bb4a063165a8": "none",
+      "review:93c060287d5299103dcef2b319b08b8d": "none",
+      "review:3536f757b57ba448899bcd9b16aa3b05": "none",
+      "review:05e281913614873f1b1b619cf999bc4f": "none",
+      "review:1ab87f3a08911af782db2d22f03d36a0": "none",
+      "review:84a904620685ef285baf4effff0ea157": "none",
+      "review:23ee044d49c8f66a0ab2d5de16bf87e2": "none",
+      "review:cf992ed0481582390422160d2447c242": "none"
     },
     "stratum": "kg_sparse"
   },
-  "product:B07KFSKF81|dispenser": {
+  "product:B08QKXY1KN|texture": {
     "labels": {
-      "review:4b0da82bad00c60a6aeee15d92e85e3c": "positive",
-      "review:062546bb347070d1d923c05562e77cd3": "positive",
-      "review:73601f4d25b23ae0e0147c07133e62db": "positive",
-      "review:7fe27d5ca2c137c0df93f53cdd8892d2": "positive",
-      "review:3b538e1761f8d7ffe69404378b71af51": "positive"
+      "review:3219aecc8dd27c38be7f942c966a8cb6": "none",
+      "review:f6329b5e0ea4e733e844b2873b67555e": "none",
+      "review:ec934dd6d47cfdc0ad5dba35dd54ad96": "none",
+      "review:0854271adfd1cd754c9667f42d8553b6": "none",
+      "review:75fed0310355eadb64c18b6afdbba7ca": "none",
+      "review:5857b82d822190c7ebddddba01c5e0ce": "none",
+      "review:4b2f84a9f43ccc103ef4b771fced64c4": "positive"
     },
     "stratum": "kg_sparse"
   },
-  "product:B071YZ2J6S|scent_longevity": {
+  "product:B00RUKJGYY|scalp_condition": {
     "labels": {
-      "review:adcf3f4678434d26c581984ca1acbdd7": "none",
-      "review:0d9cda0b9914ca79dcbb4b9fa0cf8d2b": "none",
-      "review:a7623dc5529700441e43f057221d41d0": "none"
+      "review:18f4f29fee9e046c609f2fc3e170c895": "none",
+      "review:8e4ff82099c43050b4545edc0c741656": "none",
+      "review:c9e3e9bd26754a52bc9e6d4fa0c4443b": "none",
+      "review:6e64afdee1ee24321daeab50c9082ee8": "none",
+      "review:04c364c4a4268c27c0d3e426830a41a7": "none",
+      "review:9c7249628419c147dc72fad590090193": "none"
     },
     "stratum": "kg_sparse"
   }

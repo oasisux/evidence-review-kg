@@ -5,8 +5,8 @@ import random
 
 import pandas as pd
 
-from .common import Config, aspect_names, ontology, read_json, sha, write_json
-from .extract import EXTRACT_SYSTEM, _claim_schema
+from .common import Config, aspect_names, contexts, families, ontology, read_json, sha, write_json
+from .extract import _claim_schema, extract_system
 from .llm import LLM
 from .pipeline import load_data, sentence_table
 
@@ -105,14 +105,17 @@ def run_reference(cfg: Config, llm: LLM) -> None:
         rng.shuffle(ids)
         picks[part] = ids[:n]
     rv = reviews.set_index("review_id")
-    items = [rid for ids in picks.values() for rid in ids]
-    batches = [items[i:i + 5] for i in range(0, len(items), 5)]
-    schema = _claim_schema(aspect_names())
+    by_family: dict = {}
+    for rid in (rid for ids in picks.values() for rid in ids):  # same family-specific aspect set as the extractor
+        fam = rv.loc[rid].family if rv.loc[rid].family in families() else None
+        by_family.setdefault(fam, []).append(rid)
+    batches = [(fam, ids[i:i + 5]) for fam, ids in by_family.items() for i in range(0, len(ids), 5)]
 
-    def run(b):
+    def run(job):
+        fam, b = job
         user = ("Independently annotate ALL aspect opinions in these reviews (reference annotation).\n\n" +
                 "\n\n".join(f"<review key=\"R{i}\">\n{rv.loc[rid].doc}\n</review>" for i, rid in enumerate(b)))
-        res = _judge(cfg, llm, "reference", EXTRACT_SYSTEM, user, schema)
+        res = _judge(cfg, llm, "reference", extract_system(fam), user, _claim_schema(aspect_names(fam), allow_other=True))
         return [{"review_id": b[int(x["key"].lstrip("R"))], **c} for x in res["reviews"]
                 if x["key"].lstrip("R").isdigit() and int(x["key"].lstrip("R")) < len(b) for c in x["claims"]]
 
@@ -129,18 +132,20 @@ Types:
 - compare: compare 2 given products on one aspect. product_ids must list both products; mention them by a short name.
 - disagreement: ask what reviewers disagree about or the main complaints for 1 given product. product_ids lists it.
 - unanswerable: plausible questions that reviews cannot answer (lab test results, ingredient certifications, prices in other stores, medical efficacy). product_ids may list 1 product.
-For pos/neg conditions, product_ids is empty; pick aspects that many products mention so several products could qualify. About half of them should name a product type from the catalog (e.g. "a body lotion that...", "mascara that...").
-Questions must be clearly different from each other: vary aspect, product type and wording; never write two questions with the same aspect AND product type. target_aspects lists the aspects involved (empty for unanswerable if none fits)."""
+For pos/neg conditions, product_ids is empty; pick aspects that many products mention so several products could qualify. About half of them should name a product type from the catalog (e.g. "a body lotion that...", "shampoo that...").
+About a third of pos/neg conditions should be conditional on WHO uses the product: name a skin or hair type, climate or time of use from the context statistics (e.g. "a moisturizer that isn't greasy on oily skin", "conditioner that detangles curly hair"), and set target_context to it. Prefer contexts that reviewers of several products mention. All other questions use target_context "unspecified".
+Questions must be clearly different from each other: vary aspect, product type, context and wording; never write two questions with the same aspect, product type AND context. target_aspects lists the aspects involved (empty for unanswerable if none fits)."""
 
 
 def _query_schema() -> dict:
     return {"type": "object", "additionalProperties": False, "required": ["queries"],
             "properties": {"queries": {"type": "array", "items": {
                 "type": "object", "additionalProperties": False,
-                "required": ["type", "text", "product_ids", "target_aspects"],
+                "required": ["type", "text", "product_ids", "target_aspects", "target_context"],
                 "properties": {"type": {"type": "string", "enum": QUERY_TYPES}, "text": {"type": "string"},
                                "product_ids": {"type": "array", "items": {"type": "string"}},
-                               "target_aspects": {"type": "array", "items": {"type": "string", "enum": aspect_names()}}}}}}}
+                               "target_aspects": {"type": "array", "items": {"type": "string", "enum": aspect_names()}},
+                               "target_context": {"type": "string", "enum": contexts()}}}}}}
 
 
 def run_queries(cfg: Config, llm: LLM) -> list[dict]:
@@ -155,6 +160,8 @@ def run_queries(cfg: Config, llm: LLM) -> list[dict]:
     titles = products.set_index("product_id").title
     out = []
     ptypes = products.set_index("product_id").product_type if "product_type" in products else None
+    ctx_counts = context_mentions(st).groupby("context").product_id.nunique().sort_values(ascending=False)
+    ctx_stats = "\n".join(f"- {c}: stated by reviewers of {n} products" for c, n in ctx_counts.items()) or "- (none)"
     for part, plan in PLAN.items():
         pids = [p for p in per_product.index if split.get(p) == part]
         listing = "\n".join(f"- {p}: {titles[p][:90]} | type: {ptypes[p] if ptypes is not None else '?'} | most discussed: "
@@ -162,13 +169,17 @@ def run_queries(cfg: Config, llm: LLM) -> list[dict]:
         type_counts = products.product_type.value_counts().head(25).to_dict() if ptypes is not None else {}
         stats = "\n".join(f"- {a}: discussed (>=2 sentences) in {n} of {len(per_product)} products" for a, n in coverage.items())
         for qtype, n in plan.items():
-            user = (f"Aspect statistics over the whole catalog:\n{stats}\n\nProduct types in the catalog (count): {type_counts}\n\n"
+            user = (f"Aspect statistics over the whole catalog:\n{stats}\n\nContext statistics (review sentences stating "
+                    f"a skin/hair type, climate or time of use):\n{ctx_stats}\n\n"
+                    f"Product types in the catalog (count): {type_counts}\n\n"
                     f"Products you may reference in compare/disagreement/unanswerable questions:\n{listing}\n\n"
                     f"Write exactly {n} questions of type {qtype}.")
             res = _judge(cfg, llm, f"queries_{part}_{qtype}", QUERY_SYSTEM, user, _query_schema())
             for q in res["queries"][:n]:
                 q["type"] = qtype
                 q["product_ids"] = [p for p in q["product_ids"] if p in pids]
+                if qtype not in RETRIEVAL_TYPES:
+                    q["target_context"] = "unspecified"
                 if q["type"] in {"compare", "disagreement"} and not q["product_ids"]:
                     continue
                 out.append({"qid": "q" + sha(part + q["text"])[:8], "split": part, "status": "draft", **q})
@@ -182,7 +193,8 @@ Grades:
 2 = reviewers clearly indicate the product satisfies the request (for "few complaints / not X" requests: reviewers report the absence of the problem and complaints are rare).
 1 = partially or with mixed evidence (some reviewers satisfied, some complain).
 0 = does not satisfy, mostly complaints, or no relevant evidence.
-If the request names a kind of product (e.g. "body lotion", "mascara") and this product is clearly a different kind, grade 0.
+If the request names a kind of product (e.g. "body lotion", "shampoo") and this product is clearly a different kind, grade 0.
+If the request names who uses the product (a skin or hair type, climate or time of use): grade 2 needs reviewers who state that condition and are satisfied; satisfied reviewers who do not state it give at most 1; reviewers with that condition who complain give 0.
 Judge each product independently."""
 
 QREL_SCHEMA = {"type": "object", "additionalProperties": False, "required": ["grades"],
@@ -192,9 +204,25 @@ QREL_SCHEMA = {"type": "object", "additionalProperties": False, "required": ["gr
                                   "reason": {"type": "string"}}}}}}
 
 
-def product_aspect_sentences(cfg: Config, pid: str, aspects: list[str], limit: int = 10) -> list[str]:
+def context_mentions(st: pd.DataFrame) -> pd.DataFrame:
+    """Sentences stating a context (same cue dictionary as extraction), one row per (sentence, context)."""
+    from .common import detect_context
+    ctx = st.text.map(detect_context)
+    return st.assign(context=ctx)[ctx != "unspecified"]
+
+
+def product_aspect_sentences(cfg: Config, pid: str, aspects: list[str], limit: int = 10,
+                             context: str = "unspecified") -> list[str]:
+    """Review sentences on the aspects; for a context request, sentences of the reviews that state the context
+    come first (the judge needs them to give grade 2)."""
     st = raw_sentences(cfg)
     g = st[(st.product_id == pid) & st.aspects.apply(lambda xs: any(a in xs for a in aspects))]
+    if context != "unspecified":
+        cm = context_mentions(st[st.product_id == pid])
+        ctx_reviews = set(cm[cm.context == context].review_id)
+        stated = cm[cm.context == context].text.tolist()
+        g = pd.concat([g[g.review_id.isin(ctx_reviews)], g[~g.review_id.isin(ctx_reviews)]])
+        return list(dict.fromkeys(stated[:3] + g.text.tolist()))[:limit]
     return g.text.head(limit).tolist()
 
 
@@ -215,7 +243,7 @@ def run_qrels(cfg: Config, llm: LLM, queries: list[dict]) -> dict:
         q, pids = job
         blocks = []
         for k, p in enumerate(pids):
-            sents = product_aspect_sentences(cfg, p, q["target_aspects"], 8)
+            sents = product_aspect_sentences(cfg, p, q["target_aspects"], 8, q.get("target_context", "unspecified"))
             blocks.append(f"<product id=\"P{k}\" title=\"{titles[p][:80]}\">\n" +
                           "\n".join(f"- {s}" for s in sents) + "\n</product>")
         res = _judge(cfg, llm, "qrels", QREL_SYSTEM, f"Request: {q['text']}\n\n" + "\n\n".join(blocks), QREL_SCHEMA)
@@ -328,10 +356,23 @@ def run_kg_accuracy(cfg: Config, llm: LLM) -> None:
     write_json(cfg.p("annotations") / "kg_accuracy_judge.json", out)
 
 
+def check_sample(cfg: Config) -> None:
+    """Labels are tied to one product sample. Refuse to mix them with a re-ingested sample: queries and qrels
+    are cached by file and would otherwise be reused silently."""
+    ann = cfg.p("annotations")
+    current = read_json(cfg.p("processed") / "split_manifest.json", {}).get("hash")
+    stamp = read_json(ann / "sample.json", {})
+    if stamp.get("split_hash") not in (None, current) or (not stamp and any(ann.glob("*.json"))):
+        raise SystemExit(f"{ann} holds labels for a different product sample (or labels made before sample stamping). "
+                         "Move it away (e.g. to annotations_run2/) and re-run the judge.")
+    write_json(ann / "sample.json", {"split_hash": current})
+
+
 def run(cfg: Config, task: str = "all") -> None:
     if cfg.offline:
         print("offline profile: judge skipped (metrics will be NOT_EVALUATED)")
         return
+    check_sample(cfg)
     llm = LLM(cfg)
     if task == "dev":
         run_dev(cfg, llm)

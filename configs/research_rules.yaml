@@ -13,7 +13,10 @@ dataset:
   max_products: 100
   min_reviews_per_product: 15
   reviews_per_product: 20
-  dev_products: 30
+  dev_products: 30         # split per family in proportion to its quota
+  family_quotas:          # product families (aspects_v2.yaml) and products per family, seeded order within each
+    skin_moisturizer: 50
+    hair_care: 50
 extraction:
   provider: mock
   model: claude-sonnet-5
@@ -31,6 +34,10 @@ augmentation:
   gap_max_claims: 1
   mention_cos: 0.45
   gaps_per_call: 3
+seller:
+  products_per_call: 5
+  attr_merge_cos: 0.75    # EDC canonicalization: merge attribute names whose name+definition embeddings are this close
+  value_merge_cos: 0.88   # merge values within one canonical attribute
 answer:
   model: claude-sonnet-5
   effort: low
@@ -42,6 +49,9 @@ retrieval:
   encoder: sentence-transformers/all-MiniLM-L6-v2
   candidate_k: 50
   rrf_k: 60
+  index_metadata: true        # every system also indexes each product's seller listing (fair to text baselines)
+  seller_target_weight: 1.0   # context query, no reviewer of that context: weight when the seller targets it
+  no_context_weight: 0.5      # ... and when the seller does not
 budget:
   max_cost_usd: 60.0
   concurrency: 8

@@ -31,6 +31,10 @@ augmentation:
   gap_max_claims: 1
   mention_cos: 0.45
   gaps_per_call: 3
+seller:
+  products_per_call: 5
+  attr_merge_cos: 0.75    # EDC canonicalization: merge attribute names whose name+definition embeddings are this close
+  value_merge_cos: 0.88   # merge values within one canonical attribute
 answer:
   model: rules-v1
   effort: low
@@ -42,6 +46,9 @@ retrieval:
   encoder: sentence-transformers/all-MiniLM-L6-v2
   candidate_k: 50
   rrf_k: 60
+  index_metadata: true        # every system also indexes each product's seller listing (fair to text baselines)
+  seller_target_weight: 1.0   # context query, no reviewer of that context: weight when the seller targets it
+  no_context_weight: 0.5      # ... and when the seller does not
 budget:
   max_cost_usd: 0.0
   concurrency: 1
