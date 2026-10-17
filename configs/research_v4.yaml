@@ -1,0 +1,95 @@
+project: evireview-kg
+profile: research_v4
+seed: 42
+runtime:
+  platform: macos-arm64
+  embedding_device: cpu   # cpu | mps (falls back to cpu)
+dataset:
+  repo: McAuley-Lab/Amazon-Reviews-2023
+  revision: 2b6d039ed471f2ba5fd2acb718bf33b0a7e5598e
+  category: All_Beauty
+  review_file: data/raw/All_Beauty.jsonl
+  meta_file: data/raw/meta_All_Beauty.jsonl
+  max_products: 300
+  min_reviews_per_product: 20
+  reviews_per_product: 30
+  review_order: time       # first 30 reviews in time order: how reviews accumulate on a new product
+  beauty_filter: true
+  dev_products: 60         # split per family in proportion to its quota
+  family_quotas:          # product families (aspects_v2.yaml) and products per family
+    skin_moisturizer: 150
+    hair_care: 150
+  sampling: family_brand   # classify every eligible title; brands with >= 3 products in a family are taken first
+  brand_min_products: 3
+  brand_max_products: 8
+  brand_share: 0.5         # at most half of a family's quota from brand clusters
+extraction:
+  provider: external      # mock | external
+  model: claude-sonnet-5
+  effort: low
+  reviews_per_call: 8
+verification:
+  model: claude-sonnet-5
+  effort: low
+  candidates_per_call: 15
+augmentation:
+  threshold: 0.80
+  dev_precision_target: 0.85
+  max_gaps_per_product: 5
+  gap_min_mentions: 2
+  gap_max_claims: 1
+  mention_cos: 0.45
+  gaps_per_call: 3
+seller:
+  products_per_call: 5
+  attr_merge_cos: 0.75    # EDC canonicalization: merge attribute names whose name+definition embeddings are this close
+  value_merge_cos: 0.88   # merge values within one canonical attribute
+induce:                 # evireview induce-aspects (dev reviews only; writes a proposal, never edits the dictionary)
+  reviews_per_family: 300
+  reviews_per_call: 10
+  match_cos: 0.55         # an induced aspect this close to an existing aspect definition counts as that aspect
+  merge_cos: 0.75         # cluster threshold for proposed new aspects
+answer:
+  model: claude-sonnet-5
+  effort: low
+  max_evidence: 8
+judge:
+  model: claude-opus-5
+  effort: medium
+retrieval:
+  encoder: sentence-transformers/all-MiniLM-L6-v2
+  candidate_k: 50
+  rrf_k: 60
+  index_metadata: true        # every system also indexes each product's seller listing (fair to text baselines)
+  seller_target_weight: 1.0   # context query, no reviewer of that context: weight when the seller targets it
+  no_context_weight: 0.5      # ... and when the seller does not
+  exposure:                   # B9 new-product slots (exposure.py): policy choice, 7 slots + LLM selector (decided 2026-10-17)
+    max_slots: 7
+    threshold: 0.0
+    w_attr: 0.0
+    w_ctx: 0.3
+    w_pred: 0.0
+    selector: llm               # score | llm (an LLM orders new products by their listings; one call per query)
+relations:                # product-product relations and relation-based rating prediction (v4)
+  attr_aspect_model: claude-sonnet-5
+  min_neighbors: 3         # fewer neighbors that mention the aspect -> no prediction
+  min_neighbor_mentions: 2 # a neighbor's share counts when it has >= this many votes on the aspect
+  weight_grid: [0, 0.5, 1, 2]
+  lambda_grid: [1, 2, 4, 8, 16]
+  interval: 0.8
+coldstart:                # experiment 1: products in the new-product role keep only their first k reviews
+  role_share: 0.3          # of each family's test products
+  ks: [0, 1, 3, 5]
+  min_hidden_mentions: 5
+  title_neighbors: 10
+  llm_review_neighbors: 5
+budget:
+  max_cost_usd: 120.0
+  concurrency: 12
+paths:
+  processed: data/v4/processed
+  graphs: data/v4/graphs
+  cache: .cache/llm
+  runs: runs/v4
+  annotations: annotations_v4
+  reports: reports/v4

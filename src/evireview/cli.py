@@ -12,13 +12,14 @@ from .common import ROOT, load_config
 def main(argv: list[str] | None = None) -> None:
     ap = argparse.ArgumentParser(prog="evireview")
     sub = ap.add_subparsers(dest="cmd", required=True)
-    for name in ("doctor", "ingest", "induce-aspects", "build", "augment", "judge", "audit", "evaluate", "app", "all",
-                 "demo"):
+    for name in ("doctor", "ingest", "induce-aspects", "build", "augment", "predict", "coldstart", "coldsearch",
+                 "exposure", "exposure-curve", "judge", "audit", "evaluate", "pilot", "app", "all", "demo"):
         p = sub.add_parser(name)
         p.add_argument("--config", default="configs/research.yaml")
         if name == "judge":
             p.add_argument("--task", default="all",
-                           choices=["all", "dev", "queries", "claims", "reference", "qrels", "answers", "b6", "kgacc"])
+                           choices=["all", "dev", "queries", "claims", "reference", "qrels", "answers", "b6", "kgacc",
+                                    "relations"])
         if name == "demo":
             p.add_argument("--profile", default="fixture")
             p.add_argument("--offline", action="store_true")
@@ -45,6 +46,34 @@ def main(argv: list[str] | None = None) -> None:
     if a.cmd == "induce-aspects":
         from .induce import run_induce
         print(json.dumps(run_induce(cfg), indent=1, ensure_ascii=False))
+        return
+    if a.cmd == "predict":
+        from .predict import run_predict
+        print(json.dumps(run_predict(cfg), indent=1, default=str))
+        return
+    if a.cmd == "coldstart":
+        from .predict import run_coldstart
+        res = run_coldstart(cfg)
+        print(json.dumps({k: v for k, v in res.items() if k not in ("metrics", "by_aspect_k0")}, indent=1, default=str))
+        return
+    if a.cmd == "exposure":
+        from .exposure import run_exposure
+        res = run_exposure(cfg)
+        print(json.dumps({k: res[k] for k in ("chosen", "dev_floor_ndcg_B8", "n_judged_pairs")}, indent=1, default=str))
+        return
+    if a.cmd == "exposure-curve":
+        from .exposure import run_exposure_curve
+        res = run_exposure_curve(cfg)
+        print(json.dumps({k: res[k] for k in ("n_test_queries", "n_judged_pairs")}, indent=1))
+        return
+    if a.cmd == "coldsearch":
+        from .coldsearch import run_coldsearch
+        res = run_coldsearch(cfg)
+        print(json.dumps({k: v for k, v in res.items() if k != "comparisons"}, indent=1, default=str))
+        return
+    if a.cmd == "pilot":
+        from .pilot import run_pilot
+        print(json.dumps(run_pilot(cfg), indent=1, default=str)[:4000])
         return
     if a.cmd in ("build", "all", "demo"):
         from .pipeline import run_build

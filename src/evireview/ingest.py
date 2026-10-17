@@ -9,8 +9,9 @@ from pathlib import Path
 
 import pandas as pd
 
-from .common import (ROOT, SCHEMA_VERSION, Config, canonical_json, families, family_from_title, nfc,
-                     review_document, seeded_rank, sha, user_key, write_json)
+from .common import (ROOT, SCHEMA_VERSION, Config, brand_key, canonical_json, families, family_from_title, nfc,
+                     product_types, review_document, seeded_rank, sha, type_family, type_from_title, user_key,
+                     write_json)
 
 
 def _stream(path: Path):
@@ -50,6 +51,16 @@ def meta_document(m: dict) -> str:
     return "\n".join(parts)
 
 
+def _details(m: dict) -> dict | None:
+    details = m.get("details")
+    if isinstance(details, str):
+        try:
+            details = json.loads(details)
+        except json.JSONDecodeError:
+            details = {"raw": details}
+    return details
+
+
 def review_uid(r: dict) -> str:
     return "review:" + sha(canonical_json([r.get("user_id"), r.get("parent_asin"), r.get("asin"),
                                            r.get("timestamp"), r.get("title"), r.get("text")]))[:32]
@@ -61,6 +72,10 @@ beauty=false for anything else (coins, kitchenware, clothing, supplements, books
 product_type: 1-3 lowercase words naming what it is (e.g. "body lotion", "shampoo", "false eyelashes", "lipstick").
 family: one of the product families below, or "other" when none fits (kits and bundles mixing families are "other").
 """ + "\n".join(f"- {f}: {spec['description']}" for f, spec in families().items())
+
+TYPE_SYSTEM_V4 = TYPE_SYSTEM + """
+type: the canonical type within the family, one of the names below, or "other" (also "other" when family is "other"):
+""" + "\n".join(f"- {t} ({type_family(t)}): {spec['description']}" for t, spec in product_types().items())
 
 
 def _quota_full(selected: dict[str, list], quotas: dict[str, int] | None, k: int) -> bool:
@@ -79,34 +94,69 @@ def _take(selected: dict[str, list], quotas: dict[str, int] | None, k: int, p: s
 
 
 def _beauty_filter(cfg: Config, ranked: list[str], meta: dict, k: int,
-                   quotas: dict[str, int] | None) -> tuple[dict[str, list], dict]:
+                   quotas: dict[str, int] | None, classify_all: bool = False) -> tuple[dict[str, list], dict]:
     """Walk products in seeded order, classify titles in batches (beauty, product type, family) and fill the
-    family quotas, or keep the first k beauty products when no quotas are configured."""
+    family quotas, or keep the first k beauty products when no quotas are configured. classify_all (brand-stratified
+    sampling) classifies every eligible title, with a canonical type, and leaves the selection to the caller."""
     from .llm import LLM
     llm = LLM(cfg)
+    props = {"id": {"type": "string"}, "beauty": {"type": "boolean"}, "product_type": {"type": "string"},
+             "family": {"type": "string", "enum": list(families()) + ["other"]}}
+    if classify_all:
+        props["type"] = {"type": "string", "enum": list(product_types()) + ["other"]}
     schema = {"type": "object", "additionalProperties": False, "required": ["items"],
               "properties": {"items": {"type": "array", "items": {
-                  "type": "object", "additionalProperties": False,
-                  "required": ["id", "beauty", "product_type", "family"],
-                  "properties": {"id": {"type": "string"}, "beauty": {"type": "boolean"},
-                                 "product_type": {"type": "string"},
-                                 "family": {"type": "string", "enum": list(families()) + ["other"]}}}}}}
-    selected, types, pos = {}, {}, 0
-    while not _quota_full(selected, quotas, k) and pos < len(ranked):
-        batch = ranked[pos:pos + 50]
-        pos += 50
+                  "type": "object", "additionalProperties": False, "required": list(props), "properties": props}}}}
+    batches = [ranked[i:i + 50] for i in range(0, len(ranked), 50)]
+
+    def classify(batch):
         user = "\n".join(f"- id={p} title=\"{nfc(meta[p].get('title'))[:150]}\"" for p in batch)
-        res = llm.json_call(stage="ingest_types_v2", model=cfg["extraction"]["model"], effort="low",
-                            system=TYPE_SYSTEM, user=user, schema=schema)
-        got = {x["id"]: x for x in res["items"]}
+        if classify_all:
+            return llm.json_call(stage="ingest_types_v4", model=cfg["extraction"]["model"], effort="low",
+                                 system=TYPE_SYSTEM_V4, user=user, schema=schema)
+        return llm.json_call(stage="ingest_types_v2", model=cfg["extraction"]["model"], effort="low",
+                             system=TYPE_SYSTEM, user=user, schema=schema)
+
+    selected, types = {}, {}
+    results = llm.map(classify, batches, desc="ingest_types") if classify_all else []
+    for bi, batch in enumerate(batches):
+        if not classify_all and _quota_full(selected, quotas, k):
+            break
+        res = results[bi] if classify_all else classify(batch)
+        got = {x["id"]: x for x in (res or {}).get("items", [])}
         for p in batch:  # keep seeded order; unlabeled titles are skipped
             if p in got:
                 fam = got[p]["family"] if got[p]["family"] in families() else None
+                t = got[p].get("type")
                 types[p] = {"beauty": got[p]["beauty"], "product_type": got[p]["product_type"].lower().strip(),
-                            "family": fam}
-                if got[p]["beauty"]:
+                            "family": fam, "type": t if fam and type_family(t) == fam else None}
+                if got[p]["beauty"] and not classify_all:
                     _take(selected, quotas, k, p, fam)
     return selected, types
+
+
+def _brand_select(ranked: list[str], types: dict, brands: dict, quotas: dict[str, int], ds: dict) -> dict[str, list]:
+    """Brand-stratified quota sampling: within each family, brands with >= brand_min_products candidates are taken
+    first (seeded brand order, at most brand_max_products each, until brand_share of the quota), then the quota is
+    filled in seeded product order. Same-brand neighbors are rare in a plain random sample."""
+    lo, hi, share = ds.get("brand_min_products", 3), ds.get("brand_max_products", 8), ds.get("brand_share", 0.5)
+    selected = {}
+    for fam, n in quotas.items():
+        cands = [p for p in ranked if p in types and types[p]["beauty"] and types[p]["family"] == fam]
+        by_brand: dict[str, list] = {}
+        for p in cands:
+            if brands.get(p):
+                by_brand.setdefault(brands[p], []).append(p)
+        take: list[str] = []
+        for b in sorted((b for b, ps in by_brand.items() if len(ps) >= lo), key=lambda b: seeded_rank(0, b)):
+            room = int(n * share) - len(take)
+            if room < lo:
+                break
+            take += by_brand[b][:min(hi, room)]
+        chosen = set(take)
+        take += [p for p in cands if p not in chosen][: n - len(take)]
+        selected[fam] = take[:n]
+    return selected
 
 
 def _keyword_select(ranked: list[str], meta: dict, k: int, quotas: dict[str, int] | None) -> tuple[dict[str, list], dict]:
@@ -150,10 +200,20 @@ def run_ingest(cfg: Config) -> dict:
     quotas = ds.get("family_quotas") or None
     if quotas and set(quotas) - set(families()):
         raise ValueError(f"family_quotas names unknown families: {sorted(set(quotas) - set(families()))}")
+    brand_strata = ds.get("sampling") == "family_brand"
+    brands = {p: brand_key(_details(meta[p]), meta[p].get("store")) for p in ranked_eligible}
+    if brand_strata and not quotas:
+        raise ValueError("sampling: family_brand needs family_quotas")
     if ds.get("beauty_filter") and not cfg.offline:
-        by_family, types = _beauty_filter(cfg, ranked_eligible, meta, ds["max_products"], quotas)
+        by_family, types = _beauty_filter(cfg, ranked_eligible, meta, ds["max_products"], quotas,
+                                          classify_all=brand_strata)
     else:
-        by_family, types = _keyword_select(ranked_eligible, meta, ds["max_products"], quotas)
+        by_family, types = _keyword_select(ranked_eligible, meta, 10**9 if brand_strata else ds["max_products"],
+                                           None if brand_strata else quotas)
+        for p, t in types.items():
+            t["type"] = type_from_title(meta[p].get("title"), t["family"])
+    if brand_strata:
+        by_family = _brand_select(ranked_eligible, types, brands, quotas, ds)
     if quotas and not _quota_full(by_family, quotas, 0):
         short = {f: f"{len(by_family.get(f, []))}/{n}" for f, n in quotas.items()}
         raise ValueError(f"not enough eligible products to fill family quotas: {short}")
@@ -172,7 +232,11 @@ def run_ingest(cfg: Config) -> dict:
 
     reviews = []
     for p in selected:
-        ranked = sorted(by_product[p].items(), key=lambda kv: seeded_rank(seed, kv[0]))[: ds["reviews_per_product"]]
+        if ds.get("review_order") == "time":  # earliest reviews first: how reviews accumulate on a new product
+            ranked = sorted(by_product[p].items(), key=lambda kv: (kv[1]["raw"].get("timestamp") or 0, kv[0]))
+        else:
+            ranked = sorted(by_product[p].items(), key=lambda kv: seeded_rank(seed, kv[0]))
+        ranked = ranked[: ds["reviews_per_product"]]
         for rid, entry in ranked:
             r = entry["raw"]
             ts = r.get("timestamp")
@@ -201,12 +265,7 @@ def run_ingest(cfg: Config) -> dict:
     for p in selected:
         m = meta[p]
         price, perr = _price(m.get("price"))
-        details = m.get("details")
-        if isinstance(details, str):
-            try:
-                details = json.loads(details)
-            except json.JSONDecodeError:
-                details = {"raw": details}
+        details = _details(m)
         products.append({
             "product_id": f"product:{p}",
             "parent_asin": p,
@@ -225,6 +284,8 @@ def run_ingest(cfg: Config) -> dict:
             "n_reviews_kept": sum(1 for r in reviews if r["parent_asin"] == p),
             "product_type": types.get(p, {}).get("product_type"),
             "family": types.get(p, {}).get("family"),
+            "type": types.get(p, {}).get("type"),
+            "brand_key": brands.get(p),
             "meta_doc": meta_document(m),
             "missing_metadata": False,
             "schema_version": SCHEMA_VERSION,
@@ -258,7 +319,12 @@ def run_ingest(cfg: Config) -> dict:
         "profile": cfg.profile,
         "dataset": ds["repo"], "revision": ds["revision"], "category": ds["category"],
         "files": {f.name: {"bytes": f.stat().st_size, "sha256": _file_sha(f)} for f in (review_path, meta_path)},
-        "sampling_mode": "seeded_hash_family_quota" if quotas else "seeded_hash_min_reviews",
+        "sampling_mode": ("family_brand_strata" if brand_strata else "seeded_hash_family_quota") if quotas
+        else "seeded_hash_min_reviews",
+        "review_order": ds.get("review_order", "seeded"),
+        "n_selected_by_type": {str(k): int(v) for k, v in
+                               pd.Series([str(types.get(p, {}).get("type")) for p in selected]).value_counts().items()},
+        "n_brands_with_3plus": int((pd.Series([brands.get(p) for p in selected]).value_counts() >= 3).sum()),
         "family_quotas": quotas,
         "n_selected_by_family": {str(f): sum(1 for p in selected if str(family_of[p]) == f)
                                  for f in sorted({str(v) for v in family_of.values()})},

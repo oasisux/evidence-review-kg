@@ -10,9 +10,24 @@ families:
   skin_moisturizer:
     description: Leave-on products whose main job is to moisturize face or body skin - lotion, cream, body butter, facial moisturizer, face serum, eye cream, facial or body oil. NOT self-tanners or bronzers, sunscreen-first products, medicated, antibacterial or pain-relief creams, beard products, patches or masks, cleansers, makeup.
     title_cues: [moisturizer, moisturiser, moisturizing cream, face cream, facial cream, night cream, day cream, eye cream, body lotion, hand lotion, hand cream, lotion, body butter, face serum, facial serum, serum]
+    # Canonical product types (ProductType nodes). Title cues are the offline fallback; the LLM classifier picks from the names.
+    types:
+      face_moisturizer: {description: "face cream, facial lotion or gel moisturizer, day or night cream", title_cues: [face cream, facial cream, night cream, day cream, face moisturizer, facial moisturizer, gel cream]}
+      body_moisturizer: {description: "body or hand or foot lotion, cream or butter", title_cues: [body lotion, body butter, body cream, hand cream, hand lotion, foot cream, lotion]}
+      face_serum: {description: "serum, essence or ampoule for the face", title_cues: [serum, essence, ampoule]}
+      eye_cream: {description: "cream, gel or serum for the eye area", title_cues: [eye cream, eye gel, eye serum]}
+      skin_oil: {description: "facial or body oil", title_cues: [face oil, facial oil, body oil]}
   hair_care:
     description: Products whose main job is to wash, condition or treat hair and scalp - shampoo, conditioner, co-wash, hair mask, leave-in conditioner, hair oil or serum, scalp treatment. NOT styling products (gel, pomade, wax, mousse, hairspray, texturizing or heat-protectant spray), hair color, dye, developer or toner, beard products, wigs, hair extensions or braiding hair, tools, brushes, massagers, caps, elastics, clips or other accessories.
     title_cues: [shampoo, conditioner, co-wash, cowash, hair mask, leave-in, leave in, hair oil, hair serum, hair treatment]
+    types:
+      shampoo_conditioner_set: {description: "shampoo and conditioner sold together, or a 2-in-1 shampoo-conditioner", title_cues: [shampoo and conditioner, shampoo & conditioner, 2 in 1, 2-in-1]}
+      shampoo: {description: "shampoo or clarifying wash", title_cues: [shampoo]}
+      conditioner: {description: "rinse-out conditioner or co-wash", title_cues: [conditioner, co-wash, cowash]}
+      leave_in: {description: "leave-in conditioner, cream or spray", title_cues: [leave-in, leave in]}
+      hair_mask_treatment: {description: "hair mask, deep conditioner or repair treatment", title_cues: [hair mask, deep conditioner, hair treatment, masque]}
+      hair_oil_serum: {description: "hair oil or hair serum", title_cues: [hair oil, hair serum, argan oil]}
+      scalp_treatment: {description: "scalp serum, scrub or treatment", title_cues: [scalp]}
 aspects:
   # ---------------------------------------------------------------- common
   texture:

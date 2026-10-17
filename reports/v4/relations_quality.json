@@ -1,0 +1,39 @@
+{
+  "label_source": "llm_judge:claude-opus-5",
+  "type_accuracy": {
+    "value": 0.9666666666666667,
+    "n": 60,
+    "ci_low": 0.8863601247107462,
+    "ci_high": 0.9908108735098498
+  },
+  "attribute_supported": {
+    "value": 0.8833333333333333,
+    "n": 60,
+    "ci_low": 0.7782097940014187,
+    "ci_high": 0.9423235259654995
+  },
+  "attribute_name_fits": {
+    "value": 1.0,
+    "n": 60,
+    "ci_low": 0.9398260695220669,
+    "ci_high": 0.9999999999999999
+  },
+  "attribute_aspects_right": {
+    "value": 0.8833333333333333,
+    "n": 60,
+    "ci_low": 0.7782097940014187,
+    "ci_high": 0.9423235259654995
+  },
+  "attribute_aspects_right_or_partly": {
+    "value": 0.9666666666666667,
+    "n": 60,
+    "ci_low": 0.8863601247107462,
+    "ci_high": 0.9908108735098498
+  },
+  "target_accuracy": {
+    "value": 0.925,
+    "n": 40,
+    "ci_low": 0.8013546984090248,
+    "ci_high": 0.9741644432281419
+  }
+}

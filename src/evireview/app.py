@@ -54,6 +54,16 @@ def aggs(variant: str) -> pd.DataFrame:
     return _aggs(variant, _stamp(G / variant / "aggregates.parquet"))
 
 
+@st.cache_data
+def _predictions(stamp_key: float) -> pd.DataFrame:
+    p = G / "ceva" / "predictions.parquet"
+    return pd.read_parquet(p) if p.exists() else pd.DataFrame()
+
+
+def predictions() -> pd.DataFrame:
+    return _predictions(_stamp(G / "ceva" / "predictions.parquet"))
+
+
 def review_doc(review_id: str) -> str:
     """Review text for highlighting; never fails the page if a review is missing."""
     try:
@@ -200,6 +210,11 @@ with tabs[2]:
                 gtxt = ""
                 if r["graph"]:
                     gtxt = f" · 👍{r['graph']['n_pos']} 👎{r['graph']['n_neg']}" + (" · 근거 부족" if r["graph"]["insufficient"] else "")
+                    if r.get("new_product_slot"):  # B9: reserved new-product slot
+                        gtxt += " · 🆕 신상품 (리뷰 5개 미만, 평가는 추정)"
+                    if r["graph"].get("pred"):  # B7: relation-predicted ratings
+                        gtxt += " · " + ", ".join(f"{a} {'추정 ' if r['graph']['estimated'] else ''}{v:.2f}"
+                                                  for a, v in r["graph"]["pred"].items())
                 col.markdown(f"**{i}.** {r['title'][:70]}{gtxt}")
     elif mode == "상품 비교":
         from evireview.common import aspect_names
@@ -209,14 +224,20 @@ with tabs[2]:
         variant = st.selectbox("스냅샷", ["g1", "ceva"], index=1, format_func=lambda v: VARIANT_LABEL[v], key="cmpv")
         ag = aggs(variant)
         cl = claims(variant)
+        pr = predictions() if variant == "ceva" else pd.DataFrame()
         for a in asp:
             st.markdown(f"#### {a}")
             cols = st.columns(max(len(pids), 1))
             for col, p in zip(cols, pids):
                 row = ag[(ag.product_id == p) & (ag.aspect == a) & (ag.context == "*")]
                 col.markdown(f"**{title_of(p)[:50]}**")
+                est = pr[(pr.product_id == p) & (pr.aspect == a)] if len(pr) else pr
+                if len(est):  # relation-based estimate (v4): own opinions + related products
+                    e = est.iloc[0]
+                    tag = "추정 (관련 상품 기반)" if e.estimated else "예측"
+                    col.write(f"{tag} 긍정 {e.pred:.0%} · 80% 구간 {e.lo:.0%}–{e.hi:.0%} · 이웃 {e.n_neighbors}개")
                 if row.empty:
-                    col.write("근거 부족")
+                    col.write("리뷰 근거 부족")
                     continue
                 r = row.iloc[0]
                 col.write(f"👍 {r.n_pos} · 👎 {r.n_neg} · 작성자 {r.n_authors}" + (" · ⚠️ 의견 갈림" if r.contested else ""))
@@ -227,7 +248,7 @@ with tabs[2]:
         from evireview.llm import LLM
         q = st.text_input("질문 (영문)", "Which of these products has a scent that reviewers like?")
         pids = st.multiselect("대상 상품 (선택)", products.product_id, format_func=lambda p: title_of(p)[:70])
-        s = st.selectbox("시스템", ["B2", "B4", "B5", "A-context"], index=2, format_func=lambda s: SYSTEMS[s]["label"])
+        s = st.selectbox("시스템", ["B2", "B4", "B5", "B7", "A-context"], index=2, format_func=lambda s: SYSTEMS[s]["label"])
         st.caption("답변 버튼을 누를 때만 LLM을 호출합니다 (같은 입력은 캐시 재사용). 오프라인 프로필은 템플릿 답변.")
         if st.button("답변 생성"):
             llm = None if cfg.offline else LLM(cfg)

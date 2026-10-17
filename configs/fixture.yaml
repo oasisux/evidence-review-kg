@@ -49,6 +49,19 @@ retrieval:
   index_metadata: true        # every system also indexes each product's seller listing (fair to text baselines)
   seller_target_weight: 1.0   # context query, no reviewer of that context: weight when the seller targets it
   no_context_weight: 0.5      # ... and when the seller does not
+relations:
+  attr_aspect_model: rules-v1
+  min_neighbors: 1
+  min_neighbor_mentions: 1
+  weight_grid: [0, 1]
+  lambda_grid: [2, 4]
+  interval: 0.8
+coldstart:
+  role_share: 0.5
+  ks: [0, 1]
+  min_hidden_mentions: 1
+  title_neighbors: 3
+  llm_review_neighbors: 2
 budget:
   max_cost_usd: 0.0
   concurrency: 1

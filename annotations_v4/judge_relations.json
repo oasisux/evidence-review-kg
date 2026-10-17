@@ -1,0 +1,2402 @@
+[
+  {
+    "id": "T0",
+    "kind": "type",
+    "evidence": "Renpure Plant-Based Beauty Rose Water Shampoo, 16 Fluid Ounce",
+    "recorded": "shampoo",
+    "key": "product:B07N4M821H",
+    "label": {
+      "id": "T0",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T1",
+    "kind": "type",
+    "evidence": "Purple Hair Mask for Blonde with Keratin & Jojoba Oil - Platinum & Silver Hair - Instantly Eliminate Brassiness & Yellows - Made in USA - Hair Toner - Bleached & Highlighted Hair - Sulfate Free - 8 oz",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B089RLLT5C",
+    "label": {
+      "id": "T1",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T2",
+    "kind": "type",
+    "evidence": "Skin QR Organics Luxe Eternel Firming Luxury Body Creme, with Vitamins & Antioxidants, 1lbs",
+    "recorded": "body_moisturizer",
+    "key": "product:B0045RTG9A",
+    "label": {
+      "id": "T2",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T3",
+    "kind": "type",
+    "evidence": "E'TAE Nutrient Herbal Scalp Replenisher 6oz",
+    "recorded": "scalp_treatment",
+    "key": "product:B01H7QSCVS",
+    "label": {
+      "id": "T3",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T4",
+    "kind": "type",
+    "evidence": "Moroccanoil Color Care Conditioner",
+    "recorded": "conditioner",
+    "key": "product:B0BXB4J297",
+    "label": {
+      "id": "T4",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T5",
+    "kind": "type",
+    "evidence": "SAUCE BEAUTY Guacamole Whip Hair Mask - Deep Conditioning Hair Mask for All Hair Types w/Avocado, Honey & Argan Oil - 12 Fl Oz Hair Mask for Dry, Damaged & Frizzy Hair (Guacamole)",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B0BV1FPZY6",
+    "label": {
+      "id": "T5",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T6",
+    "kind": "type",
+    "evidence": "Bath Body Works Sugar Plum Swirl Body Cream 8 Ounce",
+    "recorded": "body_moisturizer",
+    "key": "product:B01N7GX3XP",
+    "label": {
+      "id": "T6",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T7",
+    "kind": "type",
+    "evidence": "AG Care Natural Remedy Apple Cider Vinegar Leave On Mist",
+    "recorded": "leave_in",
+    "key": "product:B0BG6WX4DH",
+    "label": {
+      "id": "T7",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T8",
+    "kind": "type",
+    "evidence": "SHOUVY White Body Lotion - Natural Skin Brightening With Glutathione & Kojic Acid, Co-Enzyme Q10, Vitamin C - Keep Hydrating & Nourishing Your Skin Smooth And Moist For All Skin Type",
+    "recorded": "body_moisturizer",
+    "key": "product:B01JD1DJZE",
+    "label": {
+      "id": "T8",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T9",
+    "kind": "type",
+    "evidence": "TIGI Copyright Custom Care SOS EXTREME RECOVERY TREATMENT - 15.22oz",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B07H6VTS7D",
+    "label": {
+      "id": "T9",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T10",
+    "kind": "type",
+    "evidence": "SILVER CREAM by True Radiance, Collagen for Anti-Aging, Wrinkle Reduction and Skin Rejuvination. Has Argireline 20%, DMAE, Alpha lipoic acid, APT, Ceremide 3, Hyaluronic acid PARABEN FREE 1 oz /30ml.",
+    "recorded": "face_moisturizer",
+    "key": "product:B0027F0CAY",
+    "label": {
+      "id": "T10",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T11",
+    "kind": "type",
+    "evidence": "Royal Locks Curl Rescue Leave in Conditioner | Curly Hair Therapy | Keravis Ultra Conditioning Formula | 4 Oz",
+    "recorded": "leave_in",
+    "key": "product:B071JMGPTH",
+    "label": {
+      "id": "T11",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T12",
+    "kind": "type",
+    "evidence": "Bath and Body Works Aromatherapy Sleep Lavender & Cedarwood Nourishing Body Oil. 4 Oz",
+    "recorded": "skin_oil",
+    "key": "product:B07651XLDQ",
+    "label": {
+      "id": "T12",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T13",
+    "kind": "type",
+    "evidence": "E'TAE Natural Products - Buttershine Moisturizing Hair and Scalp Cream 2oz",
+    "recorded": "scalp_treatment",
+    "key": "product:B01I605PHS",
+    "label": {
+      "id": "T13",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T14",
+    "kind": "type",
+    "evidence": "John Frieda Detox and Repair Shampoo and Conditioner Set with Nourishing Avocado Oil and Green Tea, 8.45 Fl Oz (Pack of 2)",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B08XJWLLKQ",
+    "label": {
+      "id": "T14",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T15",
+    "kind": "type",
+    "evidence": "Purple Shampoo and Conditioner Set - Sulfate Free Salon Grade (2 x 16.9 fl oz) - Hydrating Toner - Shimmer Correction for Platinum Blonde, Silver, Light, and Grey Hair - New Formula",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B08QKXY1KN",
+    "label": {
+      "id": "T15",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T16",
+    "kind": "type",
+    "evidence": "Eye Corrector Serum With Triple Peptides 1 oz. (28g) by BeautyLux",
+    "recorded": "eye_cream",
+    "key": "product:B0B5VP6TZ7",
+    "label": {
+      "id": "T16",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T17",
+    "kind": "type",
+    "evidence": "4 oz - Bargz Perfume - Polo Sport Body Oil For Men Scented Fragrance",
+    "recorded": "skin_oil",
+    "key": "product:B00XYLQU92",
+    "label": {
+      "id": "T17",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T18",
+    "kind": "type",
+    "evidence": "e.l.f. Skin Antioxidant Booster Drops, Lightweight Drops For Added Antioxidants, Infused With Vitamin C, Vitamin E & Snow Mushroom Extract",
+    "recorded": "face_serum",
+    "key": "product:B0812C77ZR",
+    "label": {
+      "id": "T18",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T19",
+    "kind": "type",
+    "evidence": "Topiclear Number One 1.76oz. (3 Pack)",
+    "recorded": "face_moisturizer",
+    "key": "product:B00GMOY270",
+    "label": {
+      "id": "T19",
+      "correct": false,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "other"
+    }
+  },
+  {
+    "id": "T20",
+    "kind": "type",
+    "evidence": "Best Under Eye Cream Gel Treatment For Dark Circles Puffiness, Bags. Anti Aging Wrinkle Repair Pure Organic All Natural Ingredients For Men Or Women With Peptides Stem Cells Niacinamide and Matrixyl",
+    "recorded": "eye_cream",
+    "key": "product:B00YZCTDMK",
+    "label": {
+      "id": "T20",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T21",
+    "kind": "type",
+    "evidence": "Mifelio Hair Darkening Shampoo Bar, Natural Organic Conditioner and Repair Essence,Volumizing & Moisturizing, Black Hair Shampoo Non Allergic Hair",
+    "recorded": "shampoo",
+    "key": "product:B086JL8X97",
+    "label": {
+      "id": "T21",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T22",
+    "kind": "type",
+    "evidence": "Hairgurt Smoothing Deep Conditioner Yogurt Hair Mask for Frizzy, Dry and Damaged Hair; Sulfate Free",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B01BKR5IEE",
+    "label": {
+      "id": "T22",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T23",
+    "kind": "type",
+    "evidence": "No7 Pure Retinol Night Cream - Anti-Aging Collagen Peptides for Fine Lines & Wrinkles - Fragrance-Free, All Skin Types (1.69 fl oz)",
+    "recorded": "face_moisturizer",
+    "key": "product:B09JGLT4DB",
+    "label": {
+      "id": "T23",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T24",
+    "kind": "type",
+    "evidence": "Calily Life Hyaluronic Acid Vitamin C Serum with Dead Sea Minerals, 1 Oz. – Contains Vitamins A, C, E, B5 and More - Restores Youthful Glow - Hydrates, Enrichens, Strengthens and Nourishes [ENHANCED]",
+    "recorded": "face_serum",
+    "key": "product:B077JGYZSD",
+    "label": {
+      "id": "T24",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T25",
+    "kind": "type",
+    "evidence": "Lot of 2 Avon Skin So Soft SSS Bath Oil Original Scent with Pump",
+    "recorded": "skin_oil",
+    "key": "product:B00LE1K9FU",
+    "label": {
+      "id": "T25",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T26",
+    "kind": "type",
+    "evidence": "Ogx Bamboo Fiber-Full Thickening Fiber Cream 6 Ounce (177ml) (2 Pack)",
+    "recorded": "leave_in",
+    "key": "product:B017HYB2BM",
+    "label": {
+      "id": "T26",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T27",
+    "kind": "type",
+    "evidence": "Delectable by Cake Beauty Blend Butter Balm Hand Cream, Triple Citrus, 4 Ounces",
+    "recorded": "body_moisturizer",
+    "key": "product:B0767TNQHL",
+    "label": {
+      "id": "T27",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T28",
+    "kind": "type",
+    "evidence": "Purple Shampoo and Conditioner Set - Sulfate Free Salon Grade (2 x 16.9 fl oz) - Hydrating Toner - Shimmer Correction for Platinum Blonde, Silver, Light, and Grey Hair",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B082RD77G5",
+    "label": {
+      "id": "T28",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T29",
+    "kind": "type",
+    "evidence": "EltaMD Laser Enzyme Gel Moisturizer Cools and Moisturizes, Post Treatment Gel with Hyaluronic Acid for Dry Skin , Dermatologist-Recommended, 2.0 oz",
+    "recorded": "face_moisturizer",
+    "key": "product:B019LF1BOS",
+    "label": {
+      "id": "T29",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T30",
+    "kind": "type",
+    "evidence": "The Ordinary Buffet + Copper Peptides 1%",
+    "recorded": "face_serum",
+    "key": "product:B07CZSFHZM",
+    "label": {
+      "id": "T30",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T31",
+    "kind": "type",
+    "evidence": "Fresh Monster Kids Detangler Spray (Watermelon, 8oz) for NORMAL to THICK hair types - No Toxins, Sulfates, Parabens - Hypoallergenic - Natural Conditioning Spray Smoothes Tangles",
+    "recorded": "leave_in",
+    "key": "product:B00RNFREKO",
+    "label": {
+      "id": "T31",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T32",
+    "kind": "type",
+    "evidence": "Burt's Bees Super Shiny Mango Conditioner, Sulfate-Free Conditioner - 10 Ounce Bottle",
+    "recorded": "conditioner",
+    "key": "product:B00VXIJFE0",
+    "label": {
+      "id": "T32",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T33",
+    "kind": "type",
+    "evidence": "Neutrogena Triple Moisture Cream Lather Shampoo for Extra Dry Hair, Damaged & Over-Processed Hair, Hydrating with Olive, Meadowfoam & Sweet Almond, 8.5 fl. oz",
+    "recorded": "shampoo",
+    "key": "product:B00UOLBPZE",
+    "label": {
+      "id": "T33",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T34",
+    "kind": "type",
+    "evidence": "Ancient Minerals Magnesium Lotion Goodnight night cream contains melatonin with magnesium chloride and OptiMSM a topical nighttime moisturizing lotion(2.5oz)",
+    "recorded": "body_moisturizer",
+    "key": "product:B00BN9PFUW",
+    "label": {
+      "id": "T34",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T35",
+    "kind": "type",
+    "evidence": "Eva NYC Satin Dream Leave-In Cream, 5 fl oz",
+    "recorded": "leave_in",
+    "key": "product:B01N48ALAE",
+    "label": {
+      "id": "T35",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T36",
+    "kind": "type",
+    "evidence": "BATH AND BODY WORKS Aromatherapy LOVE - ROSE & VANILLA Lot of 2 Body Lotion - Full Size",
+    "recorded": "body_moisturizer",
+    "key": "product:B07G5KYHM4",
+    "label": {
+      "id": "T36",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T37",
+    "kind": "type",
+    "evidence": "Thicker Fuller Hair Weightless Shampoo & Conditioner Duo Set (12 Oz Each)",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B006YUIWKA",
+    "label": {
+      "id": "T37",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T38",
+    "kind": "type",
+    "evidence": "Orofluido Shampoo + Conditioner, 200 ml/6.7 oz",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B006R0ZEN0",
+    "label": {
+      "id": "T38",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T39",
+    "kind": "type",
+    "evidence": "Natural Botanical Livoty Hydrating Argan Oil Repairs Hair Mask and Deep Conditioner Hair Detoxifying Mask, Advanced Molecular Hair Roots Treatment Recover Elasticity Hair for Dry or Damaged Hair 60ML",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B07WQWVGHZ",
+    "label": {
+      "id": "T39",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T40",
+    "kind": "type",
+    "evidence": "John Frieda Frizz Ease Beyond Smooth Frizz-Immunity Shampoo with Frizz-Immunity Conditioner, 8.45oz",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B086HRN773",
+    "label": {
+      "id": "T40",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T41",
+    "kind": "type",
+    "evidence": "Thicker Fuller Hair Conditioner Weightless 12 Ounce (355ml) (Pack of 2)",
+    "recorded": "conditioner",
+    "key": "product:B00YLGZC7K",
+    "label": {
+      "id": "T41",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T42",
+    "kind": "type",
+    "evidence": "Cirugia Capilar 16 Oz Tratamiento Capilar Anti Frizz KeraFruit Facil uso Envio Rapido From USA",
+    "recorded": "hair_mask_treatment",
+    "key": "product:B07Y4SYK78",
+    "label": {
+      "id": "T42",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T43",
+    "kind": "type",
+    "evidence": "It 12 in One Amazing Leave in Treatment",
+    "recorded": "leave_in",
+    "key": "product:B00W2EASCC",
+    "label": {
+      "id": "T43",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T44",
+    "kind": "type",
+    "evidence": "Argan Oil Shampoo and Conditioner Set - Sulfate Free All Natural Hair Repair Treatment, Clarifying Volumizing & Moisturizing, Color Safe, Gentle for Curly & Color Treated Hair (2x 16oz)",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B01GOWKAD4",
+    "label": {
+      "id": "T44",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T45",
+    "kind": "type",
+    "evidence": "Hempz Original Herbal Body Moisturizer + Sweet Pineapple & Honey Melon Moisturizer + Triple Moisture Herbal Whipped Body Cream, 17 Fl Oz, 3 Pack Bundle – Natural Hemp Seed for Complete Hydration",
+    "recorded": "body_moisturizer",
+    "key": "product:B08BXRGPKC",
+    "label": {
+      "id": "T45",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T46",
+    "kind": "type",
+    "evidence": "NEUMA Neumoisture Instant Fix, Kalette, Coconut and Vanilla, 6.8 Fl Oz",
+    "recorded": "leave_in",
+    "key": "product:B074W1M23V",
+    "label": {
+      "id": "T46",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T47",
+    "kind": "type",
+    "evidence": "WenHairCare Fig - Cleanses, Nourishes, and Strengthens Hair, No Harsh Sulfates (16 oz)",
+    "recorded": "shampoo",
+    "key": "product:B07HZ7T1SZ",
+    "label": {
+      "id": "T47",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T48",
+    "kind": "type",
+    "evidence": "Maui Moisture Curl Quench & Coconut Oil Shampoo & Conditioner Set 19.5 Ounce",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B07L46W7J4",
+    "label": {
+      "id": "T48",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T49",
+    "kind": "type",
+    "evidence": "Tone It Down Blonde Leave In Foam",
+    "recorded": "leave_in",
+    "key": "product:B07NVSKVPM",
+    "label": {
+      "id": "T49",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T50",
+    "kind": "type",
+    "evidence": "Face Moisturizer for Dry Skin by WONDERPIEL for Men and Women - 100% Natural 70% Organic",
+    "recorded": "face_moisturizer",
+    "key": "product:B018TZTS96",
+    "label": {
+      "id": "T50",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T51",
+    "kind": "type",
+    "evidence": "Jardin Sante Organic Anti Hair Loss Shampoo with Argan Oil - Formulated for Men and Women to Slow Down Hair Loss and Add Volume, Strengthens Hair, Effective Against Thinning and Breakage",
+    "recorded": "shampoo",
+    "key": "product:B01HIWMD4I",
+    "label": {
+      "id": "T51",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T52",
+    "kind": "type",
+    "evidence": "Captain Blankenship Dry Shampoo (2.4 Ounce)",
+    "recorded": "shampoo",
+    "key": "product:B0170FP8CC",
+    "label": {
+      "id": "T52",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T53",
+    "kind": "type",
+    "evidence": "Plant Therapy Organic Cocoa Butter Raw, Unrefined USDA Certified 16 oz Bar For Body, Face and Hair 100% Pure, Natural Moisturizer For Dry Skin, DIY",
+    "recorded": "body_moisturizer",
+    "key": "product:B094KXD5MF",
+    "label": {
+      "id": "T53",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T54",
+    "kind": "type",
+    "evidence": "Gliss Kur Oil Nutritive Express Repair Conditioner Spray 6.76 fl oz",
+    "recorded": "conditioner",
+    "key": "product:B00LLLITR8",
+    "label": {
+      "id": "T54",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T55",
+    "kind": "type",
+    "evidence": "GK HAIR Global Keratin Moisturizing Shampoo and Conditioner Sets (10.1 Fl Oz/300ml) for Color Treated Hair - Daily Use Cleansing Dry to Normal Sulfate Paraben-Free - All Hair Types for Men and Women",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B07R1K1SBD",
+    "label": {
+      "id": "T55",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T56",
+    "kind": "type",
+    "evidence": "Bath and Body works sweet escape strawberry picnic shea & vitamin e body lotion 8 oz",
+    "recorded": "body_moisturizer",
+    "key": "product:B01IWR7ZZA",
+    "label": {
+      "id": "T56",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T57",
+    "kind": "type",
+    "evidence": "Purple Shampoo and Conditioner Set - Blonde Shampoo - Made in USA - Purple Hair Silver Shampoo - Hair Toner Shampoo & Conditioner for Brassy Hair - Purple Toning Shampoo & Overtone Conditioner",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B08GMC48QF",
+    "label": {
+      "id": "T57",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T58",
+    "kind": "type",
+    "evidence": "Purple Shampoo and Conditioner Set - No, Orange, Yellow or Brassy Tones - Best Toner Treatment for Brassiness - Blonde, Grey, Bleached or Silver Hair - Sulfate Free",
+    "recorded": "shampoo_conditioner_set",
+    "key": "product:B08RY6S25W",
+    "label": {
+      "id": "T58",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "T59",
+    "kind": "type",
+    "evidence": "Curls Blueberry Liquid Hair Vitamin, 8 Ounces (Pack of 2)",
+    "recorded": "hair_oil_serum",
+    "key": "product:B074G39W7P",
+    "label": {
+      "id": "T59",
+      "correct": false,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "leave_in"
+    }
+  },
+  {
+    "id": "A0",
+    "kind": "attribute",
+    "evidence": "For All Hair Textures & Skin Types",
+    "recorded": "suitable_for = all hair textures and skin types; related aspects: []",
+    "key": "product:B083F76L79|attr:cb7a2a3ad05ce960",
+    "label": {
+      "id": "A0",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A1",
+    "kind": "attribute",
+    "evidence": "aloe vera",
+    "recorded": "key_ingredient = aloe vera; related aspects: [\"irritation\", \"moisturization\"]",
+    "key": "product:B01M3P9SH0|attr:5a3561a87a9409ee",
+    "label": {
+      "id": "A1",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A2",
+    "kind": "attribute",
+    "evidence": "Leaves Hair Shiney Soft",
+    "recorded": "claimed_benefit = shiny and smooth hair; related aspects: [\"hair_results\"]",
+    "key": "product:B076G678RS|attr:f89090af4b2028c7",
+    "label": {
+      "id": "A2",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A3",
+    "kind": "attribute",
+    "evidence": "Olive Oils",
+    "recorded": "key_ingredient = olive oil; related aspects: [\"moisturization\"]",
+    "key": "product:B083PXJBVY|attr:e2a805b6aaeb416b",
+    "label": {
+      "id": "A3",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A4",
+    "kind": "attribute",
+    "evidence": "3 Lb/48 Oz",
+    "recorded": "size = 3 lb / 48 oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B006JALQW6|attr:f76ebfdba1a794d8",
+    "label": {
+      "id": "A4",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A5",
+    "kind": "attribute",
+    "evidence": "ANTI WRINKLE",
+    "recorded": "claimed_benefit = anti wrinkle; related aspects: [\"anti_aging\"]",
+    "key": "product:B017J19GGQ|attr:a7bb483307c8cbd0",
+    "label": {
+      "id": "A5",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A6",
+    "kind": "attribute",
+    "evidence": "Color Treated Hair",
+    "recorded": "suitable_for = color treated hair; related aspects: []",
+    "key": "product:B0190JGPZA|attr:cc7b31e29fb3a747",
+    "label": {
+      "id": "A6",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A7",
+    "kind": "attribute",
+    "evidence": "Hyaluronic Acid",
+    "recorded": "key_ingredient = hyaluronic acid; related aspects: [\"moisturization\"]",
+    "key": "product:B01BZJDEXE|attr:67d505ece3f721e6",
+    "label": {
+      "id": "A7",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A8",
+    "kind": "attribute",
+    "evidence": "Body Oil Scented Fragrance",
+    "recorded": "product_type = body oil; related aspects: []",
+    "key": "product:B00XYLBKF6|attr:2d2b3a5ce9e7227d",
+    "label": {
+      "id": "A8",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A9",
+    "kind": "attribute",
+    "evidence": "Retinol",
+    "recorded": "key_ingredient = retinol; related aspects: [\"anti_aging\", \"skin_results\"]",
+    "key": "product:B00OPEASFO|attr:f5e66eeba6979d5a",
+    "label": {
+      "id": "A9",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A10",
+    "kind": "attribute",
+    "evidence": "Thicker Fuller Hair Thickening Serum",
+    "recorded": "claimed_benefit = thicker fuller hair; related aspects: [\"hair_results\"]",
+    "key": "product:B00OQKKZA0|attr:90fa55b3f882a4a0",
+    "label": {
+      "id": "A10",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A11",
+    "kind": "attribute",
+    "evidence": "8 oz / 226 g",
+    "recorded": "size = 8 oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B084KZQW5H|attr:c64a86179190d6cb",
+    "label": {
+      "id": "A11",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A12",
+    "kind": "attribute",
+    "evidence": "proteins and conditioners to aid in preventing hair breakage and soften the hair",
+    "recorded": "claimed_benefit = prevents hair breakage; related aspects: [\"hair_results\"]",
+    "key": "product:B071JMGPTH|attr:35fb5486f379b825",
+    "label": {
+      "id": "A12",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A13",
+    "kind": "attribute",
+    "evidence": "Vitamins C & E",
+    "recorded": "key_ingredient = vitamin c; related aspects: [\"anti_aging\", \"skin_results\"]",
+    "key": "product:B012KLHGNK|attr:079b0007e21ee4af",
+    "label": {
+      "id": "A13",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A14",
+    "kind": "attribute",
+    "evidence": "Helps Skin Brightening",
+    "recorded": "claimed_benefit = skin brightening; related aspects: [\"skin_results\"]",
+    "key": "product:B01DNQFR2S|attr:f993fcdb1e688f11",
+    "label": {
+      "id": "A14",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A15",
+    "kind": "attribute",
+    "evidence": "Green tea",
+    "recorded": "key_ingredient = green tea; related aspects: [\"skin_results\"]",
+    "key": "product:B09NBDZDJW|attr:e34578344125d919",
+    "label": {
+      "id": "A15",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A16",
+    "kind": "attribute",
+    "evidence": "Avocado",
+    "recorded": "key_ingredient = avocado; related aspects: [\"moisturization\", \"skin_results\"]",
+    "key": "product:B079DGTY9G|attr:8b48b901e71508ae",
+    "label": {
+      "id": "A16",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A17",
+    "kind": "attribute",
+    "evidence": "Cruelty Free",
+    "recorded": "certification = cruelty free; related aspects: []",
+    "key": "product:B07TDB2M5R|attr:f5651929e289faa3",
+    "label": {
+      "id": "A17",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A18",
+    "kind": "attribute",
+    "evidence": "Aloe, Neptune Algae and Sea Kelp",
+    "recorded": "key_ingredient = aloe vera; related aspects: [\"irritation\", \"moisturization\"]",
+    "key": "product:B0BYDRR4ZR|attr:5a3561a87a9409ee",
+    "label": {
+      "id": "A18",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A19",
+    "kind": "attribute",
+    "evidence": "ULTIMATE MOISTURE CREAM for dull, dry, aging, sensitive or oily skin",
+    "recorded": "suitable_for = sensitive skin; related aspects: [\"irritation\"]",
+    "key": "product:B00J14AOUW|attr:193cc481c2349bcf",
+    "label": {
+      "id": "A19",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A20",
+    "kind": "attribute",
+    "evidence": "Face Moisturizer for Dry Skin",
+    "recorded": "suitable_for = dry skin; related aspects: [\"moisturization\"]",
+    "key": "product:B018TZTS96|attr:3dcbd870d7a4798d",
+    "label": {
+      "id": "A20",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A21",
+    "kind": "attribute",
+    "evidence": "1.75 fl. oz",
+    "recorded": "size = 1.69 fl oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B01MYGCJBP|attr:665ebfc0839a2856",
+    "label": {
+      "id": "A21",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A22",
+    "kind": "attribute",
+    "evidence": "Under Eyes Dark Circles",
+    "recorded": "claimed_benefit = reduces dark circles; related aspects: [\"anti_aging\"]",
+    "key": "product:B00VQHFBBE|attr:9ba421421d29f6ec",
+    "label": {
+      "id": "A22",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "partly",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A23",
+    "kind": "attribute",
+    "evidence": "8.8 fl. oz.",
+    "recorded": "size = 8.45 fl oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B07HQ4YBSS|attr:af8183579d11e094",
+    "label": {
+      "id": "A23",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A24",
+    "kind": "attribute",
+    "evidence": "Hyaluronic Acid",
+    "recorded": "key_ingredient = hyaluronic acid; related aspects: [\"moisturization\"]",
+    "key": "product:B077JGYZSD|attr:67d505ece3f721e6",
+    "label": {
+      "id": "A24",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A25",
+    "kind": "attribute",
+    "evidence": "Gel with Tea Tree Oil",
+    "recorded": "key_ingredient = tea tree oil; related aspects: [\"irritation\", \"scalp_condition\"]",
+    "key": "product:B07HQ4YBSS|attr:d752e0fc255716a0",
+    "label": {
+      "id": "A25",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A26",
+    "kind": "attribute",
+    "evidence": "1 fl oz.",
+    "recorded": "size = 2 fl oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B004GHIEZQ|attr:7315883254a4d792",
+    "label": {
+      "id": "A26",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A27",
+    "kind": "attribute",
+    "evidence": "Naturally Unscented",
+    "recorded": "scent_note = unscented; related aspects: [\"scent\"]",
+    "key": "product:B07X6JKNDC|attr:b24824a5b0e4423e",
+    "label": {
+      "id": "A27",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A28",
+    "kind": "attribute",
+    "evidence": "protect against free radical damage, tone and lock in moisture",
+    "recorded": "claimed_benefit = free radical damage prevention; related aspects: [\"anti_aging\", \"skin_results\"]",
+    "key": "product:B00BKNYCAU|attr:4dedb87964068a49",
+    "label": {
+      "id": "A28",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A29",
+    "kind": "attribute",
+    "evidence": "very lightweight and super absorbent oil",
+    "recorded": "texture_claim = lightweight; related aspects: [\"absorption\", \"residue\", \"texture\"]",
+    "key": "product:B01I2MU2JQ|attr:abea430f97231404",
+    "label": {
+      "id": "A29",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A30",
+    "kind": "attribute",
+    "evidence": "Rosewater Moisture Creme",
+    "recorded": "key_ingredient = rosewater; related aspects: [\"scent\"]",
+    "key": "product:B07CBZ97DW|attr:03c71fd4aad50e85",
+    "label": {
+      "id": "A30",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "partly",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A31",
+    "kind": "attribute",
+    "evidence": "Expeller Pressed",
+    "recorded": "extraction_method = expeller pressed; related aspects: []",
+    "key": "product:B00P472PNE|attr:3877196876430a82",
+    "label": {
+      "id": "A31",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A32",
+    "kind": "attribute",
+    "evidence": "16 ounce Bar",
+    "recorded": "size = 16 oz bar; related aspects: [\"size_quantity\"]",
+    "key": "product:B08WJHMRTD|attr:c6a0cec95608b109",
+    "label": {
+      "id": "A32",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A33",
+    "kind": "attribute",
+    "evidence": "USDA Certified",
+    "recorded": "certification = usda certified; related aspects: []",
+    "key": "product:B00ZPQB9RW|attr:5f477a7e7b1dd8fc",
+    "label": {
+      "id": "A33",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A34",
+    "kind": "attribute",
+    "evidence": "1.7oz",
+    "recorded": "size = 1.7 oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B00XDB3QTA|attr:681966749bc76d7d",
+    "label": {
+      "id": "A34",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A35",
+    "kind": "attribute",
+    "evidence": "RENPURE ISN'T JUST SULFATE-FREE",
+    "recorded": "free_of = sulfates; related aspects: [\"cleansing\", \"lather\", \"scalp_condition\"]",
+    "key": "product:B07N4M821H|attr:6e665b42f082006e",
+    "label": {
+      "id": "A35",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A36",
+    "kind": "attribute",
+    "evidence": "PARABEN FREE",
+    "recorded": "free_of = parabens; related aspects: [\"irritation\"]",
+    "key": "product:B0027F0CAY|attr:429b9f28dd5ac99e",
+    "label": {
+      "id": "A36",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A37",
+    "kind": "attribute",
+    "evidence": "Retinol 2.5% Cream",
+    "recorded": "key_ingredient = retinol 0.2%; related aspects: [\"anti_aging\", \"skin_results\"]",
+    "key": "product:B00VXEQ0WO|attr:c248739dd7e29bbd",
+    "label": {
+      "id": "A37",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A38",
+    "kind": "attribute",
+    "evidence": "Niacinamide",
+    "recorded": "key_ingredient = niacinamide; related aspects: [\"anti_aging\", \"skin_results\"]",
+    "key": "product:B09K77RBHB|attr:56062b78f2bb334e",
+    "label": {
+      "id": "A38",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A39",
+    "kind": "attribute",
+    "evidence": "Free of Sulfates, Parabens, Phthalates, Mineral Oil, Gluten, and Animal Cruelty",
+    "recorded": "free_of = parabens; related aspects: [\"irritation\"]",
+    "key": "product:B087JW33W6|attr:429b9f28dd5ac99e",
+    "label": {
+      "id": "A39",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A40",
+    "kind": "attribute",
+    "evidence": "Formaldehyde, Paraben & SLS Free",
+    "recorded": "free_of = parabens; related aspects: [\"irritation\"]",
+    "key": "product:B00NB7VQJ8|attr:429b9f28dd5ac99e",
+    "label": {
+      "id": "A40",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "wrong",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A41",
+    "kind": "attribute",
+    "evidence": "8.4 oz / 250 ml",
+    "recorded": "size = 8 oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B071DW24JM|attr:c64a86179190d6cb",
+    "label": {
+      "id": "A41",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A42",
+    "kind": "attribute",
+    "evidence": "Cruelty Free",
+    "recorded": "certification = cruelty free; related aspects: []",
+    "key": "product:B07T85WJD2|attr:f5651929e289faa3",
+    "label": {
+      "id": "A42",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A43",
+    "kind": "attribute",
+    "evidence": "Made With Moroccan Argan Oil",
+    "recorded": "key_ingredient = moroccan argan oil; related aspects: [\"hair_results\", \"moisturization\"]",
+    "key": "product:B086VR8F1K|attr:641c8869c119b523",
+    "label": {
+      "id": "A43",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "partly",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A44",
+    "kind": "attribute",
+    "evidence": "Clarifying Volumizing & Moisturizing",
+    "recorded": "claimed_benefit = moisturizing; related aspects: [\"moisturization\"]",
+    "key": "product:B01GS7QKQQ|attr:589a94ab70c47545",
+    "label": {
+      "id": "A44",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A45",
+    "kind": "attribute",
+    "evidence": "Great For DIY Soap and Lip Balm Making",
+    "recorded": "usage_instruction = diy soap and lip balm making; related aspects: []",
+    "key": "product:B00EO5JV48|attr:09c0d960a584d884",
+    "label": {
+      "id": "A45",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A46",
+    "kind": "attribute",
+    "evidence": "less split ends",
+    "recorded": "claimed_benefit = less split ends; related aspects: [\"hair_results\"]",
+    "key": "product:B00BKNYCAU|attr:83fe03fe6204803d",
+    "label": {
+      "id": "A46",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A47",
+    "kind": "attribute",
+    "evidence": "50ml",
+    "recorded": "size = 30ml; related aspects: [\"size_quantity\"]",
+    "key": "product:B01GBZT5GM|attr:fc0c6aba3895dd36",
+    "label": {
+      "id": "A47",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A48",
+    "kind": "attribute",
+    "evidence": "Body Oil",
+    "recorded": "product_type = body oil; related aspects: []",
+    "key": "product:B00XYLQU92|attr:2d2b3a5ce9e7227d",
+    "label": {
+      "id": "A48",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A49",
+    "kind": "attribute",
+    "evidence": "MOISTURIZING vegan conditioner bar for oily and balanced hair",
+    "recorded": "suitable_for = oily hair; related aspects: []",
+    "key": "product:B0BN113VWD|attr:235a5905bb6e05e9",
+    "label": {
+      "id": "A49",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A50",
+    "kind": "attribute",
+    "evidence": "Natural Rose Oil",
+    "recorded": "key_ingredient = rose oil; related aspects: [\"moisturization\", \"scent\"]",
+    "key": "product:B01MYGCJBP|attr:874a9b93b06e7f67",
+    "label": {
+      "id": "A50",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "partly",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A51",
+    "kind": "attribute",
+    "evidence": "6 fl oz",
+    "recorded": "size = 12 fl oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B095J1C66J|attr:21246dd76742a50a",
+    "label": {
+      "id": "A51",
+      "correct": true,
+      "supported": false,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A52",
+    "kind": "attribute",
+    "evidence": "Clarifying Volumizing & Moisturizing",
+    "recorded": "claimed_benefit = clarifying; related aspects: [\"cleansing\", \"scalp_condition\"]",
+    "key": "product:B01GS7QKQQ|attr:118bab0c5ae28c94",
+    "label": {
+      "id": "A52",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A53",
+    "kind": "attribute",
+    "evidence": "gently hydrates as it cleanses and lathers like a liquid shampoo",
+    "recorded": "claimed_benefit = gently cleans while hydrating and nourishing; related aspects: [\"cleansing\", \"conditioning\", \"moisturization\"]",
+    "key": "product:B0941YDPSW|attr:11b05a42149dce57",
+    "label": {
+      "id": "A53",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A54",
+    "kind": "attribute",
+    "evidence": "Made In The USA",
+    "recorded": "origin = made in usa; related aspects: []",
+    "key": "product:B015WVW8EW|attr:69214241a5d6f9b8",
+    "label": {
+      "id": "A54",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A55",
+    "kind": "attribute",
+    "evidence": "19.5 Ounce",
+    "recorded": "size = 19.5 ounce; related aspects: [\"size_quantity\"]",
+    "key": "product:B07L46W7J4|attr:7c452bd305755221",
+    "label": {
+      "id": "A55",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A56",
+    "kind": "attribute",
+    "evidence": "rose hydrosol, vitamin E, and panthenol protect against free radical damage",
+    "recorded": "key_ingredient = vitamin e; related aspects: [\"hair_results\", \"moisturization\", \"skin_results\"]",
+    "key": "product:B00BKNYCAU|attr:ae4baf0261300577",
+    "label": {
+      "id": "A56",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "partly",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A57",
+    "kind": "attribute",
+    "evidence": "Moisturizing Damaged, Dry, Curly, Color Treated Hair",
+    "recorded": "suitable_for = damaged hair; related aspects: []",
+    "key": "product:B0190JGPZA|attr:c0d08d3ffd0f28ed",
+    "label": {
+      "id": "A57",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A58",
+    "kind": "attribute",
+    "evidence": "4 oz",
+    "recorded": "size = 4 oz; related aspects: [\"size_quantity\"]",
+    "key": "product:B00XYLQU92|attr:4cd92491f6806816",
+    "label": {
+      "id": "A58",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "right",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "A59",
+    "kind": "attribute",
+    "evidence": "SLS Free",
+    "recorded": "free_of = sls; related aspects: [\"cleansing\", \"lather\"]",
+    "key": "product:B006UNQ1RM|attr:aa7d57afbe4a4b5d",
+    "label": {
+      "id": "A59",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "wrong",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G0",
+    "kind": "target",
+    "evidence": "preserve color and nourish and rejuvenate the hair follicles",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:c2bd302a95d2886769bdce3d82730344",
+    "label": {
+      "id": "G0",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G1",
+    "kind": "target",
+    "evidence": "for NORMAL to THICK hair types",
+    "recorded": "hair_type=thick",
+    "key": "seller:41ad3e20918daf37cb7a3334f5098cfd",
+    "label": {
+      "id": "G1",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G2",
+    "kind": "target",
+    "evidence": "Hair Repair Treatment for Damaged Hair",
+    "recorded": "hair_type=damaged",
+    "key": "seller:e12d72d72b934d3e36c9452aabf3a19f",
+    "label": {
+      "id": "G2",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G3",
+    "kind": "target",
+    "evidence": "Softening Shampoo Bar for Fine to Normal Hair",
+    "recorded": "hair_type=fine",
+    "key": "seller:41f7b1dc16270560b1d2df8ab480d6c2",
+    "label": {
+      "id": "G3",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G4",
+    "kind": "target",
+    "evidence": "Use this night face cream as the final step in your evening skincare and night moisturizer routine.",
+    "recorded": "time_of_use=night",
+    "key": "seller:7a3639dcabd63d817f59a6e3e9f8f90c",
+    "label": {
+      "id": "G4",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G5",
+    "kind": "target",
+    "evidence": "Natural Moisturizer For Dry Skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:f1c12517c6286328ecfb734236138881",
+    "label": {
+      "id": "G5",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G6",
+    "kind": "target",
+    "evidence": "soothing to dry cracked skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:ee7b3b7fa1ccbfde110a30d808878a8a",
+    "label": {
+      "id": "G6",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G7",
+    "kind": "target",
+    "evidence": "Color Treated",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:24790c9c5d445460d0c9cc3de9719c55",
+    "label": {
+      "id": "G7",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G8",
+    "kind": "target",
+    "evidence": "Ideal Moisturizer For Dry Skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:0f174f46b538e72aa38e08d4a2398f44",
+    "label": {
+      "id": "G8",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G9",
+    "kind": "target",
+    "evidence": "Safe for Color Treated Hair",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:468889e38c8e69fea22c9528b153343f",
+    "label": {
+      "id": "G9",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G10",
+    "kind": "target",
+    "evidence": "Damaged hair treatment",
+    "recorded": "hair_type=damaged",
+    "key": "seller:31b46b6a471bab0e62573fe7f1405108",
+    "label": {
+      "id": "G10",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G11",
+    "kind": "target",
+    "evidence": "Nourishes and protects color treated hair.",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:0be15c1b54e54b2862ce19501d27c477",
+    "label": {
+      "id": "G11",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G12",
+    "kind": "target",
+    "evidence": "For Dry Hair + Itchy Scalp",
+    "recorded": "hair_type=oily",
+    "key": "seller:fbb52d86bffe775601ef19d0fee9455f",
+    "label": {
+      "id": "G12",
+      "correct": false,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G13",
+    "kind": "target",
+    "evidence": "effective for both aging and blemish-prone skin",
+    "recorded": "skin_type=acne_prone",
+    "key": "seller:d355044ff04e1961608cfcb0d24dac9c",
+    "label": {
+      "id": "G13",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G14",
+    "kind": "target",
+    "evidence": "Suitable for Dry, Oily, Sensitive and any other skin type",
+    "recorded": "skin_type=sensitive",
+    "key": "seller:89c4a483813648fa87b35259fc182a64",
+    "label": {
+      "id": "G14",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G15",
+    "kind": "target",
+    "evidence": "Fortified with Keratin to Restore Proteins Lost to Chemical and Environmental Damage",
+    "recorded": "hair_type=damaged",
+    "key": "seller:17f102ace13939bdca0da29dd6358aec",
+    "label": {
+      "id": "G15",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G16",
+    "kind": "target",
+    "evidence": "the conditioner improves the texture of medium/thick wavy and curly hair types",
+    "recorded": "hair_type=thick",
+    "key": "seller:daa445671e15367d36c49b1023018c6a",
+    "label": {
+      "id": "G16",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G17",
+    "kind": "target",
+    "evidence": "Day Oil Free with Retinol",
+    "recorded": "time_of_use=day",
+    "key": "seller:b9bd0afaec1c395b247d795ec4200808",
+    "label": {
+      "id": "G17",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G18",
+    "kind": "target",
+    "evidence": "Smoothing Deep Conditioner",
+    "recorded": "hair_type=damaged",
+    "key": "seller:29f9de1fd0a14666e6b5c9f7a5074705",
+    "label": {
+      "id": "G18",
+      "correct": false,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G19",
+    "kind": "target",
+    "evidence": "Hydrating Day Moisturizer for Face and Neck",
+    "recorded": "time_of_use=day",
+    "key": "seller:070cced4bf5be58dbb2d689bf265f335",
+    "label": {
+      "id": "G19",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G20",
+    "kind": "target",
+    "evidence": "Face Moisturizer for Dry Skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:75aa078dd59c49359aab05e614eb8f7c",
+    "label": {
+      "id": "G20",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G21",
+    "kind": "target",
+    "evidence": "Recover Elasticity Hair for Dry or Damaged Hair",
+    "recorded": "hair_type=damaged",
+    "key": "seller:903757ae08b28a08fea952232f744aab",
+    "label": {
+      "id": "G21",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G22",
+    "kind": "target",
+    "evidence": "Dry Hair Shampoo",
+    "recorded": "skin_type=dry",
+    "key": "seller:2143f7a84bca2920bcc039220a1a491a",
+    "label": {
+      "id": "G22",
+      "correct": false,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G23",
+    "kind": "target",
+    "evidence": "For all types of color-treated or permed hair.",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:83bbfca06f7c4cb6c0101123c7a8578a",
+    "label": {
+      "id": "G23",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G24",
+    "kind": "target",
+    "evidence": "Hair Treatment Set to Brighten and Hydrate Color-Treated Hair",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:ad1670926f69ff0cc8534e085218122a",
+    "label": {
+      "id": "G24",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G25",
+    "kind": "target",
+    "evidence": "reversing hair damage",
+    "recorded": "hair_type=damaged",
+    "key": "seller:0bf1f296369ec4308f6686a1e70788b0",
+    "label": {
+      "id": "G25",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G26",
+    "kind": "target",
+    "evidence": "Extra Dry Skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:ff414284dc596e10ff9de6968a0b0527",
+    "label": {
+      "id": "G26",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G27",
+    "kind": "target",
+    "evidence": "REPARA TU FUERZA CAPIAR",
+    "recorded": "hair_type=damaged",
+    "key": "seller:710933ac3580e613505e2b4f5dca6ce5",
+    "label": {
+      "id": "G27",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G28",
+    "kind": "target",
+    "evidence": "MOISTURIZING vegan conditioner bar for oily and balanced hair",
+    "recorded": "hair_type=oily",
+    "key": "seller:fae847a773be12ca5f0900162e6176eb",
+    "label": {
+      "id": "G28",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G29",
+    "kind": "target",
+    "evidence": "Hair Repair Treatment",
+    "recorded": "hair_type=damaged",
+    "key": "seller:5982008ead2468fdd3a54f7df79f1d3b",
+    "label": {
+      "id": "G29",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G30",
+    "kind": "target",
+    "evidence": "which makes it a great moisturizer for dry and damaged skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:caaa77160ed46706eb13b24ee6e373ae",
+    "label": {
+      "id": "G30",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G31",
+    "kind": "target",
+    "evidence": "Safe for natural hair and color-treated hair",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:570c8a830c252bae3f5585967111edf2",
+    "label": {
+      "id": "G31",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G32",
+    "kind": "target",
+    "evidence": "Reduces Natural Oil Build Up While Keeping Your Hair Soft And Full Of Body",
+    "recorded": "hair_type=oily",
+    "key": "seller:1b13c6ec09cda3edc38cb37f689460f0",
+    "label": {
+      "id": "G32",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G33",
+    "kind": "target",
+    "evidence": "great moisturizer for dry and damaged skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:0a8563e5102c3136c457dd3e31e7a034",
+    "label": {
+      "id": "G33",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G34",
+    "kind": "target",
+    "evidence": "Used to treat chapped lips, diaper rash, dry skin",
+    "recorded": "skin_type=dry",
+    "key": "seller:6a02e296a731a1b4c0a7243ea3d6254a",
+    "label": {
+      "id": "G34",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G35",
+    "kind": "target",
+    "evidence": "Dry and Damaged Hair",
+    "recorded": "hair_type=damaged",
+    "key": "seller:49698097242390e1b693fc090b053df6",
+    "label": {
+      "id": "G35",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G36",
+    "kind": "target",
+    "evidence": "Color Fading",
+    "recorded": "hair_type=color_treated",
+    "key": "seller:f8dbe762c9653731b393176179f2a0f9",
+    "label": {
+      "id": "G36",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G37",
+    "kind": "target",
+    "evidence": "helps the tightening pores of oily skin",
+    "recorded": "skin_type=oily",
+    "key": "seller:54aec9bea99b2bfc3a43e350c3a8ca9a",
+    "label": {
+      "id": "G37",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G38",
+    "kind": "target",
+    "evidence": "Damaged, Dry, Curly, Color Treated Hair",
+    "recorded": "hair_type=curly",
+    "key": "seller:d5e9e41deb72e1cb0854d1bae9d2dde9",
+    "label": {
+      "id": "G38",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  },
+  {
+    "id": "G39",
+    "kind": "target",
+    "evidence": "for Dry and All Skin Types",
+    "recorded": "skin_type=dry",
+    "key": "seller:b5683528d8bb5ea18dfda8d6d978cbbe",
+    "label": {
+      "id": "G39",
+      "correct": true,
+      "supported": true,
+      "name_fits": true,
+      "aspects": "n/a",
+      "right_type": "n/a"
+    }
+  }
+]

@@ -136,6 +136,31 @@ def family_from_title(title: str | None) -> str | None:
     return best[1] if best else None
 
 
+def product_types(family: str | None = None) -> dict[str, dict]:
+    """Canonical product types (ProductType nodes), of one family or of all families."""
+    return {t: spec for f, fs in families().items() if family in (None, f) for t, spec in fs.get("types", {}).items()}
+
+
+def type_family(ptype: str | None) -> str | None:
+    return next((f for f, fs in families().items() if ptype in fs.get("types", {})), None)
+
+
+def type_from_title(title: str | None, family: str | None) -> str | None:
+    """Keyword type assignment within a family (offline fallback). Types are tried in dictionary order, so a
+    'shampoo and conditioner' title matches shampoo_conditioner_set before shampoo."""
+    for t, spec in product_types(family).items():
+        if re.search(r"\b(" + "|".join(re.escape(c) for c in spec["title_cues"]) + r")\b", title or "", re.I):
+            return t
+    return None
+
+
+def brand_key(details: dict | None, store: str | None) -> str | None:
+    """Brand for SAME_BRAND relations: details.Brand, else the store name; lowercased, whitespace-normalized."""
+    b = (details or {}).get("Brand") if isinstance(details, dict) else None
+    b = b if isinstance(b, str) and b.strip() else store
+    return " ".join(b.lower().split()) if isinstance(b, str) and b.strip() else None
+
+
 def contexts() -> list[str]:
     return ontology()["contexts"]
 

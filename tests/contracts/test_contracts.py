@@ -202,3 +202,54 @@ def test_r02_context_query_sources(built):
     assert gs["product:FXP1"]["context_source"] == ["context_reviewers"]  # "Not greasy at all on my oily skin"
     gs = graph_scores(idx, "ceva", ParsedQuery("q", ["lather"], "hair_type=curly", False), built)
     assert gs["product:FXP3"]["context_source"] == ["seller_target"]  # listing: "made for curly hair"
+
+
+# ---------------------------------------------------------------- v4: relations and relation-based prediction
+def test_v01_beta_binomial_prediction():
+    import numpy as np
+    from evireview.predict import posterior
+    pred, lo, hi = posterior(np.array([0.8, 0.8, 0.8]), np.array([0.0, 1.0, 9.0]), np.array([0.0, 1.0, 10.0]), 4.0)
+    assert abs(pred[0] - 0.8) < 1e-9  # no own opinions: the prior
+    assert abs(pred[1] - 0.84) < 1e-9 and abs(pred[2] - 0.8714) < 1e-3  # plan example (lambda=4)
+    assert (lo < pred).all() and (pred < hi).all() and (hi[2] - lo[2]) < (hi[0] - lo[0])  # more reviews, narrower
+
+
+def test_v02_relations_from_metadata_only(built):
+    from evireview.relations import load_relations
+    rel = load_relations(built)
+    p = pd.read_parquet(built.p("processed") / "products.parquet").set_index("product_id")
+    e = rel["edges"]
+    for x in e[e.relation == "brand"].itertuples():
+        assert p.brand_key[x.src] == p.brand_key[x.dst] == x.via
+    for x in e[e.relation == "type"].itertuples():
+        assert p.type[x.src] == p.type[x.dst] == x.via
+    g = pd.read_parquet(built.p("graphs") / "ceva" / "edges.parquet")
+    assert (g.relation == "SAME_BRAND").sum() == (e.relation == "brand").sum()
+
+
+def test_v03_coldstart_role_products_never_in_pool(built):
+    from evireview.pipeline import load_data
+    from evireview.predict import Neighborhood, review_votes, role_products
+    from evireview.relations import load_relations
+    reviews, products, split = load_data(built)
+    roles = set(role_products(built, products, split))
+    votes = review_votes(pd.read_parquet(built.p("graphs") / "ceva" / "claims.parquet"), reviews)
+    nh = Neighborhood(built, products, load_relations(built), votes[~votes.product_id.isin(roles)])
+    assert roles and not any(pid in roles for pid, _ in nh.share)
+    assert all(split[p] == "test" for p in roles)
+
+
+def test_v04_predictions_traceable(built):
+    import json
+    from evireview.predict import run_predict
+    run_predict(built)
+    pr = pd.read_parquet(built.p("graphs") / "ceva" / "predictions.parquet")
+    aggs = pd.read_parquet(built.p("graphs") / "ceva" / "aggregates.parquet")
+    assert len(pr) and (pr.epistemic == "estimate").all()
+    assert ((0 <= pr.lo) & (pr.lo < pr.hi) & (pr.hi <= 1) & (0 <= pr.pred) & (pr.pred <= 1)).all()
+    for c in (c for cs in pr.contributors for c in json.loads(cs)):
+        assert c["agg_id"] in set(aggs.agg_id)  # PREDICTED_FROM -> AspectOpinion -> claims -> review spans
+    n = pd.read_parquet(built.p("graphs") / "ceva" / "nodes.parquet")
+    e = pd.read_parquet(built.p("graphs") / "ceva" / "edges.parquet")
+    pf = e[e.relation == "PREDICTED_FROM"]
+    assert pf.dst_id.isin(n.node_id).all() and pf.src_id.isin(n.node_id).all()

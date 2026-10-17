@@ -55,6 +55,24 @@ Every LLM response is cached in `.cache/llm/`. Re-running a stage reuses the cac
 | judge | Opus 5 (raw text only, blind to systems) drafts 40 queries, grades product relevance (qrels), labels claim support, writes T1 reference claims, and grades answers. |
 | evaluate | T1/T2/T3 metrics, paired bootstrap 95% CI, CSV export to `reports/`. |
 
+## Run 4: relation-based rating prediction (v4)
+
+The KG links products to each other (same canonical type, same brand, shared seller attribute related to an aspect) and uses those links to estimate aspect ratings of products with few or no reviews. Each estimate carries an 80% interval and the related products' review evidence it rests on (`PREDICTED_FROM`). Run 4 uses its own profile and paths (`configs/research_v4.yaml`, `data/v4/`, `annotations_v4/`, `reports/v4/`), so Run 3 results stay untouched.
+
+```bash
+CFG=configs/research_v4.yaml
+evireview ingest --config $CFG              # 300 products (150 per family, brand clusters first), first 30 reviews in time order
+evireview build --config $CFG               # seller layer + relations (ProductType, Attribute, SAME_*) + G1
+evireview judge --task dev --config $CFG    # tau
+evireview augment --config $CFG             # CEVA graph
+evireview predict --config $CFG             # tune weights/lambda on dev, write predictions + PREDICTED_FROM
+evireview coldstart --config $CFG           # experiment 1 -> reports/v4/coldstart.json
+evireview judge --task relations --config $CFG   # experiment 3 -> reports/v4/relations_quality.json
+evireview coldsearch --config $CFG          # experiment 2 -> reports/v4/coldsearch.json (views in data/v4/cold/)
+```
+
+Results: `reports/v4/RESULTS.md`. Retrieval system **B7** ranks by the predicted positive share; answers from B7 mark estimates as estimates. On Windows set `PYTHONUTF8=1` before running.
+
 ## Judge check (LLM cross-audit)
 
 `evireview audit --config configs/research.yaml` has `claude-fable-5-1`, a model different from both the extractor and the judge, re-answer a fixed sample of check items: every query, 30 claims, 30 qrels and 10 answer citations (`src/evireview/checklist.py`). It then re-evaluates. Queries it drops are excluded from evaluation. Results are labelled as LLM-audited; there is no human validation.

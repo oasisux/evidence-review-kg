@@ -1,0 +1,596 @@
+{
+  "lambda": 4.0,
+  "min_neighbors": 3,
+  "kg": {
+    "variant": "ceva",
+    "min_mentions": 5,
+    "by_k": {
+      "0": {
+        "n_targets": 495,
+        "n_products": 99,
+        "truth_mean": 0.8009667762644046,
+        "truth_majority_positive": 0.8848484848484849,
+        "methods": [
+          {
+            "method": "self_only",
+            "mae": 0.3609556426169072,
+            "majority_acc": 0.8848484848484849,
+            "n": 495
+          },
+          {
+            "method": "always_positive",
+            "mae": 0.1990332237355955,
+            "majority_acc": 0.8848484848484849,
+            "n": 495
+          },
+          {
+            "method": "global",
+            "mae": 0.1784127632779315,
+            "majority_acc": 0.901010101010101,
+            "n": 495
+          },
+          {
+            "method": "family",
+            "mae": 0.16988195658183322,
+            "majority_acc": 0.9030303030303031,
+            "n": 495,
+            "available": 0.997979797979798,
+            "n_available": 494,
+            "delta_mae_vs_global_where_available": -0.00854807553556409,
+            "rel_delta": -0.04791446889015618,
+            "ci_low": -0.015602285070140644,
+            "ci_high": -0.0017355471332956948
+          },
+          {
+            "method": "type",
+            "mae": 0.17725400357033821,
+            "majority_acc": 0.896969696969697,
+            "n": 495,
+            "available": 0.2828282828282828,
+            "n_available": 140,
+            "delta_mae_vs_global_where_available": -0.004097043251847752,
+            "rel_delta": -0.023820706959271444,
+            "ci_low": -0.02827884753273035,
+            "ci_high": 0.011609097577309178
+          },
+          {
+            "method": "brand",
+            "mae": 0.1784127632779315,
+            "majority_acc": 0.901010101010101,
+            "n": 495,
+            "available": 0.0,
+            "n_available": 0,
+            "delta_mae_vs_global_where_available": null,
+            "rel_delta": null,
+            "ci_low": null,
+            "ci_high": null
+          },
+          {
+            "method": "seller_attr",
+            "mae": 0.17805267698031263,
+            "majority_acc": 0.8929292929292929,
+            "n": 495,
+            "available": 0.6080808080808081,
+            "n_available": 301,
+            "delta_mae_vs_global_where_available": -0.0005921684960842167,
+            "rel_delta": -0.003346794251975273,
+            "ci_low": -0.01089871962004614,
+            "ci_high": 0.014774601470954891
+          }
+        ]
+      },
+      "1": {
+        "n_targets": 481,
+        "n_products": 99,
+        "truth_mean": 0.7977774901583286,
+        "truth_majority_positive": 0.8794178794178794,
+        "methods": [
+          {
+            "method": "self_only",
+            "mae": 0.30860032306247004,
+            "majority_acc": 0.8752598752598753,
+            "n": 481
+          },
+          {
+            "method": "always_positive",
+            "mae": 0.20222250984167137,
+            "majority_acc": 0.8794178794178794,
+            "n": 481
+          },
+          {
+            "method": "global",
+            "mae": 0.17705977218751742,
+            "majority_acc": 0.893970893970894,
+            "n": 481
+          },
+          {
+            "method": "family",
+            "mae": 0.16948695734109342,
+            "majority_acc": 0.8981288981288982,
+            "n": 481,
+            "available": 1.0,
+            "n_available": 481,
+            "delta_mae_vs_global_where_available": -0.00757281484642401,
+            "rel_delta": -0.042769821472513375,
+            "ci_low": -0.013756555201660034,
+            "ci_high": -0.00019056173743676086
+          },
+          {
+            "method": "type",
+            "mae": 0.17543177053934703,
+            "majority_acc": 0.8898128898128899,
+            "n": 481,
+            "available": 0.2869022869022869,
+            "n_available": 138,
+            "delta_mae_vs_global_where_available": -0.005674411541811445,
+            "rel_delta": -0.0323739926861477,
+            "ci_low": -0.029364080648072978,
+            "ci_high": 0.010661436479268514
+          },
+          {
+            "method": "brand",
+            "mae": 0.17705977218751742,
+            "majority_acc": 0.893970893970894,
+            "n": 481,
+            "available": 0.0,
+            "n_available": 0,
+            "delta_mae_vs_global_where_available": null,
+            "rel_delta": null,
+            "ci_low": null,
+            "ci_high": null
+          },
+          {
+            "method": "seller_attr",
+            "mae": 0.17577291763677644,
+            "majority_acc": 0.8898128898128899,
+            "n": 481,
+            "available": 0.6153846153846154,
+            "n_available": 296,
+            "delta_mae_vs_global_where_available": -0.0020911386449540834,
+            "rel_delta": -0.01188189721400565,
+            "ci_low": -0.012822593942174594,
+            "ci_high": 0.013275255229778538
+          }
+        ]
+      },
+      "3": {
+        "n_targets": 449,
+        "n_products": 99,
+        "truth_mean": 0.792380262400268,
+        "truth_majority_positive": 0.8797327394209354,
+        "methods": [
+          {
+            "method": "self_only",
+            "mae": 0.26322153951497906,
+            "majority_acc": 0.8685968819599109,
+            "n": 449
+          },
+          {
+            "method": "always_positive",
+            "mae": 0.20761973759973207,
+            "majority_acc": 0.8797327394209354,
+            "n": 449
+          },
+          {
+            "method": "global",
+            "mae": 0.16819673048717743,
+            "majority_acc": 0.9020044543429844,
+            "n": 449
+          },
+          {
+            "method": "family",
+            "mae": 0.16256966102280568,
+            "majority_acc": 0.8975501113585747,
+            "n": 449,
+            "available": 1.0,
+            "n_available": 449,
+            "delta_mae_vs_global_where_available": -0.0056270694643717825,
+            "rel_delta": -0.03345528446405066,
+            "ci_low": -0.011326457966316277,
+            "ci_high": 0.002048011891701267
+          },
+          {
+            "method": "type",
+            "mae": 0.16856631405545205,
+            "majority_acc": 0.8975501113585747,
+            "n": 449,
+            "available": 0.27839643652561247,
+            "n_available": 125,
+            "delta_mae_vs_global_where_available": 0.0013275441772423987,
+            "rel_delta": 0.008297637684438383,
+            "ci_low": -0.021336444922726516,
+            "ci_high": 0.018264029076592643
+          },
+          {
+            "method": "brand",
+            "mae": 0.16819673048717743,
+            "majority_acc": 0.9020044543429844,
+            "n": 449,
+            "available": 0.0,
+            "n_available": 0,
+            "delta_mae_vs_global_where_available": null,
+            "rel_delta": null,
+            "ci_low": null,
+            "ci_high": null
+          },
+          {
+            "method": "seller_attr",
+            "mae": 0.1668721490435837,
+            "majority_acc": 0.8997772828507795,
+            "n": 449,
+            "available": 0.6057906458797327,
+            "n_available": 272,
+            "delta_mae_vs_global_where_available": -0.002186533338873484,
+            "rel_delta": -0.013248730535161346,
+            "ci_low": -0.01311663987361581,
+            "ci_high": 0.010446990251994168
+          }
+        ]
+      }
+    },
+    "signal": {
+      "share_of_variance_between_products": 0.7391444559634187,
+      "noise_mae_floor_at_min_mentions": 0.08985429595452034,
+      "aspects": [
+        {
+          "aspect": "scent",
+          "n_products": 73,
+          "mean_share": 0.7985248327077409,
+          "var_observed": 0.0433281436600048,
+          "var_noise": 0.01297031368237063,
+          "var_between_products": 0.03035782997763417
+        },
+        {
+          "aspect": "effectiveness",
+          "n_products": 54,
+          "mean_share": 0.770926886899109,
+          "var_observed": 0.05501303636209075,
+          "var_noise": 0.014203322013651494,
+          "var_between_products": 0.040809714348439254
+        },
+        {
+          "aspect": "moisturization",
+          "n_products": 50,
+          "mean_share": 0.8404633977133977,
+          "var_observed": 0.05266236209154203,
+          "var_noise": 0.011441664561097402,
+          "var_between_products": 0.041220697530444626
+        },
+        {
+          "aspect": "value_for_money",
+          "n_products": 44,
+          "mean_share": 0.6917388167388167,
+          "var_observed": 0.10985701155413226,
+          "var_noise": 0.015850717599182267,
+          "var_between_products": 0.09400629395495
+        },
+        {
+          "aspect": "hair_results",
+          "n_products": 41,
+          "mean_share": 0.8855384114530456,
+          "var_observed": 0.013853830181483978,
+          "var_noise": 0.007957830414217718,
+          "var_between_products": 0.00589599976726626
+        },
+        {
+          "aspect": "skin_results",
+          "n_products": 36,
+          "mean_share": 0.9496935731584855,
+          "var_observed": 0.008272114009675452,
+          "var_noise": 0.004046889411244783,
+          "var_between_products": 0.004225224598430669
+        },
+        {
+          "aspect": "residue",
+          "n_products": 31,
+          "mean_share": 0.773346366894754,
+          "var_observed": 0.07447000228846341,
+          "var_noise": 0.014552480935697465,
+          "var_between_products": 0.05991752135276595
+        },
+        {
+          "aspect": "texture",
+          "n_products": 27,
+          "mean_share": 0.7900462435550156,
+          "var_observed": 0.03943856543921549,
+          "var_noise": 0.01588581908535603,
+          "var_between_products": 0.023552746353859462
+        },
+        {
+          "aspect": "conditioning",
+          "n_products": 25,
+          "mean_share": 0.9042930402930404,
+          "var_observed": 0.01905709544830424,
+          "var_noise": 0.009093482266681156,
+          "var_between_products": 0.009963613181623084
+        },
+        {
+          "aspect": "irritation",
+          "n_products": 17,
+          "mean_share": 0.831879721585604,
+          "var_observed": 0.024509725971043454,
+          "var_noise": 0.017602934981097444,
+          "var_between_products": 0.00690679098994601
+        },
+        {
+          "aspect": "packaging",
+          "n_products": 14,
+          "mean_share": 0.27330447330447327,
+          "var_observed": 0.09484632090692699,
+          "var_noise": 0.01798792404638747,
+          "var_between_products": 0.07685839686053952
+        },
+        {
+          "aspect": "absorption",
+          "n_products": 13,
+          "mean_share": 0.8657509157509158,
+          "var_observed": 0.030804552590266873,
+          "var_noise": 0.014402902888872275,
+          "var_between_products": 0.0164016497013946
+        },
+        {
+          "aspect": "size_quantity",
+          "n_products": 13,
+          "mean_share": 0.5756410256410256,
+          "var_observed": 0.11613960113960115,
+          "var_noise": 0.02246883903133903,
+          "var_between_products": 0.09367076210826211
+        },
+        {
+          "aspect": "anti_aging",
+          "n_products": 10,
+          "mean_share": 0.8802272727272726,
+          "var_observed": 0.020727789256198347,
+          "var_noise": 0.011170343022163787,
+          "var_between_products": 0.00955744623403456
+        },
+        {
+          "aspect": "frizz_control",
+          "n_products": 9,
+          "mean_share": 0.9370370370370371,
+          "var_observed": 0.009012345679012341,
+          "var_noise": 0.00968312757201646,
+          "var_between_products": 0.0
+        },
+        {
+          "aspect": "cleansing",
+          "n_products": 8,
+          "mean_share": 0.9561011904761905,
+          "var_observed": 0.003937251984126986,
+          "var_noise": 0.0035979964282339925,
+          "var_between_products": 0.0003392555558929932
+        }
+      ]
+    }
+  },
+  "raw": {
+    "n_products": 6044,
+    "n_typed": 2246,
+    "hidden_after": 5,
+    "truth_mean": 0.7225705778294222,
+    "type_counts": {
+      "": 3798,
+      "brush": 529,
+      "nail_polish": 190,
+      "hair_extension": 161,
+      "eyeliner": 158,
+      "body_wash": 156,
+      "wig": 146,
+      "shampoo": 130,
+      "foundation": 129,
+      "serum": 114,
+      "false_lashes": 100,
+      "perfume": 88,
+      "mascara": 78,
+      "conditioner": 73,
+      "body_lotion": 66,
+      "lipstick": 58,
+      "face_moisturizer": 26,
+      "lip_balm": 22,
+      "eye_cream": 13,
+      "hair_oil_mask": 9
+    },
+    "by_k": {
+      "0": [
+        {
+          "method": "self_only",
+          "mae": 0.2658247636871373,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044
+        },
+        {
+          "method": "global",
+          "mae": 0.15908906861802583,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044
+        },
+        {
+          "method": "type",
+          "mae": 0.15603691446580936,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044,
+          "available": 0.37160820648577103,
+          "n_available": 2246,
+          "delta_mae_vs_global_where_available": -0.008213365848618093,
+          "rel_delta": -0.05088827305727116,
+          "ci_low": -0.01024873336467159,
+          "ci_high": -0.006255806077745444
+        },
+        {
+          "method": "brand",
+          "mae": 0.15567125729192757,
+          "majority_acc": 0.8615155526141628,
+          "n": 6044,
+          "available": 0.1942422236929186,
+          "n_available": 1174,
+          "delta_mae_vs_global_where_available": -0.017595614697562115,
+          "rel_delta": -0.11677599783684219,
+          "ci_low": -0.023461186121690403,
+          "ci_high": -0.012100395528780693
+        },
+        {
+          "method": "type+brand",
+          "mae": 0.15356047311175777,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044,
+          "available": 0.4874255459960291,
+          "n_available": 2946,
+          "delta_mae_vs_global_where_available": -0.011342441018290567,
+          "rel_delta": -0.0721298035917884,
+          "ci_low": -0.013796799848739046,
+          "ci_high": -0.008840268982571998
+        }
+      ],
+      "1": [
+        {
+          "method": "self_only",
+          "mae": 0.31361885157600544,
+          "majority_acc": 0.7966578424884183,
+          "n": 6044
+        },
+        {
+          "method": "global",
+          "mae": 0.1515487335068905,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044
+        },
+        {
+          "method": "type",
+          "mae": 0.14965752922214925,
+          "majority_acc": 0.8623428193249504,
+          "n": 6044,
+          "available": 0.37160820648577103,
+          "n_available": 2246,
+          "delta_mae_vs_global_where_available": -0.005089242518689209,
+          "rel_delta": -0.03339597743111928,
+          "ci_low": -0.006788390707370304,
+          "ci_high": -0.003479106804099219
+        },
+        {
+          "method": "brand",
+          "mae": 0.14952490020779222,
+          "majority_acc": 0.8618464592984778,
+          "n": 6044,
+          "available": 0.1942422236929186,
+          "n_available": 1174,
+          "delta_mae_vs_global_where_available": -0.010419121345613276,
+          "rel_delta": -0.07179632655937945,
+          "ci_low": -0.015516943055452022,
+          "ci_high": -0.005714952101016289
+        },
+        {
+          "method": "type+brand",
+          "mae": 0.14813831004868838,
+          "majority_acc": 0.8625082726671078,
+          "n": 6044,
+          "available": 0.4874255459960291,
+          "n_available": 2946,
+          "delta_mae_vs_global_where_available": -0.006996809022869484,
+          "rel_delta": -0.04660282688361997,
+          "ci_low": -0.008965746183936566,
+          "ci_high": -0.0049541311736281774
+        }
+      ],
+      "3": [
+        {
+          "method": "self_only",
+          "mae": 0.21232099178060146,
+          "majority_acc": 0.8462938451356717,
+          "n": 6044
+        },
+        {
+          "method": "global",
+          "mae": 0.141908468743939,
+          "majority_acc": 0.8735936465916612,
+          "n": 6044
+        },
+        {
+          "method": "type",
+          "mae": 0.14110390152104685,
+          "majority_acc": 0.8735936465916612,
+          "n": 6044,
+          "available": 0.37160820648577103,
+          "n_available": 2246,
+          "delta_mae_vs_global_where_available": -0.002165095411914612,
+          "rel_delta": -0.015139215483472124,
+          "ci_low": -0.003367128840459061,
+          "ci_high": -0.0008814043758974915
+        },
+        {
+          "method": "brand",
+          "mae": 0.14124070601392993,
+          "majority_acc": 0.8735936465916612,
+          "n": 6044,
+          "available": 0.1942422236929186,
+          "n_available": 1174,
+          "delta_mae_vs_global_where_available": -0.00343778359469751,
+          "rel_delta": -0.024734693312354946,
+          "ci_low": -0.006915070312237532,
+          "ci_high": -2.463029038220492e-05
+        },
+        {
+          "method": "type+brand",
+          "mae": 0.14049334609873224,
+          "majority_acc": 0.8735936465916612,
+          "n": 6044,
+          "available": 0.4874255459960291,
+          "n_available": 2946,
+          "delta_mae_vs_global_where_available": -0.0029032590860929236,
+          "rel_delta": -0.02052706681213078,
+          "ci_low": -0.004274539192265493,
+          "ci_high": -0.001511684946525537
+        }
+      ],
+      "5": [
+        {
+          "method": "self_only",
+          "mae": 0.17492311620118442,
+          "majority_acc": 0.8678027796161483,
+          "n": 6044
+        },
+        {
+          "method": "global",
+          "mae": 0.13376163292177326,
+          "majority_acc": 0.8812045003309067,
+          "n": 6044
+        },
+        {
+          "method": "type",
+          "mae": 0.13335878103158927,
+          "majority_acc": 0.8812045003309067,
+          "n": 6044,
+          "available": 0.37160820648577103,
+          "n_available": 2246,
+          "delta_mae_vs_global_where_available": -0.001084076947583284,
+          "rel_delta": -0.00798950813099532,
+          "ci_low": -0.002063781313512599,
+          "ci_high": -5.1782315118437285e-05
+        },
+        {
+          "method": "brand",
+          "mae": 0.13380961270560962,
+          "majority_acc": 0.8797154202514891,
+          "n": 6044,
+          "available": 0.1942422236929186,
+          "n_available": 1174,
+          "delta_mae_vs_global_where_available": 0.00024701006261247833,
+          "rel_delta": 0.001892706445317575,
+          "ci_low": -0.0023957373552882235,
+          "ci_high": 0.002907166526358228
+        },
+        {
+          "method": "type+brand",
+          "mae": 0.13325245118564152,
+          "majority_acc": 0.8798808735936466,
+          "n": 6044,
+          "available": 0.4874255459960291,
+          "n_available": 2946,
+          "delta_mae_vs_global_where_available": -0.001044634899246504,
+          "rel_delta": -0.007804102730074283,
+          "ci_low": -0.002127173464135341,
+          "ci_high": 3.0289400955806636e-05
+        }
+      ]
+    }
+  }
+}

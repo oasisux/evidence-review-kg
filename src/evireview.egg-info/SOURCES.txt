@@ -4,6 +4,7 @@ src/evireview/__init__.py
 src/evireview/answer.py
 src/evireview/app.py
 src/evireview/aspects_v1.yaml
+src/evireview/aspects_v2.yaml
 src/evireview/audit.py
 src/evireview/checklist.py
 src/evireview/cli.py
@@ -11,6 +12,7 @@ src/evireview/common.py
 src/evireview/embed.py
 src/evireview/evaluate.py
 src/evireview/extract.py
+src/evireview/induce.py
 src/evireview/ingest.py
 src/evireview/judge.py
 src/evireview/llm.py
@@ -18,6 +20,7 @@ src/evireview/pipeline.py
 src/evireview/report.py
 src/evireview/report_tab.py
 src/evireview/retrieval.py
+src/evireview/seller.py
 src/evireview.egg-info/PKG-INFO
 src/evireview.egg-info/SOURCES.txt
 src/evireview.egg-info/dependency_links.txt

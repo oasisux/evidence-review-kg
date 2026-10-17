@@ -47,6 +47,8 @@ def run_build(cfg: Config) -> pd.DataFrame:
     reviews, products, split = load_data(cfg)
     llm = _llm(cfg)
     build_seller_attributes(cfg, llm, products)
+    from .relations import build_relations
+    build_relations(cfg, llm, products)
     raw = rule_candidates(reviews) if llm is None else llm_candidates(llm, cfg, reviews, stage="extract")
     cands = apply_hard_gates(raw, reviews, "direct", "g1", _version(cfg))
     cands = verify(llm, cfg, cands, reviews, stage="verify_g1")
@@ -312,6 +314,8 @@ def write_graph(cfg: Config, name: str, claims: pd.DataFrame, reviews: pd.DataFr
             edge(x.product_id, "SELLER_TARGETS", f"context:{x.context}", prov)
     for a in aspect_names():
         node(aspect_id(a), "Aspect", a)
+    from .relations import relation_graph
+    relation_graph(cfg, products, node, edge)  # ProductType, Attribute, product-product relations (v4)
     for c in claims.itertuples():
         node(c.claim_id, "Claim", f"{c.aspect}:{c.polarity}", polarity=c.polarity, context=c.context,
              derivation=c.derivation, source_run=c.source_run, s=round(float(c.s), 3))
